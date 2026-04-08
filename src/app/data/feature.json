@@ -1,0 +1,780 @@
+{
+  "categories": {
+    "Website": {
+      "section": {
+        "className": "team-section fix section-padding bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "Web Develpment",
+        "title": "Vaqtrix Builds AI-Powered Websites UX",
+        "desc": "AI-ready websites built to convert users, present portfolios, and scale securely with performance and SEO-focused architecture for modern businesses.",
+        "media": {
+          "type": "video",
+          "src": "/assets/video/song.mp4"
+        },
+        "lists": [
+          [
+            {
+              "text": "AI-ready website architecture"
+            },
+            {
+              "text": "Conversion-focused UX design"
+            }
+          ],
+          [
+            {
+              "text": "SEO-optimised performance"
+            },
+            {
+              "text": "Scalable & secure systems"
+            }
+          ]
+        ]
+      }
+    },
+    "Ai": {
+      "section": {
+        "className": "team-section fix section-padding bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "Best SEO results",
+        "title": "Vaqtrix Builds Intelligent AI Solutions",
+        "desc": "Vaqtrix develops intelligent AI systems that automate workflows analyze data and power scalable business solutions built for innovation efficiency and growth.",
+        "media": {
+          "type": "video",
+          "src": "/assets/video/song.mp4"
+        },
+        "lists": [
+          [
+            {
+              "text": "Custom AI solution design"
+            },
+            {
+              "text": "Business process automation"
+            }
+          ],
+          [
+            {
+              "text": "AI data insights systems"
+            },
+            {
+              "text": "Scalable AI architectures"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "App": {
+      "section": {
+        "className": "team-section fix section-padding bg-cover py-0",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "App Development",
+        "title": "Vaqtrix Builds Scalable Mobile Apps",
+        "desc": "Vaqtrix designs high performance mobile apps with clean UX secure architecture and scalable features to support growth, automation, and long term business success.",
+        "media": {
+          "type": "video",
+          "src": "/assets/video/song.mp4"
+        },
+        "lists": [
+          [
+            {
+              "text": "iOS and Android development"
+            },
+            {
+              "text": "Scalable app architecture"
+            }
+          ],
+          [
+            {
+              "text": "Secure backend integrations"
+            },
+            {
+              "text": "UX focused mobile design UI"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "Ebook": {
+      "section": {
+        "className": "team-section fix section-padding bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "Best SEO results",
+        "title": "Let’s make something awesome together",
+        "desc": "Every pleasure is to be welcomed and every pain avoided. certain circumstances and owing to the claims welcomed and every pain avoided certain circumstances",
+        "media": {
+          "type": "video",
+          "src": "/assets/video/song.mp4"
+        },
+        "lists": [
+          [
+            {
+              "text": "30-day money back guarantee"
+            },
+            {
+              "text": "Web site Marketing Solutions"
+            }
+          ],
+          [
+            {
+              "text": "Unlimited Application"
+            },
+            {
+              "text": "24/7 system Monitoring"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "Digital": {
+      "section": {
+        "className": "team-section fix section-padding bg-cover ",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "Best SEO results",
+        "title": "Vaqtrix Digital Marketing That Drives Growth",
+        "desc": "Vaqtrix delivers AI-driven digital marketing and branding solutions that attract traffic, convert audiences and build growth through strategy and automation.",
+        "media": {
+          "type": "video",
+          "src": "/assets/video/song.mp4"
+        },
+        "lists": [
+          [
+            {
+              "text": "AI powered growth campaigns"
+            },
+            {
+              "text": "SEO focused brand visibility"
+            }
+          ],
+          [
+            {
+              "text": "Performance driven systems!"
+            },
+            {
+              "text": "Data led marketing strategy"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "Ecom": {
+      "section": {
+        "className": "team-section fix section-padding bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "E-COMMERCE SOLUTIONS",
+        "title": "Vaqtrix Builds Scalable E-commerce Stores",
+        "desc": "Vaqtrix builds high performance e-commerce platforms designed to increase conversions, automate operations and deliver scalable online growth.",
+        "media": {
+          "type": "video",
+          "src": "/assets/video/song.mp4"
+        },
+        "lists": [
+          [
+            {
+              "text": "Custom e-commerce platforms"
+            },
+            {
+              "text": "Secure payment integrations"
+            }
+          ],
+          [
+            {
+              "text": "Conversion focused store UX"
+            },
+            {
+              "text": "Automation ready store setup"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "Website2.0": {
+      "section": {
+        "className": "team-section fix  bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "EXPLORE OUR SERVICES",
+        "title": "Explore Vaqtrix Digital & AI Services",
+        "desc": "Discover Vaqtrix services for digital marketing, app development, e-commerce solutions, and AI development built for scalable performance and automation.",
+        "media": {
+          "type": "image",
+          "src": "/assets/img/Services/AI Development/Images/Explore-Vaqtrix-Digital-&-AI-Services.png",
+          "width": 600,
+          "height": 800
+        },
+        "lists": [
+          [
+            {
+              "text": "Digital marketing",
+              "path": "/digital-marketing"
+            },
+            {
+              "text": "App development",
+              "path": "/app-developmente"
+            }
+          ],
+          [
+            {
+              "text": "E-commerce solutions",
+              "path": "/e-commerce"
+            },
+            {
+              "text": "AI Software",
+              "path": "/ai-development"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "Ai2.0": {
+      "section": {
+        "className": "team-section fix  bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "EXPLORE MORE SERVICES",
+        "title": "Explore More Vaqtrix Digital Services",
+        "desc": "Discover Vaqtrix services including website development app development digital marketing branding and e-book creation built for scalable growth.",
+        "media": {
+          "type": "image",
+          "src": "/assets/img/Services/AI Development/Images/Explore-Vaqtrix-Digital-&-AI-Services.png",
+          "width": 600,
+          "height": 800
+        },
+        "lists": [
+          [
+            {
+              "text": "Website development",
+              "path": "/website"
+            },
+            {
+              "text": "App development",
+              "path": "/app-developmente"
+            }
+          ],
+          [
+            {
+              "text": "Digital marketing",
+              "path": "/digital-marketing"
+            },
+            {
+              "text": "E-book creation",
+              "path": "/e-book-creation"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "App2.0": {
+      "section": {
+        "className": "team-section fix  bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "EXPLORE OTHER SERVICES",
+        "title": "Explore Vaqtrix Digital & AI Services",
+        "desc": "Explore Vaqtrix services including digital marketing, app development, website development, and AI solutions built for scalable growth and future results.",
+        "media": {
+          "type": "image",
+          "src": "/assets/img/Services/AI Development/Images/Explore-Vaqtrix-Digital-&-AI-Services.png",
+          "width": 600,
+          "height": 800
+        },
+        "lists": [
+          [
+            {
+              "text": "Digital marketing",
+              "path": "/digital-marketing"
+            },
+            {
+              "text": "App development",
+              "path": "/app-developmente"
+            }
+          ],
+          [
+            {
+              "text": "Website development",
+              "path": "/website"
+            },
+            {
+              "text": "AI Systems",
+              "path": "/ai-development"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "Ebook2.0": {
+      "section": {
+        "className": "team-section fix  bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "Best SEO results",
+        "title": "Let’s make something awesome together",
+        "desc": "Every pleasure is to be welcomed and every pain avoided. certain circumstances and owing to the claims welcomed and every pain avoided certain circumstances",
+        "media": {
+          "type": "image",
+          "src": "/assets/img/Services/AI Development/Images/Explore-Vaqtrix-Digital-&-AI-Services.png",
+          "width": 600,
+          "height": 800
+        },
+        "lists": [
+          [
+            {
+              "text": "Custom e-commerce platforms",
+              "path": "/custom-ecommerce-platforms"
+            },
+            {
+              "text": "Secure payment integrations",
+              "path": "/secure-payment-integrations"
+            }
+          ],
+          [
+            {
+              "text": "Conversion focused store UX",
+              "path": "/conversion-focused-store-ux"
+            },
+            {
+              "text": "Automation ready store setup",
+              "path": "/automation-ready-store-setup"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "Digital2.0": {
+      "section": {
+        "className": "team-section fix  bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "EXPLORE VAQTRIX SERVICES",
+        "title": "Explore More Vaqtrix Digital Services",
+        "desc": "Discover Vaqtrix solutions including website development, app development, e-commerce systems, and AI solutions designed to scale modern digital businesses.",
+        "media": {
+          "type": "image",
+          "src": "/assets/img/Services/AI Development/Images/Explore-Vaqtrix-Digital-&-AI-Services.png",
+          "width": 600,
+          "height": 800
+        },
+        "lists": [
+          [
+            {
+              "text": "Website development",
+              "path": "/website"
+            },
+            {
+              "text": "App development",
+              "path": "/app-developmente"
+            }
+          ],
+          [
+            {
+              "text": "E-commerce Solutions",
+              "path": "/e-commerce"
+            },
+            {
+              "text": "AI Development ",
+              "path": "/ai-development"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    },
+    "Ecom2.0": {
+      "section": {
+        "className": "team-section fix  bg-cover",
+        "shapes": [
+          {
+            "src": "/assets/img/service/rocket-shape.png",
+            "width": 175,
+            "height": 229,
+            "className": "shape-img float-bob-y"
+          },
+          {
+            "src": "/assets/img/service/right-shape-2.png",
+            "width": 112,
+            "height": 184,
+            "className": "shape-img-2 float-bob-y"
+          }
+        ]
+      },
+      "stats": [
+        {
+          "count": "500",
+          "title": "Total Project",
+          "desc": "Lorem dolor amet consectetur adipiscing any more elit.",
+          "image": {
+            "src": "/assets/img/service/gap-shape.png",
+            "width": 200,
+            "height": 163
+          }
+        }
+      ],
+      "content": {
+        "subtitle": "EXPLORE MORE SERVICES",
+        "title": "Explore More Vaqtrix Digital Services",
+        "desc": "Discover Vaqtrix services including website development app development digital marketing and branding and AI development built for scalable business growth.",
+        "media": {
+          "type": "image",
+          "src": "/assets/img/Services/AI Development/Images/Explore-Vaqtrix-Digital-&-AI-Services.png",
+          "width": 600,
+          "height": 800
+        },
+        "lists": [
+          [
+            {
+              "text": "Website development",
+              "path": "/website"
+            },
+            {
+              "text": "App development",
+              "path": "/app-developmente"
+            }
+          ],
+          [
+            {
+              "text": "Digital marketing",
+              "path": "/digital-marketing"
+            },
+            {
+              "text": "AI Development",
+              "path": "/ai-development"
+            }
+          ]
+        ],
+        "button": {
+          "text": "EXPLORE MORE",
+          "href": "/team"
+        }
+      }
+    }
+  }
+}

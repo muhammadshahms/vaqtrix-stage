@@ -1,0 +1,80 @@
+[
+  {
+    "id": "Website",
+    "heading": "High-Performance Website Development Projects",
+    "paragraph": "Explore a selection of websites we’ve designed and developed for startups, growing companies, and enterprises. Each project is built with performance, scalability, and user experience at its core.",
+    "cards": [
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" },
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" }  ,
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" },
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" }
+    ]
+  },
+ 
+  {
+    "id": "App",
+    "heading": "Mobile Apps Designed, Built & Scaled by Vaqtrix",
+    "paragraph": "Explore a selection of mobile applications developed by Vaqtrix for startups, growing businesses, and enterprises.",
+    "cards": [
+        { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" },
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" }  ,
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" },
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" }
+    ]
+  },
+  {
+    "id": "Ebook",
+    "heading": "Education Projects",
+    "paragraph": "Educational platforms and apps designed for effective learning.",
+    "cards": [
+       { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" },
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" }  ,
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" },
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" }
+    ]
+  },
+ 
+  {
+    "id": "Ecom",
+    "heading": "E-commerce Stores Designed to Scale & Convert",
+    "paragraph": "A showcase of modern online stores designed to drive conversions, streamline operations, and support long term digital commerce growth.",
+    "cards": [
+       { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" },
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" }  ,
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" },
+      { "title": "Crypto Platform", "image": "/imag/ui-ux-1.jpg" },
+      { "title": "Crypto Event", "image": "/imag/ui-ux-2.jpg" },
+      { "title": "Crypto Wallet", "image": "/imag/ui-ux-3.jpg" }
+    ]
+  }
+]

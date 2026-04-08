@@ -1,0 +1,121 @@
+{
+  "categories": [
+    "All",
+    "Website Development",
+    "App Development",
+    "Social Media Post Design",
+    "Mascot",
+    "Text Logo",
+    "Branding",
+    "E-commerce Stores"
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "category": "Website Development",
+      "title": "Brand Intro Animation",
+      "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "link": "/services/video-animation"
+    },
+    {
+      "id": 2,
+      "category": "Website Development",
+      "title": "Product Explainer Video",
+      "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "link": "/services/video-animation"
+    },
+    {
+      "id": 3,
+      "category": "App Development",
+      "title": "Mobility Machines Logo",
+      "img": "/assets/img/case-studies/04.jpg",
+      "link": "/services/logo-design"
+    },
+    {
+      "id": 4,
+      "category": "App Development",
+      "title": "Tech Startup Brand Identity",
+      "img": "/assets/img/case-studies/06.jpg",
+      "link": "/services/logo-design"
+    },
+    {
+      "id": 5,
+      "category": "Mascot",
+      "title": "Gaming Mascot Character",
+      "img": "/assets/img/case-studies/07.jpg",
+      "link": "/services/mascot-logos"
+    },
+    {
+      "id": 6,
+      "category": "Mascot",
+      "title": "Sports Team Mascot Design",
+      "img": "/assets/img/case-studies/08.jpg",
+      "link": "/services/mascot-logos"
+    },
+    {
+      "id": 7,
+      "category": "Social Media Post Design",
+      "title": "Fashion E-Commerce Store",
+      "img": "/assets/img/case-studies/02.jpg",
+      "link": "/services/shopify-store"
+    },
+    {
+      "id": 8,
+      "category": "Social Media Post Design",
+      "title": "Electronics Store Redesign",
+      "img": "/assets/img/case-studies/03.jpg",
+      "link": "/services/shopify-store"
+    },
+    {
+      "id": 9,
+      "category": "Text Logo",
+      "title": "Instagram Growth Campaign",
+      "img": "/assets/img/case-studies/04.jpg",
+      "link": "/services/social-media"
+    },
+    {
+      "id": 10,
+      "category": "Text Logo",
+      "title": "Text Logo Brand Kit",
+      "img": "/assets/img/case-studies/06.jpg",
+      "link": "/services/social-media"
+    },
+    {
+      "id": 11,
+      "category": "Branding",
+      "title": "2D Mobile Arcade Game",
+      "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "link": "/services/game-development"
+    },
+    {
+      "id": 12,
+      "category": "Branding",
+      "title": "Web-Based Puzzle Game",
+      "img": "/assets/img/case-studies/08.jpg",
+      "link": "/services/game-development"
+    },
+   
+    {
+      "id": 14,
+      "category": "E-commerce Stores",
+      "title": "Mobile App UX Redesign",
+      "img": "/assets/img/case-studies/03.jpg",
+      "link": "/services/ui-ux"
+    },
+     {
+      "id": 15,
+      "category": "E-commerce Stores",
+      "title": "Web-Based Puzzle Game",
+      "img": "/assets/img/case-studies/08.jpg",
+      "link": "/services/game-development"
+    },
+    {
+      "id": 16,
+      "category": "E-commerce Stores",
+      "title": "SaaS Dashboard UI Design",
+      "img": "/assets/img/case-studies/02.jpg",
+      "link": "/services/ui-ux"
+    }
+   
+  ]
+}

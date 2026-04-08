@@ -1,0 +1,257 @@
+"use client";
+
+import { useRef, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+
+import blogData from "../../data/blog.json";
+
+const truncate = (text, maxLength) => {
+  if (!text) return "";
+  return text.length > maxLength ? text.slice(0, maxLength).trimEnd() + "..." : text;
+};
+
+// ✅ Calendar SVG Icon
+const CalendarIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="13"
+    height="13"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ flexShrink: 0, marginTop: "1px" }}
+  >
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+    <line x1="16" y1="2" x2="16" y2="6" />
+    <line x1="8" y1="2" x2="8" y2="6" />
+    <line x1="3" y1="10" x2="21" y2="10" />
+  </svg>
+);
+
+const Blog4 = () => {
+  const { categories, posts } = blogData;
+
+  const sectionRef = useRef(null);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const filteredContent =
+    selectedCategory === "All"
+      ? posts
+      : posts.filter((item) => item.category === selectedCategory);
+
+  const cardsPerPage = 6;
+  const totalPages = Math.ceil(filteredContent.length / cardsPerPage);
+  const currentCards = filteredContent.slice(
+    (currentPage - 1) * cardsPerPage,
+    currentPage * cardsPerPage
+  );
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+    setTimeout(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
+  const handlePageChange = (page) => {
+    if (page < 1 || page > totalPages) return;
+    setCurrentPage(page);
+    setTimeout(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
+  const isFirstPage = currentPage === 1;
+  const isLastPage = currentPage === totalPages;
+
+  return (
+    <section ref={sectionRef} className="section-padding fix">
+      <div className="container">
+
+        {/* Category Tabs */}
+        <div className="text-center mb-4">
+          <ul className="nav justify-content-center gap-2 border-0">
+            {categories.map((cat) => (
+              <li key={cat} className="nav-item">
+                <button
+                  type="button"
+                  className={`nav-link ${selectedCategory === cat ? "active" : ""}`}
+                  onClick={() => handleCategoryClick(cat)}
+                >
+                  {cat}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Cards Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`${selectedCategory}-${currentPage}`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="row g-4"
+            // ✅ align-items-stretch — saari cards row me equal height
+            style={{ alignItems: "stretch" }}
+          >
+            {currentCards.length === 0 && (
+              <div className="text-center w-100">No results found.</div>
+            )}
+
+            {currentCards.map((item, i) => (
+              <motion.div
+                key={`${item.id}-${i}`}
+                className="col-xl-4 col-lg-6 col-md-6"
+                layout
+                // ✅ flex column taaki card andar bhi stretch ho
+                style={{ display: "flex", flexDirection: "column" }}
+              >
+                {/* ✅ Card — height: 100% taaki equal height mile */}
+                <div
+                  className="news-box-items mt-0 shadow-lg rounded overflow-hidden"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%",
+                  }}
+                >
+                  {/* Image */}
+                  <div className="news-image" style={{ flexShrink: 0 }}>
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      width={414}
+                      height={295}
+                      className="w-100"
+                      style={{ display: "block", width: "100%", height: "auto" }}
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div
+                    className="news-content p-3"
+                    style={{
+                      flex: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
+                  >
+                    {/* ✅ Calendar + Date — JSON se, category badge nahi */}
+                    {item.date && (
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "6px",
+                          color: "var(--tp-theme-primary, #1C4401)",
+                          fontSize: "13px",
+                          fontWeight: 500,
+                        }}
+                      >
+                        <CalendarIcon />
+                        <span>{item.date}</span>
+                      </div>
+                    )}
+
+                    {/* ✅ Title: 2 line clamp — text ki waja se card bara chota na ho */}
+                    <h5
+                      style={{
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        lineHeight: "1.5em",
+                        minHeight: "3em",
+                        margin: 0,
+                        wordBreak: "break-word",
+                      }}
+                    >
+                      <Link href={item.link} title={item.title}>
+                        {item.title}
+                      </Link>
+                    </h5>
+
+                    {/* ✅ Paragraph: 2 line clamp */}
+                    {item.paragraph && (
+                      <p
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                          lineHeight: "1.5em",
+                          minHeight: "3em",
+                          margin: 0,
+                          wordBreak: "break-word",
+                          fontSize: "14px",
+                        }}
+                        title={item.paragraph}
+                      >
+                        {item.paragraph}
+                      </p>
+                    )}
+
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="text-center mt-5">
+            <ul className="nav justify-content-center gap-2 border-0">
+
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${isFirstPage ? "disabled opacity-50" : ""}`}
+                  onClick={() => !isFirstPage && handlePageChange(currentPage - 1)}
+                  style={{ pointerEvents: isFirstPage ? "none" : "auto" }}
+                >
+                  Prev
+                </button>
+              </li>
+
+              {Array.from({ length: totalPages }, (_, index) => (
+                <li key={index} className="nav-item">
+                  <button
+                    className={`nav-link ${currentPage === index + 1 ? "active" : ""}`}
+                    onClick={() => handlePageChange(index + 1)}
+                  >
+                    {index + 1}
+                  </button>
+                </li>
+              ))}
+
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${isLastPage ? "disabled opacity-50" : ""}`}
+                  onClick={() => !isLastPage && handlePageChange(currentPage + 1)}
+                  style={{ pointerEvents: isLastPage ? "none" : "auto" }}
+                >
+                  Next
+                </button>
+              </li>
+
+            </ul>
+          </div>
+        )}
+
+      </div>
+    </section>
+  );
+};
+
+export default Blog4;

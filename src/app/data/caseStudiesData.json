@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "title": "Digital Marketing",
+    "number": "01",
+    "bg": "",
+    "delay": ".0s",
+    "active": false,
+    "Image" : "/assets/img/Home/Blur-Background.png",
+    "description": "Performance focused marketing systems powered by AI, automation, and data intelligence, designed to generate leads, conversions, and measurable ROI.",
+  "bname": "Explore Digital Marketing Solutions",
+  "blink":"/digital-marketing"
+    }, 
+
+  {
+    "id": 2,
+    "title": "AI Development",
+    "number": "02",
+    "bg": "bg-1",
+    "delay": ".2s",
+    "active": false,
+        "Image" : "/assets/img/Home/Blur-Background.png",
+    "description": "Custom AI models, automation workflows, and intelligent systems built to optimise operations, reduce costs, and scale business performance.",
+  "bname": "Explore AI Development",
+  "blink":"/ai-development"
+  },
+  {
+    "id": 3,
+    "title": "Web Development",
+    "number": "03",
+    "bg": "bg-2",
+    "delay": ".4s",
+    "active": true,
+        "Image" : "/assets/img/Home/Blur-Background.png",
+    "description": "High-converting, SEO optimised, and AI-ready websites engineered for speed, security, scalability, and lead generation.",
+  "bname":"Explore Website Solutions",
+  "blink":"/website"
+  },
+  {
+    "id": 4,
+    "title": "App Development",
+    "number": "04",
+    "bg": "bg-3",
+    "delay": ".6s",
+    "active": false,
+        "Image" : "/assets/img/Home/Blur-Background.png",
+    "description": "Scalable mobile and web applications built with smart logic, modern architecture, and future-ready performance in mind.",
+  "bname":"Explore App Development",
+  "blink":"/app-developmente"
+  },
+  {
+    "id": 5,
+    "title": "E-Commerce",
+    "number": "05",
+    "bg": "bg-2",
+    "delay": ".4s",
+    "active": true,
+        "Image" : "/assets/img/Home/Blur-Background.png",
+    "description": "Conversion focused, automated e-commerce platforms designed to sell smarter, manage faster, and scale globally.",
+  "bname":"Explore E-Commerce",
+  "blink":"/e-commerce"
+  },
+  {
+    "id": 6,
+    "title": "E-Book Creation",
+    "number": "06",
+    "bg": "bg-3",
+    "delay": ".6s",
+    "active": false,
+        "Image" : "/assets/img/Home/Blur-Background.png",
+    "description": "AI-assisted content creation, professional design, and publishing solutions built to establish authority and digital reach.",
+  "bname":"Explore E-Book",
+  "blink":"/e-book-creation"
+  }
+]

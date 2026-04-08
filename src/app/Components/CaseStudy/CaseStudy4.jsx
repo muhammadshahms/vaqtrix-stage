@@ -1,0 +1,458 @@
+"use client";
+
+import { useRef, useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+// import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+
+import portfolioData from "../../data/portfolio.json";
+
+const CaseStudy4 = ({
+  category = [],
+  topHeading,
+  topText,
+}) => {
+  const { categories, projects } = portfolioData;
+  const allowedCategories =
+    category.length > 0
+      ? categories.filter((cat) => category.includes(cat))
+      : categories;
+
+  const sectionRef = useRef(null);
+  const lightboxVideoRef = useRef(null);
+
+  const [selectedCategory, setSelectedCategory] = useState(
+    category.length ? category[0] : "All"
+  ); const [currentPage, setCurrentPage] = useState(1);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const filteredProjects =
+    category.length > 0
+      ? projects.filter((p) => category.includes(p.category))
+      : projects;
+
+  const filteredContent =
+    selectedCategory === "All"
+      ? filteredProjects
+      : filteredProjects.filter((item) => item.category === selectedCategory);
+
+  const cardsPerPage = 6;
+  const totalPages = Math.ceil(filteredContent.length / cardsPerPage);
+  const currentCards = filteredContent.slice(
+    (currentPage - 1) * cardsPerPage,
+    currentPage * cardsPerPage
+  );
+
+  const openLightbox = (globalIndex) => {
+    setLightboxIndex(globalIndex);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    if (lightboxVideoRef.current) {
+      lightboxVideoRef.current.pause();
+      lightboxVideoRef.current.currentTime = 0;
+    }
+    setLightboxOpen(false);
+  };
+
+  const lightboxPrev = useCallback(() => {
+    setLightboxIndex((prev) => (prev <= 0 ? filteredContent.length - 1 : prev - 1));
+  }, [filteredContent.length]);
+
+  const lightboxNext = useCallback(() => {
+    setLightboxIndex((prev) => (prev >= filteredContent.length - 1 ? 0 : prev + 1));
+  }, [filteredContent.length]);
+
+  // Keyboard support
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const handleKey = (e) => {
+      if (e.key === "ArrowLeft") lightboxPrev();
+      if (e.key === "ArrowRight") lightboxNext();
+      if (e.key === "Escape") closeLightbox();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightboxOpen, lightboxPrev, lightboxNext]);
+
+  // Lock body scroll
+  useEffect(() => {
+    document.body.style.overflow = lightboxOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [lightboxOpen]);
+
+  // Pause video on slide change
+  useEffect(() => {
+    if (lightboxVideoRef.current) {
+      lightboxVideoRef.current.pause();
+      lightboxVideoRef.current.currentTime = 0;
+    }
+  }, [lightboxIndex]);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+    setTimeout(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
+  const handlePageChange = (page) => {
+    if (page < 1 || page > totalPages) return;
+    setCurrentPage(page);
+    setTimeout(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
+  const isFirstPage = currentPage === 1;
+  const isLastPage = currentPage === totalPages;
+  const currentLightboxItem = filteredContent[lightboxIndex];
+
+  return (
+    <>
+      <section ref={sectionRef} className="case-studies-section-4 fix section-padding">
+        <div className="container">
+          {topHeading && (
+            <div className="text-center mb-4" style={{ lineHeight: "60px" }}>
+              <h2>{topHeading}</h2>
+              {topText && <p>{topText}</p>}
+            </div>
+          )}
+          {/* Category Tabs */}
+          <ul className="nav categories-tabs mb-3" role="tablist">
+            {allowedCategories.map((cat, index) => (
+              <li key={`${cat}-${index}`} className="nav-item" onClick={() => handleCategoryClick(cat)}>
+                <a
+                  className={`nav-link ${selectedCategory === cat ? "active" : ""}`}
+                  role="tab"
+                  style={{ cursor: "pointer" }}
+                >
+                  {cat}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Heading */}
+          {!topHeading && (
+            <h2 className="mb-4 case-studies-heading">
+              {selectedCategory === "All" ? "All Projects" : selectedCategory}
+            </h2>
+          )}
+          {/* Cards Grid */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`${selectedCategory}-${currentPage}`}
+              className="row g-4 mt-2"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              {currentCards.length === 0 && <p>No results found.</p>}
+
+              {currentCards.map((item, i) => {
+                const globalIndex = (currentPage - 1) * cardsPerPage + i;
+                const isHovered = hoveredIndex === i;
+                const anyHovered = hoveredIndex !== null;
+                const isVideo = !!item.video;
+
+                return (
+                  <motion.div
+                    key={item.id}
+                    className="col-lg-4 col-md-6 card-item"
+                    layout
+                    style={{ cursor: "pointer" }}
+                    onMouseEnter={() => setHoveredIndex(i)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    onClick={() => openLightbox(globalIndex)}
+                  >
+                    <div
+                      className="case-studies-card-items mt-0"
+                      style={{
+                        position: "relative",
+                        overflow: "hidden",
+                        transition: "filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease",
+                        filter: anyHovered && !isHovered ? "blur(3px)" : "none",
+                        opacity: anyHovered && !isHovered ? 0.5 : 1,
+                        transform: isHovered ? "scale(1.02)" : "scale(1)",
+                      }}
+                    >
+                      <div className="thumb">
+                        {/* ✅ VIDEO card — muted autoplay loop as thumbnail */}
+                        {isVideo ? (
+                          <video
+                            src={item.video}
+                            muted
+                            loop
+                            playsInline
+                            autoPlay
+                            style={{ width: "100%", display: "block", aspectRatio: "3/2", objectFit: "cover", borderRadius: "30px" }}
+                          />
+                        ) : (
+                          /* ✅ IMAGE card */
+                          <Image
+                            src={item.img}
+                            alt={item.title}
+                            width={681}
+                            height={454}
+                            style={{ width: "100%", height: "auto", display: "block" }}
+                          />
+                        )}
+                      </div>
+
+                      {/* ✅ Play icon only on video cards */}
+                      {isVideo && (
+                        <div style={playBadgeStyle}>
+                          <i className="bi bi-play-fill" style={{ color: "#fff", fontSize: "18px" }}></i>
+                        </div>
+                      )}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <ul className="nav categories-tabs justify-content-center mt-5 gap-2">
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${isFirstPage ? "disabled opacity-50" : ""}`}
+                  onClick={() => !isFirstPage && handlePageChange(currentPage - 1)}
+                  style={{ pointerEvents: isFirstPage ? "none" : "auto" }}
+                >Prev</button>
+              </li>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <li key={page} className="nav-item">
+                  <button
+                    className={`nav-link ${currentPage === page ? "active" : ""}`}
+                    onClick={() => handlePageChange(page)}
+                  >{page}</button>
+                </li>
+              ))}
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${isLastPage ? "disabled opacity-50" : ""}`}
+                  onClick={() => !isLastPage && handlePageChange(currentPage + 1)}
+                  style={{ pointerEvents: isLastPage ? "none" : "auto" }}
+                >Next</button>
+              </li>
+            </ul>
+          )}
+
+        </div>
+      </section>
+
+      {/* ✅ LIGHTBOX */}
+      <AnimatePresence>
+        {lightboxOpen && currentLightboxItem && (
+          <motion.div
+            key="lightbox-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={closeLightbox}
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 9999,
+              background: "rgba(0,0,0,0.93)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {/* Counter */}
+            <div style={counterStyle}>
+              {lightboxIndex + 1} / {filteredContent.length}
+            </div>
+
+            {/* Close */}
+            <button onClick={closeLightbox} style={closeBtnStyle} aria-label="Close">✕</button>
+
+            {/* Left Arrow */}
+            <button
+              onClick={(e) => { e.stopPropagation(); lightboxPrev(); }}
+              style={arrowBtnStyle("left")}
+              aria-label="Previous"
+            >
+              <i className="bi bi-chevron-left" style={{ fontSize: "22px" }}></i>
+            </button>
+
+            {/* ✅ Media content */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={lightboxIndex}
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.28 }}
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  maxWidth: "820px",
+                  width: "90%",
+                  borderRadius: "10px",
+                  overflow: "hidden",
+                  boxShadow: "0 24px 70px rgba(0,0,0,0.7)",
+                  background: "#111",
+                }}
+              >
+                {/* ✅ VIDEO — controls, autoPlay */}
+                {currentLightboxItem.video ? (
+                  <video
+                    ref={lightboxVideoRef}
+                    src={currentLightboxItem.video}
+                    controls
+                    autoPlay
+                    style={{ width: "100%", display: "block", maxHeight: "68vh" }}
+                  />
+                ) : (
+                  /* ✅ IMAGE */
+                  <Image
+                    src={currentLightboxItem.img}
+                    alt={currentLightboxItem.title}
+                    width={820}
+                    height={547}
+                    style={{ width: "100%", height: "auto", display: "block" }}
+                  />
+                )}
+
+                {/* Bottom bar */}
+                {/* <div style={bottomBarStyle}>
+                  <div style={{ minWidth: 0 }}>
+                    <h4 style={lightboxTitleStyle}>{currentLightboxItem.title}</h4>
+                    <p style={lightboxCatStyle}>{currentLightboxItem.category}</p>
+                  </div>
+                  {currentLightboxItem.link && (
+                    <Link
+                      href={currentLightboxItem.link}
+                      onClick={(e) => e.stopPropagation()}
+                      style={viewServiceStyle}
+                    >
+                      View Service →
+                    </Link>
+                  )}
+                </div> */}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Right Arrow */}
+            <button
+              onClick={(e) => { e.stopPropagation(); lightboxNext(); }}
+              style={arrowBtnStyle("right")}
+              aria-label="Next"
+            >
+              <i className="bi bi-chevron-right" style={{ fontSize: "22px" }}></i>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+// ── Styles ──────────────────────────────────────────────
+
+const playBadgeStyle = {
+  position: "absolute",
+  top: "12px",
+  right: "12px",
+  background: "rgba(0,0,0,0.6)",
+  borderRadius: "50%",
+  width: "40px",
+  height: "40px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backdropFilter: "blur(4px)",
+};
+
+const counterStyle = {
+  position: "absolute",
+  top: "20px",
+  left: "24px",
+  color: "#fff",
+  fontSize: "14px",
+  fontWeight: 500,
+  userSelect: "none",
+};
+
+const closeBtnStyle = {
+  position: "absolute",
+  top: "16px",
+  right: "20px",
+  background: "transparent",
+  border: "none",
+  color: "#fff",
+  fontSize: "28px",
+  cursor: "pointer",
+  lineHeight: 1,
+  padding: "4px 8px",
+  zIndex: 10,
+};
+
+const arrowBtnStyle = (side) => ({
+  position: "absolute",
+  top: "50%",
+  [side]: "20px",
+  transform: "translateY(-50%)",
+  background: "rgba(255,255,255,0.1)",
+  border: "1px solid rgba(255,255,255,0.2)",
+  borderRadius: "50%",
+  width: "50px",
+  height: "50px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "#fff",
+  cursor: "pointer",
+  zIndex: 10,
+  flexShrink: 0,
+});
+
+const bottomBarStyle = {
+  background: "#1a1a1a",
+  padding: "14px 20px",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  gap: "12px",
+};
+
+const lightboxTitleStyle = {
+  color: "#fff",
+  margin: 0,
+  fontSize: "15px",
+  fontWeight: 600,
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+};
+
+const lightboxCatStyle = {
+  color: "#888",
+  margin: 0,
+  fontSize: "12px",
+  marginTop: "2px",
+};
+
+const viewServiceStyle = {
+  flexShrink: 0,
+  background: "var(--tp-theme-primary, #1C4401)",
+  color: "#fff",
+  fontSize: "13px",
+  textDecoration: "none",
+  fontWeight: 500,
+  padding: "7px 16px",
+  borderRadius: "6px",
+  whiteSpace: "nowrap",
+};
+
+export default CaseStudy4;

@@ -1,0 +1,246 @@
+{
+  "Website": {
+    "heading": "Industries Vaqtrix Empowers With AI-Driven Website Solutions",
+    "paragraph": "Our marketing solutions help you grow your business effectively.",
+    "background": "/assets/img/service/service-bg.jpg",
+    "items": [
+      {
+        "img": "/assets/img/Services/Website Development/Icons/Startups & Tech Innovators.svg",
+        "title": "Startups & Tech Companies",
+        "content": " Vaqtrix helps startups and tech companies build scalable MVPs, platforms, and digital products using modern web technologies, AI automation, and growth-focused website architecture.",
+        "link": "/service/digital-marketing"
+      },
+      {
+        "img": "/assets/img/Services/Website Development/Icons/E-Commerce & Retail Brands.svg",
+        "title": "E-Commerce & Retail Businesses",
+        "content": " Vaqtrix designs high-performance websites for e-commerce and retail brands, focusing on conversion optimization, automation, seamless user journeys, and scalable multi-channel growth.",
+        "link": "/service/seo-analytics"
+      },
+      {
+        "img": "/assets/img/Services/Website Development/Icons/Healthcare & Wellness Providers.svg",
+        "title": "Healthcare & Wellness Providers",
+        "content": " Vaqtrix builds secure and user friendly websites for healthcare and wellness providers, enabling appointment systems, automation, and compliant digital experiences with privacy at the core.",
+        "link": "/service/social-marketing"
+      },
+      {
+        "img": "/assets/img/Services/Website Development/Icons/Finance, FinTech & Business Services.svg",
+        "title": "Finance, FinTech & Professional Services",
+        "content": "Vaqtrix delivers reliable and secure digital platforms for finance and professional firms, supporting automation, client portals, data accuracy, and performance-driven website systems.",
+        "link": "/service/digital-marketing"
+      },
+      {
+        "img": "/assets/img/Services/Website Development/Icons/Real Estate & Property Businesses.svg",
+        "title": "Real Estate & Construction Firms",
+        "content": "Vaqtrix creates modern websites for real estate and construction businesses, including property listings, lead automation, CRM integrations, and conversion-focused digital platforms.",
+        "link": "/service/seo-analytics"
+      },
+      {
+        "img": "/assets/img/Services/Website Development/Icons/Education & Online Learning Platforms.svg",
+        "title": "Education, Training & Coaching Brands",
+        "content": "Vaqtrix supports education and coaching brands with engaging websites, learning portals, content-driven platforms, and automation tools built for scalable knowledge delivery.",
+        "link": "/service/social-marketing"
+      }
+    ]
+  },
+  "Ai": {
+    "heading": "Industries Vaqtrix Powers With AI Automation",
+    "paragraph": "Enhance your social presence with our targeted solutions.",
+    "background": "/assets/img/service/service-bg-2.jpg",
+    "items": [
+      {
+        "img": "/assets/img/Services/AI Development/Icons/Enterprise & Corporate Organizations.svg",
+        "title": "Enterprise & Corporate Organizations",
+        "content": "Vaqtrix automates enterprise operations using intelligent workflows, data automation, and AI systems that improve efficiency, scalability, and decision making.",
+        "link": "/service/email-marketing"
+      },
+      {
+        "img": "/assets/img/Services/AI Development/Icons/Healthcare & Wellness Providers.svg",
+        "title": "Healthcare & Medical Services",
+        "content": "Vaqtrix delivers AI automation for healthcare operations enabling secure data handling, workflow optimisation, and intelligent patient engagement systems.",
+        "link": "/service/social-media-marketing"
+      },
+      {
+        "img": "/assets/img/Services/AI Development/Icons/Finance, FinTech & Business Services.svg",
+        "title": "Finance & FinTech Businesses",
+        "content": "Vaqtrix builds intelligent automation systems for finance teams improving reporting accuracy, compliance workflows, and operational efficiency.",
+        "link": "/service/better-audiences"
+      },
+      {
+        "img": "/assets/img/Services/AI Development/Icons/Real Estate & Property Businesses.svg",
+        "title": "Real Estate & Property Management",
+        "content": "Vaqtrix automates lead management, property listings, CRM workflows, and insights to optimise real estate operations and conversions.",
+        "link": "/service/email-marketing"
+      },
+      {
+        "img": "/assets/img/Services/AI Development/Icons/Education & Online Learning Platforms.svg",
+        "title": "Education & Training Platforms",
+        "content": "Vaqtrix develops AI automation for education platforms supporting enrolment systems, content delivery, and student engagement management.",
+        "link": "/service/social-media-marketing"
+      },
+      {
+        "img": "/assets/img/Services/App development/Icons/E-Commerce & Retail Brands.svg",
+        "title": "E-Commerce & Retail Brands",
+        "content": "Vaqtrix implements AI automation that streamlines inventory, order management, customer interactions, and analytics for smarter online growth.",
+        "link": "/service/better-audiences"
+      }
+    ]
+  },
+  "App": {
+    "heading": "Industries Vaqtrix Empowers With Mobile Apps",
+    "paragraph": "Enhance your social presence with our targeted solutions.",
+    "background":  "/assets/img/service/service-bg-2.jpg",
+    "items": [
+      {
+        "img": "/assets/img/Services/App development/Icons/Startups & Tech Innovators.svg",
+        "title": "Startups & Tech Innovators",
+        "content": "Vaqtrix helps startups and tech innovators build scalable mobile apps, MVPs, and digital products using modern architecture, AI features, and rapid development for faster market entry.",
+        "link": "/service/email-marketing"
+      },
+      {
+        "img": "/assets/img/Services/App development/Icons/E-Commerce & Retail Brands.svg",
+        "title": "E-Commerce & Retail Brands",
+        "content": "Vaqtrix develops high-performance mobile apps for e-commerce and retail brands, focused on seamless shopping, secure payments, smart automation, and scalable customer experiences.",
+        "link": "/service/social-media-marketing"
+      },
+      {
+        "img": "/assets/img/Services/App development/Icons/Healthcare & Wellness Providers.svg",
+        "title": "Healthcare & Wellness Providers",
+        "content": "Vaqtrix creates secure and compliant mobile apps for healthcare and wellness providers, enabling engagement, appointment management, protected data handling, and privacy-first experiences.",
+        "link": "/service/better-audiences"
+      }
+      ,
+      {
+        "img": "/assets/img/Services/App development/Icons/Finance, FinTech & Business Services.svg",
+        "title": "Finance, FinTech & Business Services",
+        "content": "Vaqtrix builds robust mobile apps for finance and professional services, supporting automation, client portals, accurate data handling, and scalable systems designed for trust.",
+        "link": "/service/better-audiences"
+      }
+      ,
+      {
+        "img": "/assets/img/Services/App development/Icons/Real Estate & Property Businesses.svg",
+        "title": "Real Estate & Property Businesses",
+        "content": "Vaqtrix designs mobile apps for real estate businesses, featuring smart listings, lead management, CRM integrations, and performance-focused interfaces that drive inquiries.",
+        "link": "/service/better-audiences"
+      }
+      ,
+      {
+        "img": "/assets/img/Services/App development/Icons/Education & Online Learning Platforms.svg",
+        "title": "Education & Online Learning Platforms",
+        "content": "Vaqtrix develops engaging mobile apps for education platforms, including learning portals, content delivery, automation tools, and scalable systems for better learner engagement.",
+        "link": "/service/better-audiences"
+      }
+    ]
+  },"Digital": {
+    "heading": "Industries Vaqtrix Empowers With Digital Growth",
+    "paragraph": "Enhance your social presence with our targeted solutions.",
+    "background": "/assets/img/service/service-bg-2.jpg",
+    "items": [
+      {
+        "img": "/assets/img/Services/Digital Marketing and Branding/Icons/Startups & Tech Innovators.svg",
+        "title": "Startups & Growing Businesses",
+        "content": "Vaqtrix helps startups and growing businesses build strong digital foundations using strategic branding, performance marketing, and scalable growth campaigns for faster market entry.",
+        "link": "/service/email-marketing"
+      },
+      {
+        "img": "/assets/img/Services/Digital Marketing and Branding/Icons/E-Commerce & Retail Brands.svg",
+        "title": "E-Commerce & Retail Brands",
+        "content": "Vaqtrix drives online sales for e-commerce and retail brands through data led marketing, conversion optimisation, paid campaigns, and performance focused visibility strategies.",
+        "link": "/service/social-media-marketing"
+      },
+      {
+        "img": "/assets/img/Services/Digital Marketing and Branding/Icons/Healthcare & Wellness Providers.svg",
+        "title": "Healthcare & Wellness Providers",
+        "content": "Vaqtrix delivers compliant and trust focused digital marketing for healthcare and wellness providers, improving visibility, engagement, and long-term brand credibility.",
+        "link": "/service/better-audiences"
+      }
+      ,
+      {
+        "img": "/assets/img/Services/Digital Marketing and Branding/Icons/Finance, FinTech & Business Services.svg",
+        "title": "Finance & Professional Services",
+        "content": "Vaqtrix builds authority driven marketing strategies for finance and professional services, focused on trust, lead quality, and consistent business growth.",
+        "link": "/service/better-audiences"
+      }
+      ,
+      {
+        "img": "/assets/img/Services/Digital Marketing and Branding/Icons/Real Estate & Property Businesses.svg",
+        "title": "Real Estate & Property Businesses",
+        "content": "Vaqtrix creates high impact digital campaigns for real estate businesses, generating qualified leads, improving property visibility, and strengthening brand positioning.",
+        "link": "/service/better-audiences"
+      }
+      ,
+      {
+        "img": "/assets/img/Services/Digital Marketing and Branding/Icons/Education & Online Learning Platforms.svg",
+        "title": "Education, Coaches & Creators",
+        "content": "Vaqtrix supports educators, coaches, and creators by scaling online presence through content strategy, audience growth, and conversion focused digital marketing.",
+        "link": "/service/better-audiences"
+      }
+    ]
+  },"Ebook": {
+    "heading": "Social Services",
+    "paragraph": "Enhance your social presence with our targeted solutions.",
+    "background": "/assets/img/service/service-bg-2.jpg",
+    "items": [
+      {
+        "img": "/assets/img/service/icon-4.png",
+        "title": "Email Marketing",
+        "content": "Lorem dolor amet consectetur read adipiscing any more elit.",
+        "link": "/service/email-marketing"
+      },
+      {
+        "img": "/assets/img/service/icon-5.png",
+        "title": "Social Media Marketing",
+        "content": "Lorem dolor amet consectetur read adipiscing any more elit.",
+        "link": "/service/social-media-marketing"
+      },
+      {
+        "img": "/assets/img/service/icon-6.png",
+        "title": "Better audiences",
+        "content": "Lorem dolor amet consectetur read adipiscing any more elit.",
+        "link": "/service/better-audiences"
+      }
+    ]
+  },"Ecom": {
+    "heading": "Industries Vaqtrix Empowers With E-commerce",
+    "paragraph": "Enhance your social presence with our targeted solutions.",
+    "background": "/assets/img/service/service-bg-2.jpg",
+    "items": [
+      {
+        "img": "/assets/img/Services/E-Commerce Solutions/Icons/Retail & Consumer Brands.svg",
+        "title": "Retail & Consumer Brands",
+        "content": "Vaqtrix builds scalable e-commerce platforms for retail brands that improve customer journeys, enhance product discovery, and support consistent online sales growth.",
+        "link": "/service/email-marketing"
+      },
+      {
+        "img": "/assets/img/Services/E-Commerce Solutions/Icons/B2B & Wholesale Businesses.svg",
+        "title": "B2B & Wholesale Businesses",
+        "content": "Vaqtrix develops robust B2B e-commerce systems enabling bulk orders, pricing controls, automation, and integrations that improve efficiency for wholesale operations.",
+        "link": "/service/social-media-marketing"
+      },
+      {
+        "img": "/assets/img/Services/E-Commerce Solutions/Icons/Food, Beverage & D2C Brands.svg",
+        "title": "Food, Beverage & D2C Brands",
+        "content": "Vaqtrix creates conversion focused e-commerce stores for D2C brands with secure payments, inventory control, and seamless order fulfillment experiences.",
+        "link": "/service/better-audiences"
+      },
+      {
+        "img": "/assets/img/Services/E-Commerce Solutions/Icons/Healthcare & Wellness Businesses.svg",
+        "title": "Healthcare & Wellness Businesses",
+        "content": "Vaqtrix builds compliant e-commerce platforms for healthcare and wellness brands supporting subscriptions, product sales, secure payments, and trusted user experiences.",
+        "link": "/service/better-audiences"
+      }
+      ,
+      {
+        "img": "/assets/img/Services/E-Commerce Solutions/Icons/Startups & Growing Enterprises.svg",
+        "title": "Startups & Growing Enterprises",
+        "content": "Vaqtrix helps startups launch scalable e-commerce ecosystems built for rapid growth, flexible product management, and long term online performance.",
+        "link": "/service/better-audiences"
+      },
+      {
+        "img": "/assets/img/Services/E-Commerce Solutions/Icons/Beauty, Fashion & Lifestyle Brands.svg",
+        "title": "Beauty, Fashion & Lifestyle Brands",
+        "content": "Vaqtrix designs visually engaging e-commerce platforms for fashion and lifestyle brands that strengthen branding and maximize customer engagement.",
+        "link": "/service/better-audiences"
+      }
+    ]
+  }
+}

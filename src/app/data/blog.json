@@ -1,0 +1,286 @@
+{
+    "categories": [
+        "All",
+        "General",
+        "About Vaqtrixl",
+        "Website Development",
+         "Mobile App Development", 
+        "AI Development",
+        "E-commerce Solutions",
+        "Digital Marketing & Branding",
+        "E-book Creations"
+    
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "category": "Website Development",
+            "subtitle": "Website Blog",
+            "title": "How to Build a Fast & Modern Website in 2024",
+            "paragraph": "Learn the best practices for building lightning-fast websites using Next.js and Tailwind CSS.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/02.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 2,
+            "category": "Website Development",
+            "subtitle": "Website Blog",
+            "title": "Top 10 UI Trends for Web Design This Year",
+            "paragraph": "Discover the latest UI trends dominating the web design world and how to apply them.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/03.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 3,
+            "category": "Website Development",
+            "subtitle": "Website Blog",
+            "title": "SEO-Friendly Website Structure Guide",
+            "paragraph": "A complete guide to structuring your website for maximum search engine visibility.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/04.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 4,
+            "category": "Mobile App Development",
+            "subtitle": "App Blog",
+            "title": "React Native vs Flutter: Which to Choose?",
+            "paragraph": "A detailed comparison of React Native and Flutter for building cross-platform mobile apps.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/06.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 5,
+            "category": "Mobile App Development",
+            "subtitle": "App Blog",
+            "title": "How to Launch Your First Mobile App Successfully",
+            "paragraph": "Step-by-step process to plan, build, and launch your first mobile application on stores.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/07.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 6,
+            "category": "Mobile App Development",
+            "subtitle": "App Blog",
+            "title": "Best Backend Technologies for Mobile Apps in 2024",
+            "paragraph": "Explore the top backend technologies that power modern mobile applications today.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/08.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 7,
+            "category": "Digital Marketing & Branding",
+            "subtitle": "Marketing",
+            "title": "Digital Marketing Strategies That Actually Work",
+            "paragraph": "Proven digital marketing strategies to grow your brand and increase conversions online.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/02.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 8,
+            "category": "Digital Marketing & Branding",
+            "subtitle": "Marketing",
+            "title": "PPC Advertising: How to Get More ROI in 2024",
+            "paragraph": "Master PPC advertising with tips that help reduce cost and maximize your return on investment.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/03.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 9,
+            "category": "Digital Marketing & Branding",
+            "subtitle": "Marketing",
+            "title": "Social Media Marketing Complete Beginner Guide",
+            "paragraph": "Everything a beginner needs to know about growing their brand through social media platforms.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/04.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 10,
+            "category": "E-commerce Solutions",
+            "subtitle": "Seo Design",
+            "title": "On-Page SEO Checklist for Higher Google Rankings",
+            "paragraph": "A practical on-page SEO checklist to help your pages rank higher on Google search results.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/06.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 11,
+            "category": "E-commerce Solutions",
+            "subtitle": "Seo Design",
+            "title": "Technical SEO: Speed, Structure & Core Web Vitals",
+            "paragraph": "Improve your technical SEO by optimizing site speed, structure, and Core Web Vitals scores.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/07.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 12,
+            "category": "AI Development",
+            "subtitle": "Designer",
+            "title": "UI/UX Design Principles Every Designer Must Know",
+            "paragraph": "Essential UI/UX design principles that help create intuitive and beautiful user experiences.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/08.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 8,
+            "category": "AI Development",
+            "subtitle": "Marketing",
+            "title": "PPC Advertising: How to Get More ROI in 2024",
+            "paragraph": "Master PPC advertising with tips that help reduce cost and maximize your return on investment.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/03.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 9,
+            "category": "AI Development",
+            "subtitle": "Marketing",
+            "title": "Social Media Marketing Complete Beginner Guide",
+            "paragraph": "Everything a beginner needs to know about growing their brand through social media platforms.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/04.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 10,
+            "category": "AI Development",
+            "subtitle": "Seo Design",
+            "title": "On-Page SEO Checklist for Higher Google Rankings",
+            "paragraph": "A practical on-page SEO checklist to help your pages rank higher on Google search results.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/06.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 11,
+            "category": "AI Development",
+            "subtitle": "Seo Design",
+            "title": "Technical SEO: Speed, Structure & Core Web Vitals",
+            "paragraph": "Improve your technical SEO by optimizing site speed, structure, and Core Web Vitals scores.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/07.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 12,
+            "category": "E-book Creations",
+            "subtitle": "Designer",
+            "title": "UI/UX Design Principles Every Designer Must Know",
+            "paragraph": "Essential UI/UX design principles that help create intuitive and beautiful user experiences.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/08.jpg",
+            "link": "/project/project-details"
+        },
+         {
+            "id": 13,
+            "category": "E-book Creations",
+            "subtitle": "Marketing",
+            "title": "PPC Advertising: How to Get More ROI in 2024",
+            "paragraph": "Master PPC advertising with tips that help reduce cost and maximize your return on investment.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/03.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 14,
+            "category": "General",
+            "subtitle": "Marketing",
+            "title": "Social Media Marketing Complete Beginner Guide",
+            "paragraph": "Everything a beginner needs to know about growing their brand through social media platforms.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/04.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 15,
+            "category": "General",
+            "subtitle": "Seo Design",
+            "title": "On-Page SEO Checklist for Higher Google Rankings",
+            "paragraph": "A practical on-page SEO checklist to help your pages rank higher on Google search results.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/06.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 16,
+            "category": "General",
+            "subtitle": "Seo Design",
+            "title": "Technical SEO: Speed, Structure & Core Web Vitals",
+            "paragraph": "Improve your technical SEO by optimizing site speed, structure, and Core Web Vitals scores.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/07.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 17,
+            "category": "General",
+            "subtitle": "Designer",
+            "title": "UI/UX Design Principles Every Designer Must Know",
+            "paragraph": "Essential UI/UX design principles that help create intuitive and beautiful user experiences.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/08.jpg",
+            "link": "/project/project-details"
+        },
+         {
+            "id": 18,
+            "category": "About Vaqtrixl",
+            "subtitle": "Marketing",
+            "title": "PPC Advertising: How to Get More ROI in 2024",
+            "paragraph": "Master PPC advertising with tips that help reduce cost and maximize your return on investment.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/03.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 19,
+            "category": "About Vaqtrixl",
+            "subtitle": "Marketing",
+            "title": "Social Media Marketing Complete Beginner Guide",
+            "paragraph": "Everything a beginner needs to know about growing their brand through social media platforms.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/04.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 20,
+            "category": "About Vaqtrixl",
+            "subtitle": "Seo Design",
+            "title": "On-Page SEO Checklist for Higher Google Rankings",
+            "paragraph": "A practical on-page SEO checklist to help your pages rank higher on Google search results.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/06.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 21,
+            "category": "About Vaqtrixl",
+            "subtitle": "Seo Design",
+            "title": "Technical SEO: Speed, Structure & Core Web Vitals",
+            "paragraph": "Improve your technical SEO by optimizing site speed, structure, and Core Web Vitals scores.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/07.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 22,
+            "category": "About Vaqtrixl",
+            "subtitle": "Designer",
+            "title": "UI/UX Design Principles Every Designer Must Know",
+            "paragraph": "Essential UI/UX design principles that help create intuitive and beautiful user experiences.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/08.jpg",
+            "link": "/project/project-details"
+        }
+    ]
+}

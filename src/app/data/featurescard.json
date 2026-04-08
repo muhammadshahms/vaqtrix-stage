@@ -1,0 +1,305 @@
+{
+  "categories": [
+    {
+      "name": "High Performance Website Development Services",
+      "services": [
+        {
+          "title": "Custom Website Development",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": " Scalable, high performance websites built with modern frameworks to support business growth, speed, and long term reliability."
+        },
+        {
+          "title": "AI SaaS Website Development",
+          "image": "/assets/img/Services/Website Development/Images/AI SaaS Website Development.png",
+          "desc": "Secure SaaS platforms with dashboards, automation, and scalable architecture designed for multi vendor and subscription based models."
+        },
+        {
+          "title": "CMS Website Development",
+          "image": "/assets/img/Services/Website Development/Images/CMS Website Development.png",
+          "desc": "SEO friendly CMS websites built for easy management, flexibility, and performance using modern and headless CMS platforms."
+        },
+        {
+          "title": "Web Application Development",
+          "image": "/assets/img/Services/Website Development/Images/Web Application Development.png",
+          "desc": "Secure and scalable web applications built for automation, workflows, and performance using modern cloud ready technologies."
+        },
+        {
+          "title": "UI/UX Design for Websites",
+          "image": "/assets/img/Services/Website Development/Images/UiUx Design for Websites.png",
+          "desc": "Conversion focused UI/UX design based on research, usability testing, and data driven user behavior insights."
+        },
+        {
+          "title": "API Integration & Automation",
+          "image": "/assets/img/Services/Website Development/Images/API Integration & Automation.png",
+          "desc": "Seamless API integrations connecting business systems to automate workflows, sync data, and improve operational efficiency."
+        },
+         {
+          "title": "SEO & Performance Optimization",
+          "image": "/assets/img/Services/Website Development/Images/SEO & Performance Optimization.png",
+          "desc": "Technical SEO and performance optimisation focused on speed, Core Web Vitals, clean code, and measurable growth."
+        },
+        {
+          "title": "Website Maintenance & Support",
+          "image": "/assets/img/Services/Website Development/Images/Website Maintenance & Support.png",
+          "desc": "Ongoing monitoring, updates, backups, and support to ensure website stability, security, and performance."
+        },
+        {
+          "title": "Website Security & Protection",
+          "image": "/assets/img/Services/Website Development/Images/Website Security & Protection.png",
+          "desc": "Advanced security measures including SSL, monitoring, backups, and protection to safeguard data and users."
+        }
+        
+      ]
+    },
+    {
+      "name": "Mobile App Development Services Built to Scale",
+      "services": [
+        {
+          "title": "Native Mobile App Development",
+          "image": "/assets/img/Services/App development/Images/Native Mobile App Development.png",
+          "desc": "High performance native iOS and Android apps built for speed, security, and seamless user experiences using platform specific best practices."
+        },
+        {
+          "title": "Cross-Platform App Development",
+          "image": "/assets/img/Services/App development/Images/Cross-Platform App Development.png",
+          "desc": "Cost efficient cross-platform mobile apps delivering consistent performance and design across iOS and Android using scalable frameworks."
+        }
+        ,{
+          "title": "Custom Mobile App Development",
+          "image": "/assets/img/Services/App development/Images/Custom Mobile App Development.png",
+          "desc": "Custom mobile applications designed around your business logic, workflows, and growth goals with scalable and flexible architecture."
+        },
+        {
+          "title": "Enterprise Mobility Solutions",
+          "image": "/assets/img/Services/App development/Images/Enterprise Mobility Solutions.png",
+          "desc": "Secure enterprise mobile solutions supporting workforce mobility, system integrations, automation, and data driven operations."
+        },
+        {
+          "title": "App Modernisation & Optimisation",
+          "image": "/assets/img/Services/App development/Images/App Modernisation & Optimisation.png",
+          "desc": "Legacy mobile apps upgraded with modern UI, better performance, stronger security, and optimised platform architecture."
+        },
+        {
+          "title": "Mobile UI/UX Design Services",
+          "image": "/assets/img/Services/App development/Images/Mobile UiUx Design Services.png",
+          "desc": "User centric mobile UI/UX design focused on usability, engagement, accessibility, and conversion through research-led design."
+        },
+         {
+          "title": "Mobile App Testing & QA",
+          "image": "/assets/img/Services/App development/Images/Mobile App Testing & QA.png",
+          "desc": "Comprehensive mobile app testing and QA ensuring stability, performance, security, and cross device compatibility."
+        },
+        {
+          "title": "Ongoing Maintenance & Support",
+          "image": "/assets/img/Services/App development/Images/Ongoing Maintenance & Support.png",
+          "desc": "Continuous monitoring, updates, bug fixes, and performance improvements to keep mobile apps reliable and future ready."
+        },
+        {
+          "title": "Web3 & Blockchain App Integration",
+          "image": "/assets/img/Services/App development/Images/Web3 & Blockchain App Integration.png",
+          "desc": "Next generation mobile apps integrating blockchain, smart contracts, and Web3technologies for secure digital experiences. "
+        }
+      ]
+    },
+    {
+      "name": "Vaqtrix AI Automation Solutions We Deliver",
+      "services": [
+        {
+          "title": "AI Workflow Automation",
+          "image": "/assets/img/Services/AI Development/Images/AI Workflow Automation.png",
+          "desc": "Vaqtrix automates repetitive business workflows using intelligent systems that reduce manual effort improve accuracy and accelerate daily operations."
+        },
+        {
+          "title": "AI Data Analytics & Insights",
+          "image": "/assets/img/Services/AI Development/Images/AI Data Analytics & Insights.png",
+          "desc": "Vaqtrix transforms raw business data into actionable insights using AI analytics predictive models and real time performance tracking tools."
+        },
+        {
+          "title": "AI Process Optimization",
+          "image": "/assets/img/Services/AI Development/Images/AI Process Optimization.png",
+          "desc": "Vaqtrix optimizes complex operations through AI driven analysis automation logic and performance improvements for smarter decision making."
+        },
+        {
+          "title": "AI System Integration",
+          "image": "/assets/img/Services/AI Development/Images/AI System Integration.png",
+          "desc": "Vaqtrix integrates AI models with existing systems CRMs ERPs APIs and cloud infrastructure to create unified intelligent workflows."
+        },
+        {
+          "title": "AI Chatbots & Virtual Assistants",
+          "image": "/assets/img/Services/AI Development/Images/AI Chatbots & Virtual Assistants.png",
+          "desc": "Vaqtrix deploys AI chatbots that automate support answer questions and deliver human-like customer interactions across digital platforms."
+        },
+        {
+          "title": "Predictive Analytics & Forecasting",
+          "image": "/assets/img/Services/AI Development/Images/Predictive Analytics & Forecasting.png",
+          "desc": "Vaqtrix applies machine learning models to forecast trends demand and performance enabling smarter business planning."
+        },
+         {
+          "title": "Business Process Automation",
+          "image": "/assets/img/Services/AI Development/Images/Business Process Automation.png",
+          "desc": "Vaqtrix streamlines internal workflows using AI automation reducing operational costs improving efficiency and eliminating repetitive tasks."
+        },
+        {
+          "title": "Custom AI Solutions Development",
+          "image": "/assets/img/Services/AI Development/Images/Custom AI Solutions Development.png",
+          "desc": "Vaqtrix develops tailored AI systems aligned with business workflows data structures and long term scalability requirements."
+        },
+        {
+          "title": "AI Security & Compliance Automation",
+          "image": "/assets/img/Services/AI Development/Images/AI Security.png",
+          "desc": "Vaqtrix strengthens security through AI monitoring threat detection compliance automation and proactive risk management."
+        }
+      ]
+    },
+    {
+      "name": "Vaqtrix Digital Marketing Solutions Built For Real Growth",
+      "services": [
+        {
+          "title": "Search Engine Optimization (SEO)",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Search Engine Optimization (SEO).png",
+          "desc": "Improve organic visibility with Vaqtrix SEO strategies focused on rankings, qualified traffic, technical optimization, and long term search growth."
+        },
+        {
+          "title": "Social Media Marketing (SMM)",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Social Media Marketing (SMM).png",
+          "desc": "Build brand presence and engagement using Vaqtrix social strategies powered by audience insights, platform optimization, and consistent content."
+        },
+        {
+          "title": "Content Marketing",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Content Marketing.png",
+          "desc": "Create value driven content with Vaqtrix that educates users, strengthens authority, improves SEO signals, and drives meaningful conversions."
+        },
+        {
+          "title": "Email & Marketing Automation",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Email & Marketing Automation.png",
+          "desc": "Vaqtrix designs automated email systems and marketing workflows that nurture leads, improve retention, and scale communication efficiently."
+        },
+        {
+          "title": "Pay-Per-Click (PPC) Advertising",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Pay-Per-Click (PPC) Advertising.png",
+          "desc": "Generate targeted traffic and measurable ROI with Vaqtrix PPC campaigns optimized for search, social platforms, and paid media funnels."
+        },
+        {
+          "title": "Analytics & Conversion Optimization",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Analytics & Conversion Optimization.png",
+          "desc": "Vaqtrix uses data tracking, testing, and insights to optimize user journeys, improve conversions, and maximize marketing performance."
+        },
+         {
+          "title": "Influencer & Affiliate Marketing",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Influencer & Affiliate Marketing.png",
+          "desc": "Expand reach through Vaqtrix managed influencer partnerships and affiliate campaigns focused on credibility, performance, and brand alignment."
+        },
+        {
+          "title": "Brand Strategy & Creative Design",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Brand Strategy & Creative Design.png",
+          "desc": "Build a strong brand foundation with Vaqtrix creative strategy, visual identity, messaging systems, and conversion focused design assets."
+        },
+        {
+          "title": "Reputation & Online Presence Management",
+          "image": "/assets/img/Services/Digital Marketing and Branding/Images/Reputation & Online Presence Management.png",
+          "desc": "Vaqtrix protects and grows your digital reputation through review management, listings optimization, and online brand trust building."
+        }
+      ]
+    },
+    {
+      "name": "Ebook",
+      "services": [
+        {
+          "title": "Tech Consulting",
+          "image": "https://picsum.photos/320/450?9",
+          "desc": "Expert advice to scale your technology stack."
+        },
+        {
+          "title": "Cloud Solutions",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": "Secure cloud services to modernize your business."
+        },
+        {
+          "title": "CMS Website Development",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": ""
+        },
+        {
+          "title": "Web Application Development",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": ""
+        },
+        {
+          "title": "UI/UX Design for Websites",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": ""
+        },
+        {
+          "title": "API Integration & Automation",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": ""
+        },
+         {
+          "title": "SEO & Performance Optimization",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": ""
+        },
+        {
+          "title": "Website Maintenance & Support",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": ""
+        },
+        {
+          "title": "Website Security & Protection",
+          "image": "/assets/img/Services/Website Development/Images/Custom Website Development.png",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "name": "Vaqtrix E-Commerce Solutions Built To Scale",
+      "services": [
+        {
+          "title": "E-Commerce Website Development",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/E-Commerce Website Development.png",
+          "desc": "Vaqtrix builds high performance e-commerce websites engineered for speed, scalability, and seamless shopping experiences across modern devices."
+        },
+        {
+          "title": "Multi Vendor Marketplace Solutions",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/Multi Vendor Marketplace Solutions.png",
+          "desc": "Vaqtrix develops powerful multi-vendor marketplaces with vendor dashboards, commission systems, and scalable architecture for growing platforms."
+        },
+        {
+          "title": "Payment Gateway Integration",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/Payment Gateway Integration.png",
+          "desc": "Vaqtrix integrates secure payment gateways supporting multiple currencies, providers, and optimized checkout flows for smooth transactions."
+        },
+        {
+          "title": "Product & Inventory Management",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/Product & Inventory Management.png",
+          "desc": "Vaqtrix implements smart inventory systems with real time stock control, product management tools, and automated updates across channels."
+        },
+        {
+          "title": "Mobile Commerce App Development",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/Mobile Commerce App Development.png",
+          "desc": "Vaqtrix builds mobile commerce apps for Android and iOS featuring smooth navigation, wish lists, push alerts, and conversion focused checkout."
+        },
+        {
+          "title": "Conversion Rate Optimization (CRO)",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/Conversion Rate Optimization (CRO).png",
+          "desc": "Vaqtrix applies data driven optimization to improve user journeys, increase conversions, and maximize online sales performance."
+        },
+         {
+          "title": "E-Commerce Automation Solutions",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/E-Commerce Automation Solutions.png",
+          "desc": "Vaqtrix automates order processing, notifications, inventory sync, and workflows to streamline operations and reduce manual tasks."
+        },
+        {
+          "title": "SEO & Performance Optimization",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/SEO & Performance Optimization.png",
+          "desc": "Vaqtrix delivers SEO ready e-commerce structures with fast loading speeds, clean code, and improved search visibility."
+        },
+        {
+          "title": "Security & Compliance Management",
+          "image": "/assets/img/Services/E-Commerce Solutions/Images/Security & Compliance Management.png",
+          "desc": "Vaqtrix strengthens store security with SSL protection, fraud monitoring, and data safeguards for trusted transactions."
+        }
+      ]
+    }
+  ]
+}

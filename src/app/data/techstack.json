@@ -1,0 +1,32 @@
+{
+  "ai": {
+    "heading": "Our Technology Stack Powering",
+    "subheading": "Intelligent Digital Solutions",
+    "desktopImage": "/assets/img/Services/AI Development/Images/Vaqtrix AI Development.png",
+    "mobileImage": "/assets/img/Services/AI Development/Images/Vaqtrix AI Development (Mobile Responsive).png" 
+  },
+  "website": {
+    "heading": "Advanced Website Development Tech Stack",
+    "subheading": "Built for Performance & Scalability",
+    "desktopImage": "/assets/img/Services/Website Development/Images/Vaqtrix Website Teck Stack.png",
+    "mobileImage": "/assets/img/Services/Website Development/Images/Vaqtrix Website Teck Stack (Mobile Responsive).png"
+  },
+  "app": {
+    "heading": "Advanced Mobile App Development Tech Stack",
+    "subheading": "Built for Performance & Scalability",
+    "desktopImage": "/assets/img/Services/App development/Images/Vaqtrix Mobile app Tech Stack.png",
+    "mobileImage": "/assets/img/Services/App development/Images/Vaqtrix Mobile app Tech Stack (Mobile Responsive).png"
+  },
+  "digital": {
+    "heading": "Digital Marketing Tech Stack",
+    "subheading": "Platforms & Tools We Use For Growth",
+    "desktopImage": "/assets/img/Services/Digital Marketing and Branding/Images/Vaqtrix Digital Marketing and Branding.png",
+    "mobileImage": "/assets/img/Services/Digital Marketing and Branding/Images/Vaqtrix Digital Marketing and Branding (Mobile Responsive).png"
+  },
+  "ecom": {
+    "heading": "Advanced E-Commerce Solution Tech Stack ",
+    "subheading": "Built for Performance & Scalability",
+    "desktopImage": "/assets/img/Services/E-Commerce Solutions/Images/Vaqtrix E-Commerce Solution.png",
+    "mobileImage": "/assets/img/Services/E-Commerce Solutions/Images/Vaqtrix E-Commerce Solution (1080 x 1080 px).png"
+  }
+}

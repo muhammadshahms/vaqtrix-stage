@@ -1,0 +1,396 @@
+{
+    "categories": [
+        "Website Development",
+        "Mobile App Development",
+        "AI Development",
+        "Digital Marketing",
+        "E-commerce Solutions",
+        "E-Book"
+    ],
+    "pages": {
+        "home": {
+            "badge": "FAQs",
+            "title": "Frequently Asked Questions About Working With Vaqtrix",
+            "description": "We're not just another digital agency. Vaqtrix is your AI-powered growth partner, helping businesses build smart software, automate operations, and scale with confidence.",
+            "listItems": [
+                "AI-Driven Solutions",
+                "Automation Expertise"
+            ],
+            "faqs": [
+                {
+                    "id": 1,
+                    "category": "Working With Vaqtrix",
+                    "title": "What does Vaqtrix actually do?",
+                    "content": "Vaqtrix is an AI-centric software and digital solutions company. We build intelligent websites, applications, automation systems, and AI-driven marketing solutions that help businesses grow, scale, and operate more efficiently."
+                },
+                {
+                    "id": 2,
+                    "category": "Working With Vaqtrix",
+                    "title": "How is Vaqtrix different from a normal software agency?",
+                    "content": "We are not a traditional software house. Vaqtrix focuses on AI-first, automation-driven systems designed for long-term scalability, ROI, and future readiness, not just basic development or one-time projects."
+                },
+                {
+                    "id": 3,
+                    "category": "Working With Vaqtrix",
+                    "title": "Which types of businesses do you work with?",
+                    "content": "We work with startups, growing businesses, and enterprises across the UK, USA, and global markets. Our solutions are tailored for small teams as well as large scale operations."
+                },
+                {
+                    "id": 4,
+                    "category": "Working With Vaqtrix",
+                    "title": "Do you provide custom solutions or fixed packages?",
+                    "content": "We offer both. You can choose from our structured AI-powered packages or request fully customised solutions based on your business goals, industry, and technical requirements."
+                },
+                {
+                    "id": 5,
+                    "category": "Working With Vaqtrix",
+                    "title": "How long does it take to see results?",
+                    "content": "Timelines depend on the service. Websites and automation systems show impact within weeks, while SEO and organic growth typically deliver measurable results over a few months through consistent optimisation."
+                },
+                {
+                    "id": 6,
+                    "category": "Working With Vaqtrix",
+                    "title": "How do we get started with Vaqtrix?",
+                    "content": "Getting started is simple. Contact us for a free consultation, share your business goals, and our team will recommend the right AI-driven strategy and solution for your growth."
+                }
+            ]
+        },
+        "about": {
+            "badge": "FAQs",
+            "title": "Frequently Asked Questions About Working With Vaqtrix",
+            "description": "We're not just another digital agency. Vaqtrix is your AI-powered growth partner, helping businesses build smart software, automate operations, and scale with confidence.",
+            "listItems": [
+                "AI-Driven Solutions",
+                "Automation Expertise"
+            ],
+            "faqs": [
+                {
+                    "id": 1,
+                    "category": "Working With Vaqtrix",
+                    "title": "What does Vaqtrix actually do?",
+                    "content": "Vaqtrix is an AI-centric software and digital solutions company. We build intelligent websites, applications, automation systems, and AI-driven marketing solutions that help businesses grow, scale, and operate more efficiently."
+                },
+                {
+                    "id": 2,
+                    "category": "Working With Vaqtrix",
+                    "title": "How is Vaqtrix different from a normal software agency?",
+                    "content": "We are not a traditional software house. Vaqtrix focuses on AI-first, automation-driven systems designed for long-term scalability, ROI, and future readiness, not just basic development or one-time projects."
+                },
+                {
+                    "id": 3,
+                    "category": "Working With Vaqtrix",
+                    "title": "Which types of businesses do you work with?",
+                    "content": "We work with startups, growing businesses, and enterprises across the UK, USA, and global markets. Our solutions are tailored for small teams as well as large scale operations."
+                },
+                {
+                    "id": 4,
+                    "category": "Working With Vaqtrix",
+                    "title": "Do you provide custom solutions or fixed packages?",
+                    "content": "We offer both. You can choose from our structured AI-powered packages or request fully customised solutions based on your business goals, industry, and technical requirements."
+                },
+                {
+                    "id": 5,
+                    "category": "Working With Vaqtrix",
+                    "title": "How long does it take to see results?",
+                    "content": "Timelines depend on the service. Websites and automation systems show impact within weeks, while SEO and organic growth typically deliver measurable results over a few months through consistent optimisation."
+                },
+                {
+                    "id": 6,
+                    "category": "Working With Vaqtrix",
+                    "title": "How do we get started with Vaqtrix?",
+                    "content": "Getting started is simple. Contact us for a free consultation, share your business goals, and our team will recommend the right AI-driven strategy and solution for your growth."
+                }
+            ]
+        },
+        "website": {
+            "badge": "FAQs",
+            "title": "Website Development FAQs",
+            "description": "Clear answers to common website development questions covering design, performance, SEO, security, timelines, and scalability to help you choose the right solution. Now!",
+            "listItems": [
+                "Trusted web experts",
+                "Performance focused!"
+            ],
+            "faqs": [
+                {
+                    "id": 1,
+                    "category": "Website Development",
+                    "title": "What types of websites does Vaqtrix develop?",
+                    "content": "Vaqtrix develops business websites, landing pages, SaaS platforms, e-commerce websites, and custom web applications built for performance, scalability, and growth."
+                },
+                {
+                    "id": 2,
+                    "category": "Website Development",
+                    "title": "Are your websites SEO-ready from launch?",
+                    "content": "Yes, all Vaqtrix websites are built with clean code, technical SEO best practices, fast loading speeds, and Core Web Vitals optimisation from day one."
+                },
+                {
+                    "id": 3,
+                    "category": "Website Development",
+                    "title": "Can Vaqtrix build scalable and future-ready websites?",
+                    "content": "Absolutely. Vaqtrix focuses on scalable architecture, modular development, and modern frameworks to ensure your website grows with your business."
+                },
+                {
+                    "id": 4,
+                    "category": "Website Development",
+                    "title": "Do you offer custom designs or templates?",
+                    "content": "Vaqtrix primarily delivers custom designed websites tailored to your brand, goals, and users, ensuring a unique and conversion-focused experience."
+                },
+                {
+                    "id": 5,
+                    "category": "Website Development",
+                    "title": "How long does website development take?",
+                    "content": "Project timelines depend on complexity, features, and requirements. Most websites are delivered through a structured, milestone based development process."
+                },
+                {
+                    "id": 6,
+                    "category": "Website Development",
+                    "title": "Do you provide ongoing website support?",
+                    "content": "Yes, Vaqtrix offers ongoing maintenance, performance monitoring, updates, and security support to ensure long term stability and reliability."
+                }
+            ]
+        },
+        "app": {
+            "badge": "FAQs",
+            "title": "Mobile App Development FAQs & Answers",
+            "description": "Clear answers to common mobile app development questions covering platforms features timelines security scalability and support to help you choose the right solution.",
+            "listItems": [
+                "Trusted app experts",
+                "Scalable app builds"
+            ],
+            "faqs": [
+                {
+                    "id": 1,
+                    "category": "Mobile App Development",
+                    "title": "What types of mobile apps does Vaqtrix develop?",
+                    "content": "Vaqtrix develops native iOS apps, Android apps, and cross-platform mobile applications for startups, growing businesses, and enterprises."
+                },
+                {
+                    "id": 2,
+                    "category": "Mobile App Development",
+                    "title": "Do you build apps for both iOS and Android?",
+                    "content": "Yes, Vaqtrix builds apps for iOS, Android, and cross-platform solutions depending on your business goals, budget, and scalability needs."
+                },
+                {
+                    "id": 3,
+                    "category": "Mobile App Development",
+                    "title": "How long does mobile app development take?",
+                    "content": "Timelines depend on app complexity and features. Most projects follow a structured process with clear milestones and delivery phases."
+                },
+                {
+                    "id": 4,
+                    "category": "Mobile App Development",
+                    "title": "Can Vaqtrix build scalable and secure mobile apps?",
+                    "content": "Absolutely. Vaqtrix focuses on scalable architecture, secure backend systems, and performance driven development for long term growth."
+                },
+                {
+                    "id": 5,
+                    "category": "Mobile App Development",
+                    "title": "Do you provide UI/UX design for mobile apps?",
+                    "content": "Yes, Vaqtrix designs user-centric mobile UI/UX focused on usability, engagement, accessibility, and conversion optimization."
+                },
+                {
+                    "id": 6,
+                    "category": "Mobile App Development",
+                    "title": "Do you offer post-launch support and maintenance?",
+                    "content": "Yes, Vaqtrix provides ongoing support, updates, performance monitoring, and maintenance to keep your mobile app reliable and secure."
+                }
+            ]
+        },
+        "digital": {
+            "badge": "FAQs",
+            "title": "Digital Marketing FAQs & Answers Hub",
+            "description": "Clear answers to common digital marketing and branding questions covering SEO paid ads content strategy automation analytics and growth planning.",
+            "listItems": [
+                "Trusted growth team",
+                "Data driven results"
+            ],
+            "faqs": [
+                {
+                    "id": 1,
+                    "category": "Digital Marketing",
+                    "title": "What digital marketing services does Vaqtrix offer?",
+                    "content": "Vaqtrix provides SEO, paid advertising, social media marketing, content strategy, email marketing, analytics, and brand development to help businesses grow online."
+                },
+                {
+                    "id": 2,
+                    "category": "Digital Marketing",
+                    "title": "How long does digital marketing take to show results?",
+                    "content": "Results depend on strategy and competition. SEO may take a few months, while paid advertising and social campaigns can generate faster traffic and leads."
+                },
+                {
+                    "id": 3,
+                    "category": "Digital Marketing",
+                    "title": "Do you create custom marketing strategies?",
+                    "content": "Yes. Vaqtrix develops tailored marketing strategies based on your industry, audience, competitors, and long-term growth objectives."
+                },
+                {
+                    "id": 4,
+                    "category": "Digital Marketing",
+                    "title": "Can Vaqtrix manage paid advertising campaigns?",
+                    "content": "Absolutely. Vaqtrix manages PPC campaigns across Google, social platforms, and display networks to generate targeted traffic and measurable ROI."
+                },
+                {
+                    "id": 5,
+                    "category": "Digital Marketing",
+                    "title": "Do you provide analytics and performance tracking?",
+                    "content": "Yes. Vaqtrix implements advanced tracking, dashboards, and analytics to measure traffic, engagement, and conversions for continuous optimization."
+                },
+                {
+                    "id": 6,
+                    "category": "Digital Marketing",
+                    "title": "Do you offer ongoing digital marketing support?",
+                    "content": "Yes. Vaqtrix provides continuous marketing management, campaign optimization, reporting, and strategy updates to support long-term business growth."
+                }
+            ]
+        },
+        "ecom": {
+            "badge": "FAQs",
+            "title": "E-commerce Solutions FAQs & Answers",
+            "description": "Find answers to common e-commerce questions covering store development payments integrations performance security and scaling online businesses.",
+            "listItems": [
+                "Trusted commerce team",
+                "Growth driven stores"
+            ],
+            "faqs": [
+                {
+                    "id": 1,
+                    "category": "E-commerce Solutions",
+                    "title": "What e-commerce platforms does Vaqtrix build stores on?",
+                    "content": "Vaqtrix develops e-commerce stores using platforms such as Shopify, WooCommerce, and custom solutions tailored to your business model."
+                },
+                {
+                    "id": 2,
+                    "category": "E-commerce Solutions",
+                    "title": "Can Vaqtrix build scalable online stores for growth?",
+                    "content": "Yes. Vaqtrix builds scalable e-commerce systems designed to support product expansion, higher traffic, and long-term online sales growth."
+                },
+                {
+                    "id": 3,
+                    "category": "E-commerce Solutions",
+                    "title": "Do you integrate payment gateways into stores?",
+                    "content": "Absolutely. Vaqtrix integrates secure payment gateways supporting multiple currencies, payment methods, and smooth checkout experiences."
+                },
+                {
+                    "id": 4,
+                    "category": "E-commerce Solutions",
+                    "title": "Will my e-commerce store be mobile friendly?",
+                    "content": "Yes. All Vaqtrix e-commerce platforms are mobile responsive to ensure seamless shopping experiences across smartphones and tablets."
+                },
+                {
+                    "id": 5,
+                    "category": "E-commerce Solutions",
+                    "title": "Do you provide SEO optimization for e-commerce stores?",
+                    "content": "Yes. Vaqtrix structures e-commerce platforms with SEO-ready architecture, fast loading speeds, and optimized product pages."
+                },
+                {
+                    "id": 6,
+                    "category": "E-commerce Solutions",
+                    "title": "Do you offer support after the store launch?",
+                    "content": "Yes. Vaqtrix provides ongoing maintenance, performance monitoring, updates, and optimization to keep your store secure and scalable."
+                }
+            ]
+        },
+        "ai": {
+            "badge": "FAQs",
+            "title": "AI Development FAQs & Answers Guide",
+            "description": "Explore answers to common AI development questions covering automation machine learning integration data insights scalability and business applications.",
+            "listItems": [
+                "Trusted AI experts",
+                "Automation at scale"
+            ],
+            "faqs": [
+                {
+                    "id": 1,
+                    "category": "AI Development",
+                    "title": "What AI development services does Vaqtrix provide?",
+                    "content": "Vaqtrix develops AI solutions including workflow automation, predictive analytics, machine learning systems, chatbots, and custom AI integrations for businesses."
+                },
+                {
+                    "id": 2,
+                    "category": "AI Development",
+                    "title": "How can AI help improve business operations?",
+                    "content": "AI helps automate repetitive tasks, analyze data faster, improve decision making, and optimize processes to increase efficiency and productivity."
+                },
+                {
+                    "id": 3,
+                    "category": "AI Development",
+                    "title": "Can Vaqtrix integrate AI with existing systems?",
+                    "content": "Yes. Vaqtrix integrates AI models with CRMs, ERPs, APIs, and cloud infrastructure to enhance existing workflows and digital systems."
+                },
+                {
+                    "id": 4,
+                    "category": "AI Development",
+                    "title": "Do you build custom AI solutions for businesses?",
+                    "content": "Absolutely. Vaqtrix designs AI systems tailored to specific workflows, datasets, and operational goals to ensure long term scalability."
+                },
+                {
+                    "id": 5,
+                    "category": "AI Development",
+                    "title": "What industries can benefit from AI automation?",
+                    "content": "AI automation can benefit industries such as finance, healthcare, e-commerce, real estate, logistics, and enterprise operations."
+                },
+                {
+                    "id": 6,
+                    "category": "AI Development",
+                    "title": "Do you provide support after AI system deployment?",
+                    "content": "Yes. Vaqtrix offers monitoring, updates, optimization, and long-term support to ensure AI systems perform reliably as your business grows."
+                }
+            ]
+        },
+        "ebook": {
+            "badge": "FAQs",
+            "title": "AI Development FAQs & Answers Guide",
+            "description": "Explore answers to common AI development questions covering automation machine learning integration data insights scalability and business applications.",
+            "listItems": [
+                "Trusted AI experts",
+                "Automation at scale"
+            ],
+            "faqs": [
+                {
+                    "id": 1,
+                    "category": "E-Book",
+                    "title": "What AI development services does Vaqtrix provide?",
+                    "content": "Vaqtrix develops AI solutions including workflow automation, predictive analytics, machine learning systems, chatbots, and custom AI integrations for businesses."
+                },
+                {
+                    "id": 2,
+                    "category": "E-Book",
+                    "title": "How can AI help improve business operations?",
+                    "content": "AI helps automate repetitive tasks, analyze data faster, improve decision making, and optimize processes to increase efficiency and productivity."
+                },
+                {
+                    "id": 3,
+                    "category": "E-Book",
+                    "title": "Can Vaqtrix integrate AI with existing systems?",
+                    "content": "Yes. Vaqtrix integrates AI models with CRMs, ERPs, APIs, and cloud infrastructure to enhance existing workflows and digital systems."
+                },
+                {
+                    "id": 4,
+                    "category": "E-Book",
+                    "title": "Do you build custom AI solutions for businesses?",
+                    "content": "Absolutely. Vaqtrix designs AI systems tailored to specific workflows, datasets, and operational goals to ensure long term scalability."
+                },
+                {
+                    "id": 5,
+                    "category": "E-Book",
+                    "title": "What industries can benefit from AI automation?",
+                    "content": "AI automation can benefit industries such as finance, healthcare, e-commerce, real estate, logistics, and enterprise operations."
+                },
+                {
+                    "id": 6,
+                    "category": "E-Book",
+                    "title": "Do you provide support after AI system deployment?",
+                    "content": "Yes. Vaqtrix offers monitoring, updates, optimization, and long-term support to ensure AI systems perform reliably as your business grows."
+                }
+            ]
+        }
+    },
+    "categoryToPage": {
+        "Website Development": "website",
+        "Mobile App Development": "app",
+        "AI Development": "ai",
+        "Digital Marketing": "digital",
+        "E-commerce Solutions": "ecom",
+        "E-Book": "ebook"
+    }
+}

@@ -1,0 +1,68 @@
+{
+  "pages": {
+    "home": [
+      "AI-Powered Business Growth",
+      "Automation Driven Solutions",
+      "AI Digital Marketing",
+      "SEO & Growth Marketing",
+      "AI Software Development",
+      "Scalable Digital Systems"
+    ],
+    "about": [
+      "AI-Powered Business Growth",
+      "Automation Driven Solutions",
+      "AI Digital Marketing",
+      "SEO & Growth Marketing",
+      "AI Software Development",
+      "Scalable Digital Systems"
+    ],
+    "website": [
+      "AI Websites",
+      "Web Performance",
+      "UX/UI Design",
+      "Scalable Builds",
+      "SEO Ready",
+      "Web Automation"
+    ],
+    "app": [
+      "Native Apps",
+      "Cross Platform",
+      "App Automation",
+      "Cloud Backend",
+      "API Integration",
+      "AI Features"
+    ],
+    "digital": [
+      "Brand Growth",
+      "Digital Marketing",
+      "SEO Strategy",
+      "Paid Advertising",
+      "Content Marketing",
+      "Social Growth"
+    ],
+    "ecom": [
+      "Online Stores",
+      "E-commerce Growth",
+      "Smart Checkout",
+      "Secure Payments",
+      "Sales Automation",
+      "Store Performance"
+    ],
+    "ai": [
+      "AI Automation",
+      "Smart Workflows",
+      "AI Insights",
+      "Predictive Models",
+      "Process Automation",
+      "AI Systems"
+    ],
+    "ebook": [
+      "AI Powered Knowledge",
+      "Actionable Business Insights",
+      "Expert Authored Content",
+      "Scalable Learning Resources",
+      "Digital Growth Strategies",
+      "Future Ready Frameworks"
+    ]
+  }
+}
