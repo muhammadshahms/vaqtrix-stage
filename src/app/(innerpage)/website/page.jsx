@@ -5,7 +5,7 @@ import Pricing2 from '@/app/Components/Pricing/Pricng2';
 import WhyChoose4 from '@/app/Components/WhyChoose/WhyChoose4';
 import PdfGallery from "../../Components/Services/PdfGallery"
 import ContactInfo1 from '../../Components/ContactInfo/ContactInfo1';
-// import Blog1 from '../../Components/Blog/Blog1';
+import Blog1 from '../../Components/Blog/Blog1';
 import Faq1 from '../../Components/Faq/Faq1';
 import Marquee3 from '../../Components/Marquee/Marquee3';
 import SecurityGrowth from "../../Components/Services/SecurityGrowth"
@@ -41,11 +41,11 @@ const page = () => {
       <Marquee3 category="website" />
 <Testimonial1 category="website" />
       <ContactInfo1></ContactInfo1>
-      {/* <Blog1
+      <Blog1
         subTitle="BLOG & INSIGHTS"
         heading={<>Website Development & Design Insights <br/>  For Modern Businesses</>}
         category="Website Development"
-      /> */}
+      />
 
     </div>
   );

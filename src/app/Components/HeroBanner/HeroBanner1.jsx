@@ -121,14 +121,31 @@ export default function HeroBanner() {
 
                            <div className="d-flex flex-wrap flex-lg-nowrap gap-3 justify-content-center justify-content-lg-start">
                                 {badges.map((badge, index) => (
-                                    <Image
+                                    <a
                                         key={index}
-                                        src={badge.src}
-                                        alt={badge.alt}
-                                        width={badge.width}
-                                        height={badge.height}
-                                        className="img-fluid"
-                                    />
+                                        href="https://www.trustpilot.com/review/vaqtrix.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            display: "inline-block",
+                                            cursor: "pointer",
+                                            transition: "transform 0.3s ease",
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.transform = "scale(1.05)";
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.transform = "scale(1)";
+                                        }}
+                                    >
+                                        <Image
+                                            src={badge.src}
+                                            alt={badge.alt}
+                                            width={badge.width}
+                                            height={badge.height}
+                                            className="img-fluid"
+                                        />
+                                    </a>
                                 ))}
                             </div>
                         </div>

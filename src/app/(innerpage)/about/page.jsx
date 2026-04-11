@@ -32,11 +32,11 @@ const page = () => {
             <Marquee3 category="about" />
             <Testimonial1  category="about"/>
             <ContactInfo1></ContactInfo1>
-            {/* <Blog1
+            <Blog1
                 subTitle="BLOG & INSIGHTS"
                 heading={<>Vaqtrix Insights & Company Updates</>}
-                category="About Vaqtrixl"
-            /> */}
+                category="About Vaqtrix"
+            />
         </div>
     );
 };

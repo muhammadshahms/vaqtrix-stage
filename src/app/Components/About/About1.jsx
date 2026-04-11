@@ -77,14 +77,14 @@ const About1 = () => {
         >
             <div className="container">
 
+                <MotionText>
+                    <h4 className="brand-title text-center mb-3 mb-md-4" style={{ color: "#fff" }}>
+                        1k + Brands Trust Us
+                    </h4>
+                </MotionText>
+
                 {/* ── Brand / Logo Slider ── */}
                 <div className="brand-wrapper mb-4 mb-md-5">
-                    <MotionText>
-                        <h4 className="brand-title text-center text-md-start mb-3">
-                            1k + Brands Trust Us
-                        </h4>
-                    </MotionText>
-
                     <div className="brand-slider">
                         <Slider {...settings}>
                             {brandContent.map((item, i) => (

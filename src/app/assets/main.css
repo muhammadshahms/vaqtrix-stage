@@ -2596,6 +2596,42 @@ span {
   background-color: var(--theme);
 }
 
+@media (max-width: 991px) {
+  .footer-widgets-wrapper .single-footer-widget {
+    text-align: center;
+  }
+
+  .footer-widgets-wrapper .single-footer-widget .footer-content .social-icon {
+    justify-content: center;
+  }
+
+  .footer-widgets-wrapper .single-footer-widget .recent-post-area .recent-post-items {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .footer-widgets-wrapper .single-footer-widget .footer-content .contact-info {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .footer-widgets-wrapper .single-footer-widget .list-area {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .footer-bottom .footer-wrapper {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .footer-bottom .footer-wrapper .footer-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 767px) {
   .footer-widgets-wrapper .single-footer-widget .widget-head h3 {
     font-size: 23px;

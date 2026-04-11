@@ -31,8 +31,8 @@ const FaqSection = ({
 
   const isServicePage = typeof category === "string" && category.trim() !== "";
 
-  // FAQ page default: "Website Development" active
-  const defaultCategory = "Website Development";
+  // FAQ page default: "Home" active
+  const defaultCategory = "Home";
   const [activeCat, setActiveCat]   = useState(defaultCategory);
   const [openIndex, setOpenIndex]   = useState(-1);
   const contentRefs                 = useRef([]);

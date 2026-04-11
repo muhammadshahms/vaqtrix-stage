@@ -5,7 +5,7 @@ import TechStack from '@/app/Components/Services/TechStack';
 import WhyChoose4 from '@/app/Components/WhyChoose/WhyChoose4';
 // import PdfGallery from "../../Components/Services/PdfGallery"
 import ContactInfo1 from '../../Components/ContactInfo/ContactInfo1';
-// import Blog1 from '../../Components/Blog/Blog1';
+import Blog1 from '../../Components/Blog/Blog1';
 import Faq1 from '../../Components/Faq/Faq1';
 import Marquee3 from '../../Components/Marquee/Marquee3';
 import SecurityGrowth from "../../Components/Services/SecurityGrowth"
@@ -40,11 +40,11 @@ const page = () => {
       <Marquee3 category="ai" />
       <Testimonial1 category="ai" />
        <ContactInfo1></ContactInfo1>
-      {/*<Blog1
+      <Blog1
         subTitle="BLOG & INSIGHTS"
         heading={<>AI Development & Automation Insights</>}
         category="AI Development"
-      /> */}
+      />
 
     </div>
   );

@@ -244,6 +244,13 @@ const Blog1 = ({
                 ))}
               </div>
             )}
+
+            {/* View All Button */}
+            <div style={{ textAlign: "center", marginTop: "30px" }}>
+              <Link href="/blog" className="theme-btn">
+                View All Blog Posts
+              </Link>
+            </div>
           </>
         )}
       </div>

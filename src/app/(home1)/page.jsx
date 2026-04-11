@@ -7,7 +7,7 @@ import SuccessStories from '../Components/SuccessStories/SuccessStories';
 import Pricing2 from '../Components/Pricing/Pricng2';
 import Testimonial1 from '../Components/Testimonial/Testimonial1';
 import ContactInfo1 from '../Components/ContactInfo/ContactInfo1';
-// import Blog1 from '../Components/Blog/Blog1';
+import Blog1 from '../Components/Blog/Blog1';
 import Faq1 from '../Components/Faq/Faq1';
 import Marquee3 from "../Components/Marquee/Marquee3"
 
@@ -36,11 +36,11 @@ const page = () => {
 
             <Testimonial1 category="home" />
             <ContactInfo1></ContactInfo1>
-            {/* <Blog1
+            <Blog1
                 subTitle="BLOG & INSIGHTS"
                 heading={<>AI, SEO & Digital Growth Insights<br />to Scale Your Business</>}
                 category="General"
-            /> */}
+            />
         </div>
 
     );

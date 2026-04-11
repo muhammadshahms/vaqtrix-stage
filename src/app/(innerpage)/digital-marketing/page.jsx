@@ -48,11 +48,11 @@ const page = () => {
       <Marquee3 category="digital" />
 <Testimonial1 category="digital" />
       <ContactInfo1></ContactInfo1>
-      {/* <Blog1
+      <Blog1
         subTitle="BLOG & INSIGHTS"
         heading={<>Digital Marketing & Brand Design Insights</>}
         category="Digital Marketing & Branding"
-      /> */}
+      />
 
     </div>
   );

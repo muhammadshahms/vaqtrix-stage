@@ -1,5 +1,7 @@
 {
     "categories": [
+        "Home",
+        "About Vaqtrix",
         "Website Development",
         "Mobile App Development",
         "AI Development",
@@ -386,6 +388,8 @@
         }
     },
     "categoryToPage": {
+        "Home": "home",
+        "About Vaqtrix": "about",
         "Website Development": "website",
         "Mobile App Development": "app",
         "AI Development": "ai",
