@@ -12,6 +12,30 @@ const truncate = (text, maxLength) => {
   return text.length > maxLength ? text.slice(0, maxLength).trimEnd() + "..." : text;
 };
 
+// This tab map keeps the visible labels aligned with the requested UI,
+// while still filtering against the existing blog categories in data.
+const BLOG_TABS = [
+  { label: "All", value: "All" },
+  { label: "General", value: "General" },
+  { label: "About Vaqtrix", value: "About Vaqtrix" },
+  { label: "Website Development", value: "Website Development" },
+  { label: "Mobile App Development", value: "Mobile App Development" },
+  { label: "AI Development", value: "AI Development" },
+  { label: "E-commerce Solutions", value: "E-commerce Solutions" },
+  { label: "Digital Marketing & Branding", value: "Digital Marketing & Branding" },
+  { label: "E-book Creations", value: "E-book Creations" },
+];
+
+const buildBlogHref = (post) => {
+  if (!post?.id) return post?.link || "/blog";
+
+  const params = new URLSearchParams();
+  if (post.category) params.set("service", post.category);
+
+  const query = params.toString();
+  return `/blog/${post.id}${query ? `?${query}` : ""}`;
+};
+
 // ✅ Calendar SVG Icon
 const CalendarIcon = () => (
   <svg
@@ -33,11 +57,17 @@ const CalendarIcon = () => (
   </svg>
 );
 
-const Blog4 = () => {
-  const { categories, posts } = blogData;
+const Blog4 = ({ initialCategory }) => {
+  const { posts } = blogData;
 
   const sectionRef = useRef(null);
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  
+  // Use initialCategory if valid, else default to "All"
+  const defaultCategory = BLOG_TABS.some(t => t.value === initialCategory) 
+    ? initialCategory 
+    : BLOG_TABS[0].value;
+
+  const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredContent =
@@ -76,16 +106,16 @@ const Blog4 = () => {
       <div className="container">
 
         {/* Category Tabs */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-4 blog-tabs-wrap">
           <ul className="nav justify-content-center gap-2 border-0">
-            {categories.map((cat) => (
-              <li key={cat} className="nav-item">
+            {BLOG_TABS.map((cat) => (
+              <li key={cat.label} className="nav-item">
                 <button
                   type="button"
-                  className={`nav-link ${selectedCategory === cat ? "active" : ""}`}
-                  onClick={() => handleCategoryClick(cat)}
+                  className={`nav-link ${selectedCategory === cat.value ? "active" : ""}`}
+                  onClick={() => handleCategoryClick(cat.value)}
                 >
-                  {cat}
+                  {cat.label}
                 </button>
               </li>
             ))}
@@ -177,7 +207,7 @@ const Blog4 = () => {
                         wordBreak: "break-word",
                       }}
                     >
-                      <Link href={item.link} title={item.title}>
+                      <Link href={buildBlogHref(item)} title={item.title}>
                         {item.title}
                       </Link>
                     </h5>

@@ -28,7 +28,7 @@ const page = () => {
 
         pricingDataKey="app"
         monthlyAndYearly={false}
-        showButton={true}
+        showButton={false}
         showPlanSelector={false}
 
       />

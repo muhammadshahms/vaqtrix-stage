@@ -11,10 +11,34 @@ export default function HeroBanner() {
     const [btn2Hover, setBtn2Hover] = useState(false);
 
     const badges = [
-        { src: "/assets/img/1 (1).svg", alt: "Clutch Review", width: 130, height: 50 },
-        { src: "/assets/img/1 (2).svg", alt: "Google Rating", width: 130, height: 50 },
-        { src: "/assets/img/1 (3).svg", alt: "Yell Review", width: 130, height: 50 },
-        { src: "/assets/img/1 (4).svg", alt: "Trustpilot Review", width: 130, height: 50 },
+    {
+      src: "/assets/img/1 (1).svg",
+      alt: "Clutch Review",
+      width: 130,
+      height: 50,
+      href: "https://clutch.co/",
+    },
+    {
+      src: "/assets/img/1 (2).svg",
+      alt: "Google Rating",
+      width: 130,
+      height: 50,
+      href: "https://www.google.com/maps/search/?api=1&query=Vaqtrix",
+    },
+    {
+      src: "/assets/img/1 (3).svg",
+      alt: "Trustpilot Review",
+      width: 130,
+      height: 50,
+      href: "https://www.trustpilot.com/review/vaqtrix.com",
+    },
+    {
+      src: "/assets/img/1 (4).svg",
+      alt: "Yell Review",
+      width: 130,
+      height: 50,
+      href: "https://www.yell.com/",
+    },
     ];
 
     return (
@@ -119,13 +143,15 @@ export default function HeroBanner() {
                                 </Link>
                             </div>
 
-                           <div className="d-flex flex-wrap flex-lg-nowrap gap-3 justify-content-center justify-content-lg-start">
+                             {/* Review badges section: each logo opens its own external review/profile link. */}
+                             <div className="d-flex flex-wrap flex-lg-nowrap gap-3 justify-content-center justify-content-lg-start hero-badges">
                                 {badges.map((badge, index) => (
                                     <a
                                         key={index}
-                                        href="https://www.trustpilot.com/review/vaqtrix.com"
+                                  href={badge.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                  className="hero-badge-item"
                                         style={{
                                             display: "inline-block",
                                             cursor: "pointer",

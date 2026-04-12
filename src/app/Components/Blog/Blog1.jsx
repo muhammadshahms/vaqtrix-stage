@@ -18,6 +18,18 @@ const getVisibleCards = () => {
   return 4;
 };
 
+const buildBlogHref = (post, serviceCategory) => {
+  if (!post?.id) return post?.link || "/blog";
+
+  // Keep service/category in URL so detail page can resolve duplicate ids safely.
+  const params = new URLSearchParams();
+  const source = serviceCategory || post.category;
+  if (source) params.set("service", source);
+
+  const query = params.toString();
+  return `/blog/${post.id}${query ? `?${query}` : ""}`;
+};
+
 const Blog1 = ({
   subTitle = "BLOG & INSIGHTS",
   heading = (
@@ -201,7 +213,7 @@ const Blog1 = ({
                             margin: 0,
                           }}
                         >
-                          <Link href={item.link || "/blog/blog-details"} title={item.title}>
+                          <Link href={buildBlogHref(item, category)} title={item.title}>
                             {item.title}
                           </Link>
                         </h5>

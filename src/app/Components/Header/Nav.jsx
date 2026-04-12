@@ -103,7 +103,7 @@ export default function Nav({ setMobileToggle }) {
       </li>
 
       <li>
-        <a style={{ cursor: "pointer" }} onClick={() => { setMobileToggle(false); router.push("/undercunstraction"); }}>
+        <a style={{ cursor: "pointer" }} onClick={() => { setMobileToggle(false); router.push("/project"); }}>
           Project
         </a>
       </li>

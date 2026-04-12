@@ -42,7 +42,7 @@ const About1 = () => {
         { img: '/assets/img/Home Icons/Logos/Next JS.png', alt: 'Next JS' },
         { img: '/assets/img/Home Icons/Logos/Node JS.png', alt: 'Node JS' },
         { img: '/assets/img/Home Icons/Logos/Python.png', alt: 'Python' },
-        { img: '/assets/img/Home Icons/Logos/React (2).png', alt: 'React' },
+        { img: '/assets/img/Home Icons/Logos/WooCommerce.png', alt: 'WooCommerce' },
         { img: '/assets/img/Home Icons/Logos/React.png', alt: 'React Native' },
         { img: '/assets/img/Home Icons/Logos/Shopify.png', alt: 'Shopify' },
         { img: '/assets/img/Home Icons/Logos/Vercel.png', alt: 'Vercel' },
@@ -63,25 +63,29 @@ const About1 = () => {
     };
 
     return (
-        <section
-            className="about-section fix section-padding"
-            data-background={aboutContent.bg}
-            style={{
-                paddingBottom: "50px",
-                backgroundImage: `url(${aboutContent.bg})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
-                backgroundRepeat: "no-repeat",
-                backgroundAttachment: "scroll", /* 'fixed' breaks on iOS Safari */
-            }}
-        >
-            <div className="container">
-
+        <>
+            <div className="container mt-5 pt-3 mb-4">
                 <MotionText>
-                    <h4 className="brand-title text-center mb-3 mb-md-4" style={{ color: "#fff" }}>
+                    <h4 className="brand-title text-center" style={{ color: "var(--theme)", fontSize: "28px", fontWeight: "bold" }}>
                         1k + Brands Trust Us
                     </h4>
                 </MotionText>
+            </div>
+            
+            <section
+                className="about-section fix section-padding"
+                data-background={aboutContent.bg}
+                style={{
+                    paddingBottom: "50px",
+                    paddingTop: "50px",
+                    backgroundImage: `url(${aboutContent.bg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundAttachment: "scroll",
+                }}
+            >
+                <div className="container">
 
                 {/* ── Brand / Logo Slider ── */}
                 <div className="brand-wrapper mb-4 mb-md-5">
@@ -102,6 +106,7 @@ const About1 = () => {
                                                 maxWidth: "100px",
                                                 height: "auto",
                                                 objectFit: "contain",
+                                                filter: item.alt === 'WooCommerce' ? 'brightness(0) invert(1)' : 'none',
                                             }}
                                         />
                                     </div>
@@ -245,6 +250,7 @@ const About1 = () => {
 
             </div>
         </section>
+        </>
     );
 };
 
