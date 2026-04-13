@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -69,6 +69,11 @@ const Blog4 = ({ initialCategory }) => {
 
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
   const [currentPage, setCurrentPage] = useState(1);
+  const [shareUrl, setShareUrl] = useState("");
+
+  useEffect(() => {
+    setShareUrl(window.location.href);
+  }, []);
 
   const filteredContent =
     selectedCategory === "All"
@@ -100,6 +105,56 @@ const Blog4 = ({ initialCategory }) => {
 
   const isFirstPage = currentPage === 1;
   const isLastPage = currentPage === totalPages;
+  const safeShareUrl = shareUrl || "https://vaqtrix.com/blog";
+  const encodedUrl = encodeURIComponent(safeShareUrl);
+  const encodedText = encodeURIComponent("Check out this blog on Vaqtrix");
+  const emailSubject = encodeURIComponent("Interesting blog from Vaqtrix");
+  const emailBody = encodeURIComponent(`I found this blog useful: ${safeShareUrl}`);
+
+  const shareItems = [
+    {
+      label: "Share on Facebook",
+      icon: "bi bi-facebook",
+      className: "is-facebook",
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    },
+    {
+      label: "Share on Twitter",
+      icon: "bi bi-twitter",
+      className: "is-twitter",
+      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`,
+    },
+    {
+      label: "Share on LinkedIn",
+      icon: "bi bi-linkedin",
+      className: "is-linkedin",
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    },
+    {
+      label: "Share on X",
+      icon: "bi bi-twitter-x",
+      className: "is-x",
+      href: `https://x.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`,
+    },
+    {
+      label: "Share on Pinterest",
+      icon: "bi bi-pinterest",
+      className: "is-pinterest",
+      href: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedText}`,
+    },
+    {
+      label: "Share on WhatsApp",
+      icon: "bi bi-whatsapp",
+      className: "is-whatsapp",
+      href: `https://wa.me/?text=${encodeURIComponent(`Check this out: ${safeShareUrl}`)}`,
+    },
+    {
+      label: "Share via Email",
+      icon: "bi bi-envelope-fill",
+      className: "is-email",
+      href: `mailto:?subject=${emailSubject}&body=${emailBody}`,
+    },
+  ];
 
   return (
     <section ref={sectionRef} className="section-padding fix">
@@ -278,6 +333,64 @@ const Blog4 = ({ initialCategory }) => {
             </ul>
           </div>
         )}
+
+        <div className="blog-comment-wrap mt-5 pt-5 border-top">
+          <div className="blog-comment-card">
+            <h3 className="blog-comment-title">We would love to hear your thoughts</h3>
+            <p className="blog-comment-subtitle">
+              Ask anything, share feedback, or drop your suggestion for the next post.
+            </p>
+
+            <form onSubmit={(e) => e.preventDefault()} className="blog-comment-form">
+              <div className="row g-3">
+                <div className="col-12 col-md-6">
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    className="blog-comment-input"
+                  />
+                </div>
+                <div className="col-12 col-md-6">
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    className="blog-comment-input"
+                  />
+                </div>
+                <div className="col-12">
+                  <textarea
+                    placeholder="Write your comment"
+                    rows="5"
+                    className="blog-comment-input blog-comment-textarea"
+                  ></textarea>
+                </div>
+                <div className="col-12">
+                  <button type="submit" className="blog-comment-btn">
+                    Post Comment
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <div className="blog-share-wrap">
+              <span className="blog-share-label">Share:</span>
+              <div className="blog-share-links">
+                {shareItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.label}
+                    className={`blog-share-btn ${item.className}`}
+                  >
+                    <i className={item.icon}></i>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>

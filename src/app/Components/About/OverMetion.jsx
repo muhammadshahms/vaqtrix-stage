@@ -26,7 +26,6 @@ const Section02 = () => {
           <div className="row justify-content-center mb-5">
             <div className="col-lg-10 col-xl-9">
               <div className="mb-4 ms-2 ms-md-4 d-flex align-items-center gap-3">
-                <div style={{ width: "45px", height: "4px", backgroundColor: "#6FD801", borderRadius: "10px" }}></div>
                 <h2 className="fw-bold mb-0" style={{ color: "var(--header)", fontSize: "2.6rem" }}>
                   Our <span style={{ color: "#6FD801" }}>Mission</span>
                 </h2>
@@ -87,7 +86,6 @@ const Section02 = () => {
           <div className="row justify-content-center">
             <div className="col-lg-10 col-xl-9">
               <div className="mb-4 ms-2 ms-md-4 d-flex align-items-center gap-3 mt-4">
-                <div style={{ width: "45px", height: "4px", backgroundColor: "#6FD801", borderRadius: "10px" }}></div>
                 <h2 className="fw-bold mb-0" style={{ color: "var(--header)", fontSize: "2.6rem" }}>
                   Our <span style={{ color: "#6FD801" }}>Vision</span>
                 </h2>

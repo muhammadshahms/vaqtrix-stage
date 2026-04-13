@@ -31,12 +31,46 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="author" content="Themeservices" />
-        <link rel="icon" href="/assets/img\Home Icons/Small Logo.svg" sizes="any" />
+        <link rel="icon" href="/assets/img/Home Icons/Small Logo.svg" sizes="any" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                function stripInjectedAttrs() {
+                  try {
+                    var targets = [document.documentElement, document.body].filter(Boolean);
+                    var patterns = [/^__processed_/i, /^bis_register$/i];
+
+                    for (var i = 0; i < targets.length; i++) {
+                      var node = targets[i];
+                      var attrs = Array.prototype.slice.call(node.attributes || []);
+                      for (var j = 0; j < attrs.length; j++) {
+                        var name = attrs[j].name;
+                        for (var k = 0; k < patterns.length; k++) {
+                          if (patterns[k].test(name)) {
+                            node.removeAttribute(name);
+                            break;
+                          }
+                        }
+                      }
+                    }
+                  } catch (e) {}
+                }
+
+                stripInjectedAttrs();
+                document.addEventListener("DOMContentLoaded", stripInjectedAttrs, { once: true });
+              })();
+            `,
+          }}
+        />
       </head>
-      <body className={`${plus_jakarta_sans.variable} ${dm_sans.variable}`}>
+      <body
+        className={`${plus_jakarta_sans.variable} ${dm_sans.variable}`}
+        suppressHydrationWarning
+      >
         {children}
         {/* <ChatWidget/> */}
       </body>

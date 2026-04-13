@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -31,49 +33,6 @@ export default function BlogDetailContent({ post, relatedPosts = [] }) {
               <div className="post-body" style={{ fontSize: "17px", lineHeight: "1.8", color: "var(--text)" }}>
                 <p className="mb-4">{post.paragraph}</p>
                 {/* Additional content could go here in the future */}
-                
-                <div className="comment-form-wrap mt-5 pt-4">
-                  <h3 className="mb-4" style={{ fontSize: "26px", fontWeight: "500", color: "#000" }}>We would love to hear your thoughts</h3>
-                  <form onSubmit={(e) => e.preventDefault()} className="comment-form">
-                    <div className="row g-3">
-                      <div className="col-md-6">
-                        <input 
-                          type="text" 
-                          placeholder="Name" 
-                          className="form-control" 
-                          style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", outline: "none" }}
-                        />
-                      </div>
-                      <div className="col-md-6">
-                        <input 
-                          type="email" 
-                          placeholder="Email address" 
-                          className="form-control" 
-                          style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", outline: "none" }}
-                        />
-                      </div>
-                      <div className="col-12 mt-3">
-                        <textarea 
-                          placeholder="Comment" 
-                          rows="6" 
-                          className="form-control" 
-                          style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", resize: "vertical", outline: "none" }}
-                        ></textarea>
-                      </div>
-                      <div className="col-12 mt-4 text-start">
-                        <button 
-                          type="submit" 
-                          style={{ backgroundColor: "#1e3aed", color: "#fff", border: "none", padding: "10px 30px", borderRadius: "6px", fontWeight: "500", fontSize: "15px", cursor: "pointer", transition: "all 0.3s" }}
-                          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#152bc2"}
-                          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3aed"}
-                        >
-                          Comment
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                
                 <div className="mt-5 pt-4 border-top">
                   <Link href="/blog" className="theme-btn">
                     <i className="fas fa-arrow-left me-2"></i> Back to Blogs
@@ -115,6 +74,48 @@ export default function BlogDetailContent({ post, relatedPosts = [] }) {
                 </div>
               </div>
             )}
+
+            <div className="comment-form-wrap mt-5 pt-5 border-top">
+              <h3 className="mb-4" style={{ fontSize: "26px", fontWeight: "500", color: "#000" }}>We would love to hear your thoughts</h3>
+              <form onSubmit={(e) => e.preventDefault()} className="comment-form">
+                <div className="row g-3">
+                  <div className="col-md-6">
+                    <input 
+                      type="text" 
+                      placeholder="Name" 
+                      className="form-control" 
+                      style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", outline: "none" }}
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <input 
+                      type="email" 
+                      placeholder="Email address" 
+                      className="form-control" 
+                      style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", outline: "none" }}
+                    />
+                  </div>
+                  <div className="col-12 mt-3">
+                    <textarea 
+                      placeholder="Comment" 
+                      rows="6" 
+                      className="form-control" 
+                      style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", resize: "vertical", outline: "none" }}
+                    ></textarea>
+                  </div>
+                  <div className="col-12 mt-4 text-start">
+                    <button 
+                      type="submit" 
+                      style={{ backgroundColor: "#1e3aed", color: "#fff", border: "none", padding: "10px 30px", borderRadius: "6px", fontWeight: "500", fontSize: "15px", cursor: "pointer", transition: "all 0.3s" }}
+                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#152bc2"}
+                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3aed"}
+                    >
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

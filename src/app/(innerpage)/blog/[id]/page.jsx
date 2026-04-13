@@ -1,7 +1,5 @@
 import BreadCumb from '@/app/Components/Common/BreadCumb';
-import BlogDetailContent from '@/app/Components/Blog/BlogDetailContent';
-import blogData from '@/app/data/blog.json';
-import { notFound } from 'next/navigation';
+import BlogCard from '@/app/Components/Blog/Blog4';
 
 const normalize = (value = '') => {
   try {
@@ -13,24 +11,16 @@ const normalize = (value = '') => {
 
 const firstQueryValue = (value) => (Array.isArray(value) ? value[0] : value);
 
-export default async function BlogDetailsPage({ params, searchParams }) {
-  const resolvedParams = await Promise.resolve(params);
+export default async function BlogDetailsPage({ searchParams }) {
   const resolvedSearchParams = await Promise.resolve(searchParams);
 
-  const id = Number(resolvedParams?.id);
-  if (!id) notFound();
-
   const serviceParamRaw = firstQueryValue(resolvedSearchParams?.service);
-  const serviceParam = serviceParamRaw ? normalize(serviceParamRaw) : '';
+  const normalizedService = serviceParamRaw ? normalize(serviceParamRaw) : '';
 
-  const byIdAndService = blogData.posts.find(
-    (post) => Number(post.id) === id && (!serviceParam || normalize(post.category) === serviceParam)
-  );
-
-  const post = byIdAndService || blogData.posts.find((item) => Number(item.id) === id);
-  if (!post) notFound();
-
-  const relatedPosts = blogData.posts.filter((p) => p.category === post.category && Number(p.id) !== id).slice(0, 2);
+  // Keep tab selection consistent with query values from card links.
+  const initialCategory = serviceParamRaw
+    ? decodeURIComponent(String(serviceParamRaw)).trim()
+    : 'All';
 
   return (
     <div>
@@ -38,7 +28,7 @@ export default async function BlogDetailsPage({ params, searchParams }) {
           bgimg="/assets/img/breadcrumb.jpg"
           Title="Insights, Ideas & Digital Innovation From Vaqtrix"
       ></BreadCumb>     
-      <BlogDetailContent post={post} relatedPosts={relatedPosts} />
+      <BlogCard initialCategory={normalizedService ? initialCategory : 'All'} />
     </div>
   );
 }
