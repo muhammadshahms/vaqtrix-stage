@@ -1,5 +1,5 @@
 import BreadCumb from '@/app/Components/Common/BreadCumb';
-import BlogCard from '@/app/Components/Blog/Blog4';
+import BlogDetailContent from '@/app/Components/Blog/BlogDetailContent';
 import blogData from '@/app/data/blog.json';
 import { notFound } from 'next/navigation';
 
@@ -30,14 +30,15 @@ export default async function BlogDetailsPage({ params, searchParams }) {
   const post = byIdAndService || blogData.posts.find((item) => Number(item.id) === id);
   if (!post) notFound();
 
+  const relatedPosts = blogData.posts.filter((p) => p.category === post.category && Number(p.id) !== id).slice(0, 2);
+
   return (
     <div>
        <BreadCumb
           bgimg="/assets/img/breadcrumb.jpg"
           Title="Insights, Ideas & Digital Innovation From Vaqtrix"
       ></BreadCumb>     
-      {/* User requested the exact same UI as the main blog layout here */}
-      <BlogCard initialCategory={post.category} />
+      <BlogDetailContent post={post} relatedPosts={relatedPosts} />
     </div>
   );
 }

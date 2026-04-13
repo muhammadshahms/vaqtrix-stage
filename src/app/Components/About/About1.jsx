@@ -88,22 +88,24 @@ const About1 = () => {
                 <div className="container">
 
                 {/* ── Brand / Logo Slider ── */}
-                <div className="brand-wrapper mb-4 mb-md-5">
+                <div className="brand-wrapper mb-4 mb-md-5 mt-3 pt-2">
                     <div className="brand-slider">
                         <Slider {...settings}>
                             {brandContent.map((item, i) => (
                                 <div key={i}>
                                     <div
                                         className="brand-img d-flex align-items-center justify-content-center px-2 px-sm-3 py-2"
+                                        style={{ height: "100px" }}
                                     >
                                         <Image
                                             src={item.img}
                                             alt={item.alt}
-                                            width={120}
-                                            height={120}
+                                            width={150}
+                                            height={60}
                                             style={{
                                                 width: "100%",
-                                                maxWidth: "100px",
+                                                maxWidth: "150px",
+                                                maxHeight: "60px",
                                                 height: "auto",
                                                 objectFit: "contain",
                                                 filter: item.alt === 'WooCommerce' ? 'brightness(0) invert(1)' : 'none',
