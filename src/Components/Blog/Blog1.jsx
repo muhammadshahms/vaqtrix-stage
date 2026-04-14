@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import MotionText from "../AnimateOnScroll/MotionText";
-import blogData from "../../data/blog.json";
+import blogData from "@/data/blog.json";
 
 const AUTO_INTERVAL = 3000;
 const TRANSITION_DURATION = 600; // ms

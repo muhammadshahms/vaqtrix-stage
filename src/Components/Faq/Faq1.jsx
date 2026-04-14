@@ -22,7 +22,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import MotionText from "../AnimateOnScroll/MotionText";
 import { fadeUp, staggerContainer } from "../AnimateOnScroll/motion";
-import faqJson from "../../data/faq.json";
+import faqJson from "@/data/faq.json";
 
 const FaqSection = ({
   addclass = "faq-section section-padding",

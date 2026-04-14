@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import techStackData from "../../data/techstack.json";
+import techStackData from "@/data/techstack.json";
 
 const TechStack = ({ category = "home" }) => {
   const data = techStackData[category] || techStackData["home"];

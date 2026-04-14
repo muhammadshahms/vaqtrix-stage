@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import servicesData from '../../data/featurescard.json';
+import servicesData from "@/data/featurescard.json';
 
 const CardList = ({ category }) => {
   const categoryData = servicesData.categories.find(cat => cat.name === category);

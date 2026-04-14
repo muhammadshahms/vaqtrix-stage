@@ -1,6 +1,6 @@
 import BreadCumb from '@/app/Components/Common/BreadCumb';
 import Faq1 from '@/app/Components/Faq/Faq1';
-import Pricing2 from '../../Components/Pricing/Pricng2';
+import Pricing2 from "@/Components/Pricing/Pricng2';
 import React from 'react';
 
 

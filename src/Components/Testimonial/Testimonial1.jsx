@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-import testimonialData from "../../data/testimonial";
+import testimonialData from "@/data/testimonial";
 
 // ─── Framer Motion Variants ───────────────────────────────────────────────────
 const fadeUp = {

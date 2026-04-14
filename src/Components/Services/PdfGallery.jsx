@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import projectData from "../../data/scrollcard.json";
+import projectData from "@/data/scrollcard.json";
 
 export default function ImageCards({ categoryId }) {
   const scrollRefs = useRef({});

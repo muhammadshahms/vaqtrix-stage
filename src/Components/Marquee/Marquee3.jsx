@@ -18,7 +18,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import marqueeJson from "../../data/servise-slider.json";
+import marqueeJson from "@/data/servise-slider.json";
 
 const MarqueeRow = ({ items = [], reverse = false }) => {
   return (

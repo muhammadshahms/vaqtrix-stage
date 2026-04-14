@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import caseStudies from "../../data/caseStudiesData.json";
+import caseStudies from "@/data/caseStudiesData.json";
 import MotionText from "../AnimateOnScroll/MotionText";
 import MotionImage from "../AnimateOnScroll/MotionImage";
 import { fadeUp, staggerContainer } from "../AnimateOnScroll/motion";

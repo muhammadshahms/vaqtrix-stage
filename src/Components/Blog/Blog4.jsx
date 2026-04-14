@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-import blogData from "../../data/blog.json";
+import blogData from "@/data/blog.json";
 
 const truncate = (text, maxLength) => {
   if (!text) return "";

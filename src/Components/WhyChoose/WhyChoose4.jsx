@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Image from "next/image";
 import Link from "next/link";
-import data from "../../data/feature.json";
+import data from "@/data/feature.json";
 import MotionImage from "../AnimateOnScroll/MotionImage";
 
 const WhyChoose4 = ({ categoryId }) => {

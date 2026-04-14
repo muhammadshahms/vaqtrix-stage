@@ -9,9 +9,9 @@ import Blog1 from '@/app/Components/Blog/Blog1';
 import React from 'react';
 import Faq1 from '@/app/Components/Faq/Faq1';
 import Marquee3 from '@/app/Components/Marquee/Marquee3';
-import OverMition from "../../Components/About/OverMetion"
-import Gamecard from "../../Components/About/Gameccards"
-import Testimonial1 from '../../Components/Testimonial/Testimonial1';
+import OverMition from "@/Components/About/OverMetion"
+import Gamecard from "@/Components/About/Gameccards"
+import Testimonial1 from "@/Components/Testimonial/Testimonial1';
 
 const page = () => {
     return (

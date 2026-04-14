@@ -2,7 +2,7 @@ import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "slick-carousel/slick/slick.css";
-import "./assets/main.css";
+import "@/assets/main.css";
 // import ChatWidget from "./Chatbot/ChatWidget"
 
 const plus_jakarta_sans = Plus_Jakarta_Sans({
