@@ -1,5 +1,5 @@
 "use client"
-import BreadCumb from '@/app/Components/Common/BreadCumb';
+import BreadCumb from '@/Components/Common/BreadCumb';
 import Link from 'next/link';
 
 const TermsConditions = () => {

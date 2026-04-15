@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Bgover from "../../../../public/assets/img/Home/Light-BG.png";
+import Bgover from "../../../public/assets/img/Home/Light-BG.png";
 import React from "react";
 
 const Section02 = () => {

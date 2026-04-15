@@ -1,5 +1,5 @@
-import BreadCumb from '@/app/Components/Common/BreadCumb';
-import BlogCard from '@/app/Components/Blog/Blog4';
+import BreadCumb from '@/Components/Common/BreadCumb';
+import BlogCard from '@/Components/Blog/Blog4';
 
 const normalize = (value = '') => {
   try {

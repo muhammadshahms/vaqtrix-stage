@@ -161,15 +161,30 @@ const ContactForm = ({
         <div className="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
           <div className="form-clt">
             <span>Your Email*</span>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+            <div style={{ position: "relative" }}>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                style={{ paddingRight: "45px", width: "100%" }}
+                required
+              />
+              <i
+                className="bi bi-envelope"
+                style={{
+                  position: "absolute",
+                  right: "15px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  fontSize: "1.1rem",
+                  color: "#999",
+                  pointerEvents: "none"
+                }}
+              ></i>
+            </div>
           </div>
         </div>
 

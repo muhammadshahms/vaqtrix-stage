@@ -1,5 +1,5 @@
-import CaseStudy4 from '@/app/Components/CaseStudy/CaseStudy4';
-import BreadCumb from '@/app/Components/Common/BreadCumb';
+import CaseStudy4 from '@/Components/CaseStudy/CaseStudy4';
+import BreadCumb from '@/Components/Common/BreadCumb';
 import React from 'react';
 
 const page = () => {

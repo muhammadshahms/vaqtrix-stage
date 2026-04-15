@@ -2,7 +2,7 @@
 :root {
   /* --body: #fff; */
   /* url(../../../public//imag/Light-Theme-Max.png); */
-  --fotter:url(../../../public//assets//img/hero/Sample-Hero-1.png);
+  --fotter:url(../../public/assets/img/hero/Sample-Hero-1.png);
   --black: #000;
   --white: #fff;
   --theme: #1C4401;

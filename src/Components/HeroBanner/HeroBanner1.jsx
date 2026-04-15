@@ -2,8 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import SampleHero from "../../../../public/assets/img/hero/Sample-Hero-1.png";
-import HeroMain from "../../../../public/imag/Gif.gif";
+import SampleHero from "../../../public/assets/img/hero/Sample-Hero-1.png";
+import HeroMain from "../../../public/imag/Gif.gif";
 
 export default function HeroBanner() {
 

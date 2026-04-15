@@ -1,6 +1,6 @@
 import React from 'react';
-import Header1 from "@/Components/Header/Header1';
-import Footer1 from "@/Components/Footer/Footer1';
+import Header1 from "@/Components/Header/Header1";
+import Footer1 from "@/Components/Footer/Footer1";
 // import ChatWidget from "../Chatbot/ChatWidget"
 
 const DefalultLayout = ({ children }) => {

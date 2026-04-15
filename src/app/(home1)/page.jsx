@@ -1,14 +1,14 @@
 import React from 'react';
-import HeroBanner1 from "@/Components/HeroBanner/HeroBanner1';
-import WhatWeDo from "@/Components/WhatWeDo/WhatWeDo';
-import About1 from "@/Components/About/About1';
-import CaseStudy1 from "@/Components/CaseStudy/CaseStudy1';
-import SuccessStories from "@/Components/SuccessStories/SuccessStories';
-import Pricing2 from "@/Components/Pricing/Pricng2';
-import Testimonial1 from "@/Components/Testimonial/Testimonial1';
-import ContactInfo1 from "@/Components/ContactInfo/ContactInfo1';
-import Blog1 from "@/Components/Blog/Blog1';
-import Faq1 from "@/Components/Faq/Faq1';
+import HeroBanner1 from "@/Components/HeroBanner/HeroBanner1";
+import WhatWeDo from "@/Components/WhatWeDo/WhatWeDo";
+import About1 from "@/Components/About/About1";
+import CaseStudy1 from "@/Components/CaseStudy/CaseStudy1";
+import SuccessStories from "@/Components/SuccessStories/SuccessStories";
+import Pricing2 from "@/Components/Pricing/Pricng2";
+import Testimonial1 from "@/Components/Testimonial/Testimonial1";
+import ContactInfo1 from "@/Components/ContactInfo/ContactInfo1";
+import Blog1 from "@/Components/Blog/Blog1";
+import Faq1 from "@/Components/Faq/Faq1";
 import Marquee3 from "@/Components/Marquee/Marquee3"
 
 
