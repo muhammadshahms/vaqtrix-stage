@@ -1,26 +1,21 @@
 import BreadCumb from '@/Components/Common/BreadCumb';
-import BlogCard from '@/Components/Blog/Blog4';
+import BlogDetailContent from '@/Components/Blog/BlogDetailContent';
+import blogData from '@/data/blog.json';
+import { notFound } from 'next/navigation';
 
-const normalize = (value = '') => {
-  try {
-    return decodeURIComponent(String(value)).trim().toLowerCase();
-  } catch {
-    return String(value).trim().toLowerCase();
+export default async function BlogDetailsPage({ params }) {
+  const { id } = await params;
+  
+  const postId = parseInt(id, 10);
+  const post = blogData.posts.find(p => p.id === postId);
+
+  if (!post) {
+    return notFound();
   }
-};
 
-const firstQueryValue = (value) => (Array.isArray(value) ? value[0] : value);
-
-export default async function BlogDetailsPage({ searchParams }) {
-  const resolvedSearchParams = await Promise.resolve(searchParams);
-
-  const serviceParamRaw = firstQueryValue(resolvedSearchParams?.service);
-  const normalizedService = serviceParamRaw ? normalize(serviceParamRaw) : '';
-
-  // Keep tab selection consistent with query values from card links.
-  const initialCategory = serviceParamRaw
-    ? decodeURIComponent(String(serviceParamRaw)).trim()
-    : 'All';
+  const relatedPosts = blogData.posts
+    .filter(p => p.category === post.category && p.id !== post.id)
+    .slice(0, 2);
 
   return (
     <div>
@@ -28,7 +23,7 @@ export default async function BlogDetailsPage({ searchParams }) {
           bgimg="/assets/img/breadcrumb.jpg"
           Title="Insights, Ideas & Digital Innovation From Vaqtrix"
       ></BreadCumb>     
-      <BlogCard initialCategory={normalizedService ? initialCategory : 'All'} />
+      <BlogDetailContent post={post} relatedPosts={relatedPosts} />
     </div>
   );
 }

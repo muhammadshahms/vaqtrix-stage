@@ -2,123 +2,89 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import blogData from "@/data/blog.json";
 
 export default function BlogDetailContent({ post, relatedPosts = [] }) {
+  const recentPosts = blogData.posts.filter((p) => p.id !== post.id).slice(0, 5);
+
   return (
     <section className="section-padding">
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-10">
-            {/* Main Article Section */}
+        
+        <div className="blog-layout-wrapper">
+          
+          <div className="blog-left-col">
             <article className="blog-post-details mb-5">
-              <div className="post-header mb-4">
-                <div className="d-flex align-items-center gap-3 mb-3" style={{ fontSize: "14px", color: "var(--theme)", fontWeight: "600" }}>
-                  <span className="bg-light px-3 py-1 rounded-pill border">{post.category}</span>
-                  {post.date && <span><i className="far fa-calendar-alt me-2"></i>{post.date}</span>}
-                </div>
-                <h1 className="display-5 fw-bold mb-4" style={{ color: "var(--header)" }}>{post.title}</h1>
+              
+              <div className="post-media overflow-hidden" style={{ aspectRatio: '16/9', position: 'relative', width: '100%', borderRadius: '8px', marginBottom: '16px' }}>
+                <Image src={post.img} alt={post.title || "Blog Image"} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 68vw" priority />
               </div>
 
-              <div className="post-media mb-5 overflow-hidden rounded shadow-sm" style={{ aspectRatio: '16/9', position: 'relative' }}>
-                <Image
-                  src={post.img}
-                  alt={post.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 100vw"
-                  priority
-                />
+              <div className="mb-3">
+                <span className="bg-light px-3 py-1 rounded-pill border" style={{ color: 'var(--tp-theme-primary, #1C4401)', fontSize: '0.75rem', fontWeight: '600', display: 'inline-block', borderColor: 'var(--tp-theme-primary, #1C4401) !important' }}>
+                  {post.category}
+                </span>
               </div>
 
-              <div className="post-body" style={{ fontSize: "17px", lineHeight: "1.8", color: "var(--text)" }}>
+              <h1 style={{ fontSize: '2rem', fontWeight: '700', lineHeight: '1.3', color: 'var(--header, #000)', marginBottom: '12px' }}>{post.title}</h1>
+
+              <div style={{ fontSize: '0.9rem', color: '#6c757d', fontWeight: '500', marginBottom: '20px' }}>
+                <span>{post.author || "Vaqtrix Team"}</span>
+                {post.date && (<><span className="mx-2" style={{ opacity: 0.5 }}>•</span><span>{post.date}</span></>)}
+              </div>
+
+              <hr style={{ borderTop: '1px solid #eaeaea', opacity: 1, marginBottom: '24px' }} />
+
+              <div className="post-body" style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#333' }}>
                 <p className="mb-4">{post.paragraph}</p>
-                {/* Additional content could go here in the future */}
                 <div className="mt-5 pt-4 border-top">
-                  <Link href="/blog" className="theme-btn">
-                    <i className="fas fa-arrow-left me-2"></i> Back to Blogs
-                  </Link>
+                  <Link href="/blog" className="theme-btn"><i className="fas fa-arrow-left me-2"></i> Back to Blogs</Link>
                 </div>
               </div>
             </article>
-
-            {/* Related Posts Section */}
-            {relatedPosts.length > 0 && (
-              <div className="related-posts-section mt-5 pt-5 border-top">
-                <h3 className="mb-4 text-center">Related in {post.category}</h3>
-                <div className="row g-4">
-                  {relatedPosts.map((item) => (
-                    <div key={`${item.id}-${item.title}`} className="col-lg-6 col-md-6 d-flex">
-                      <div className="news-box-items mt-0 h-100 d-flex flex-column w-100 shadow-sm rounded-4 overflow-hidden">
-                        <div className="news-image">
-                          <Image
-                            src={item.img}
-                            alt={item.title}
-                            width={600}
-                            height={400}
-                            sizes="(max-width: 767px) 100vw, 50vw"
-                            className="w-100"
-                            style={{ height: '240px', objectFit: 'cover' }}
-                          />
-                        </div>
-                        <div className="news-content p-4 d-flex flex-column flex-grow-1 bg-white">
-                          <h5 className="mb-3" style={{ fontSize: '1.25rem', lineHeight: '1.4' }}>
-                            <Link href={`/blog/${item.id}?service=${encodeURIComponent(item.category)}`} title={item.title} className="text-decoration-none">
-                              {item.title}
-                            </Link>
-                          </h5>
-                          {item.paragraph && <p className="mb-0 text-muted" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{item.paragraph}</p>}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <div className="comment-form-wrap mt-5 pt-5 border-top">
-              <h3 className="mb-4" style={{ fontSize: "26px", fontWeight: "500", color: "#000" }}>We would love to hear your thoughts</h3>
-              <form onSubmit={(e) => e.preventDefault()} className="comment-form">
-                <div className="row g-3">
-                  <div className="col-md-6">
-                    <input 
-                      type="text" 
-                      placeholder="Name" 
-                      className="form-control" 
-                      style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", outline: "none" }}
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <input 
-                      type="email" 
-                      placeholder="Email address" 
-                      className="form-control" 
-                      style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", outline: "none" }}
-                    />
-                  </div>
-                  <div className="col-12 mt-3">
-                    <textarea 
-                      placeholder="Comment" 
-                      rows="6" 
-                      className="form-control" 
-                      style={{ padding: "12px 20px", borderRadius: "6px", border: "1px solid #a6cffd", fontSize: "14px", color: "#666", backgroundColor: "#fff", boxShadow: "0 4px 12px rgba(6, 115, 255, 0.1)", resize: "vertical", outline: "none" }}
-                    ></textarea>
-                  </div>
-                  <div className="col-12 mt-4 text-start">
-                    <button 
-                      type="submit" 
-                      style={{ backgroundColor: "#1e3aed", color: "#fff", border: "none", padding: "10px 30px", borderRadius: "6px", fontWeight: "500", fontSize: "15px", cursor: "pointer", transition: "all 0.3s" }}
-                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#152bc2"}
-                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3aed"}
-                    >
-                      Comment
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
           </div>
+
+          <aside className="blog-right-sidebar">
+            <div className="sidebar-widget">
+              <h3 style={{ fontSize: '1rem', fontWeight: '600', borderBottom: '2px solid var(--tp-theme-primary, #1C4401)', paddingBottom: '8px', marginBottom: '16px', color: 'var(--header, #000)' }}>
+Recent Posts</h3>
+              <div className="recent-posts-list">
+                {recentPosts.map((rp) => {
+                  const params = new URLSearchParams();
+                  if (rp.category) params.set("service", rp.category);
+                  const query = params.toString();
+                  const href = `/blog/${rp.id}${query ? `?${query}` : ""}`;
+                  return (
+                    <Link href={href} key={rp.id} className="recent-post-link" style={{ display: 'flex', gap: '16px', paddingBottom: '16px', marginBottom: '16px', borderBottom: '1px solid #eaeaea', textDecoration: 'none', color: 'inherit' }}>
+                      <div style={{ width: '80px', height: '60px', flexShrink: 0, position: 'relative', borderRadius: '4px', overflow: 'hidden' }}>
+                        <Image src={rp.img} alt={rp.title} fill style={{ objectFit: 'cover' }} />
+                      </div>
+                      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <h4 className="recent-title" style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0 0 6px 0', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', lineHeight: '1.4' }}>{rp.title}</h4>
+                        {rp.date && <span style={{ fontSize: '0.75rem', color: '#6c757d' }}>{rp.date}</span>}
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </aside>
+
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .blog-layout-wrapper { display: flex; flex-direction: column; gap: 2rem; }
+        .blog-left-col { width: 100%; }
+        .blog-right-sidebar { width: 100%; }
+        @media (min-width: 768px) {
+          .blog-layout-wrapper { flex-direction: row; justify-content: space-between; }
+          .blog-left-col { width: 68%; }
+          .blog-right-sidebar { width: 30%; }
+        }
+        .recent-title { transition: color 0.3s ease; color: var(--header, #000); }
+        .recent-post-link:hover .recent-title { color: var(--tp-theme-primary, #1C4401) !important; }
+      `}} />
     </section>
   );
 }

@@ -202,12 +202,15 @@ const Blog4 = ({ initialCategory }) => {
                 style={{ display: "flex", flexDirection: "column" }}
               >
                 {/* ✅ Card — height: 100% taaki equal height mile */}
-                <div
+                <Link
+                  href={buildBlogHref(item)}
                   className="news-box-items mt-0 shadow-lg rounded overflow-hidden"
                   style={{
                     display: "flex",
                     flexDirection: "column",
                     height: "100%",
+                    textDecoration: "none",
+                    color: "inherit"
                   }}
                 >
                   {/* Image */}
@@ -261,10 +264,9 @@ const Blog4 = ({ initialCategory }) => {
                         margin: 0,
                         wordBreak: "break-word",
                       }}
+                      title={item.title}
                     >
-                      <Link href={buildBlogHref(item)} title={item.title}>
-                        {item.title}
-                      </Link>
+                      {item.title}
                     </h5>
 
                     {/* ✅ Paragraph: 2 line clamp */}
@@ -288,7 +290,7 @@ const Blog4 = ({ initialCategory }) => {
                     )}
 
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </motion.div>

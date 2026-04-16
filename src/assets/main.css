@@ -5970,6 +5970,7 @@ input.main-search-input::placeholder {
 .back-to-top:hover {
   background-color: var(--header);
   color: var(--white);
+  transform: translate(0) !important;
 }
 
 .back-to-top.show {
