@@ -7,9 +7,25 @@ import Image from "next/image";
 
 export default function Header1({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
   const [isSticky, setIsSticky] = useState("");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [searchToggle, setSearchToggle] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth <= 767;
+      setIsMobileViewport(isMobile);
+      if (!isMobile) {
+        setMobileToggle(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,16 +72,28 @@ export default function Header1({ variant }) {
 
               <div className="cs_main_header_center">
                 <div className="cs_nav cs_primary_font fw-medium">
-                  <span
-                    className={
-                      mobileToggle
-                        ? "cs-munu_toggle cs_teggle_active"
-                        : "cs-munu_toggle"
-                    }
-                    onClick={() => setMobileToggle(!mobileToggle)}
-                  >
-                    <span></span>
-                  </span>
+                  {isMobileViewport ? (
+                    <button
+                      type="button"
+                      className="simple-mobile-menu-btn"
+                      aria-label={mobileToggle ? "Close menu" : "Open menu"}
+                      aria-expanded={mobileToggle}
+                      onClick={() => setMobileToggle(!mobileToggle)}
+                    >
+                      {mobileToggle ? "✕" : "☰"}
+                    </button>
+                  ) : (
+                    <span
+                      className={
+                        mobileToggle
+                          ? "cs-munu_toggle cs_teggle_active"
+                          : "cs-munu_toggle"
+                      }
+                      onClick={() => setMobileToggle(!mobileToggle)}
+                    >
+                      <span></span>
+                    </span>
+                  )}
                   <Nav setMobileToggle={setMobileToggle} />
                 </div>
               </div>

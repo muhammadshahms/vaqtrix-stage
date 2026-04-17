@@ -314,7 +314,7 @@ export default function HeroBanner() {
           .arrow-shape { right: 5%; }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .hero-section { text-align: center; padding: 60px 0; }
 
           .mike-shape { top: 10%; left: 2%; width: 24px; height: 24px; }
@@ -328,21 +328,20 @@ export default function HeroBanner() {
           .hero-text { line-height: 1.3; font-size: clamp(12px, 3vw, 16px); }
 
           .d-flex.flex-column.flex-sm-row {
-            flex-direction: row !important;
-            flex-wrap: wrap;
+            flex-direction: column !important;
             justify-content: center !important;
+            align-items: stretch;
           }
 
-          .hero-btn { font-size: 14px; padding: 10px 18px; }
+          .hero-btn { font-size: 14px; padding: 10px 18px; width: 100%; }
 
           .d-flex.flex-wrap.gap-3 {
-            flex-wrap: nowrap !important;
+            flex-wrap: wrap !important;
             justify-content: center !important;
             gap: 8px !important;
-            transform: scale(0.55);
-            transform-origin: center;
-            width: 182%;
-            margin-left: -41%;
+            transform: none;
+            width: 100%;
+            margin-left: 0;
             overflow: visible;
           }
 

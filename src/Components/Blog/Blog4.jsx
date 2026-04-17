@@ -196,7 +196,7 @@ const Blog4 = ({ initialCategory }) => {
             {currentCards.map((item, i) => (
               <motion.div
                 key={`${item.id}-${i}`}
-                className="col-xl-4 col-lg-6 col-md-6"
+                className="col-12 col-md-6 col-xl-4"
                 layout
                 // ✅ flex column taaki card andar bhi stretch ho
                 style={{ display: "flex", flexDirection: "column" }}
