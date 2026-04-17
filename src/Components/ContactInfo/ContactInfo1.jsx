@@ -87,7 +87,7 @@ const ContactInfo1 = () => {
                       <div className="contact-info style2 border-none">
                         <div className="icon">
                           <Image
-                            src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000"
+                            src="/assets/img/icon/12.svg"
                             alt="gmail"
                             width={24}
                             height={24}

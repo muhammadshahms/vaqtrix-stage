@@ -4,6 +4,7 @@ import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Link from "next/link";
 import Image from "next/image";
 import ReactCountryFlag from "react-country-flag";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 
 const Footer1 = () => {
     const [email, setEmail] = useState("");
@@ -103,11 +104,11 @@ const Footer1 = () => {
                                             We build AI-powered software, automation, and digital solutions designed for scalable growth, performance, and long term business success.
                                         </p>
                                         <div className="social-icon d-flex align-items-center gap-2 mt-auto">
-                                            <a href="https://www.facebook.com/people/Vaqtrix/61587338347118/" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><i className="bi bi-facebook"></i></a>
-                                            <a href="https://x.com/vaqtrix" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><i className="bi bi-twitter"></i></a>
-                                            <a href="https://www.instagram.com/vaqtrix" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><i className="bi bi-instagram"></i></a>
-                                            <a href="https://www.youtube.com/@Vaqtrix" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><i className="bi bi-youtube"></i></a>
-                                            <a href="https://www.linkedin.com/company/vaqtrix/" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><i className="bi bi-linkedin"></i></a>
+                                            <a href="https://www.facebook.com/people/Vaqtrix/61587338347118/" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><FaFacebookF /></a>
+                                            <a href="https://x.com/vaqtrix" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><FaTwitter /></a>
+                                            <a href="https://www.instagram.com/vaqtrix" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><FaInstagram /></a>
+                                            <a href="https://www.youtube.com/@Vaqtrix" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><FaYoutube /></a>
+                                            <a href="https://www.linkedin.com/company/vaqtrix/" target="_blank" style={{ width:"36px", height:"36px", display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(255,255,255,0.05)", borderRadius:"50%", transition:"all 0.3s" }}><FaLinkedinIn /></a>
                                         </div>
                                     </div>
                                 </div>
@@ -182,7 +183,7 @@ const Footer1 = () => {
                                     <div className="footer-content">
                                         <ul className="contact-info" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "20px" }}>
                                             <li className="d-flex align-items-center gap-3">
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" style={{ width: "22px", height: "18px", flexShrink: 0, objectFit: "contain" }} />
+                                                <Image src="/assets/img/icon/12.svg" alt="Gmail" width={22} height={18} style={{ flexShrink: 0, objectFit: "contain" }} />
                                                 <a href="mailto:info@vaqtrix.com" style={{ color: "#fff", fontSize: "15px", textDecoration: "none", fontWeight: "500" }}>info@vaqtrix.com</a>
                                             </li>
                                             <li className="d-flex align-items-center gap-3">
@@ -224,8 +225,8 @@ const Footer1 = () => {
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
                                 className="scroll-icon d-inline-flex align-items-center justify-content-center" 
                                 style={{ width: "50px", height: "50px", borderRadius: "50%", background: "transparent", border: "5px solid #fff", color: "#fff", fontSize: "18px", cursor: "pointer", transition: "all 0.3s ease" }}
-                                onMouseEnter={(e) => e.currentTarget.style.transform = "translateY(-5px)"}
-                                onMouseLeave={(e) => e.currentTarget.style.transform = "translateY(0)"}
+                                onMouseEnter={(e) => e.currentTarget.style.transform = "translateX(-50%) translateY(-5px)"}
+                                onMouseLeave={(e) => e.currentTarget.style.transform = "translateX(-50%) translateY(0)"}
                             >
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="12" y1="19" x2="12" y2="5"></line>
