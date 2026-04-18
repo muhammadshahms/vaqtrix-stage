@@ -133,58 +133,8 @@
             "link": "/project/project-details"
         },
         {
-            "id": 8,
-            "category": "AI Development",
-            "subtitle": "Marketing",
-            "title": "PPC Advertising: How to Get More ROI in 2024",
-            "paragraph": "Master PPC advertising with tips that help reduce cost and maximize your return on investment.",
-            "date": "June 3, 2025",
-            "img": "/assets/img/case-studies/03.jpg",
-            "link": "/project/project-details"
-        },
-        {
-            "id": 9,
-            "category": "AI Development",
-            "subtitle": "Marketing",
-            "title": "Social Media Marketing Complete Beginner Guide",
-            "paragraph": "Everything a beginner needs to know about growing their brand through social media platforms.",
-            "date": "June 3, 2025",
-            "img": "/assets/img/case-studies/04.jpg",
-            "link": "/project/project-details"
-        },
-        {
-            "id": 10,
-            "category": "AI Development",
-            "subtitle": "Seo Design",
-            "title": "On-Page SEO Checklist for Higher Google Rankings",
-            "paragraph": "A practical on-page SEO checklist to help your pages rank higher on Google search results.",
-            "date": "June 3, 2025",
-            "img": "/assets/img/case-studies/06.jpg",
-            "link": "/project/project-details"
-        },
-        {
-            "id": 11,
-            "category": "AI Development",
-            "subtitle": "Seo Design",
-            "title": "Technical SEO: Speed, Structure & Core Web Vitals",
-            "paragraph": "Improve your technical SEO by optimizing site speed, structure, and Core Web Vitals scores.",
-            "date": "June 3, 2025",
-            "img": "/assets/img/case-studies/07.jpg",
-            "link": "/project/project-details"
-        },
-        {
-            "id": 12,
-            "category": "E-book Creations",
-            "subtitle": "Designer",
-            "title": "UI/UX Design Principles Every Designer Must Know",
-            "paragraph": "Essential UI/UX design principles that help create intuitive and beautiful user experiences.",
-            "date": "June 3, 2025",
-            "img": "/assets/img/case-studies/08.jpg",
-            "link": "/project/project-details"
-        },
-         {
             "id": 13,
-            "category": "E-book Creations",
+            "category": "AI Development",
             "subtitle": "Marketing",
             "title": "PPC Advertising: How to Get More ROI in 2024",
             "paragraph": "Master PPC advertising with tips that help reduce cost and maximize your return on investment.",
@@ -194,7 +144,7 @@
         },
         {
             "id": 14,
-            "category": "General",
+            "category": "AI Development",
             "subtitle": "Marketing",
             "title": "Social Media Marketing Complete Beginner Guide",
             "paragraph": "Everything a beginner needs to know about growing their brand through social media platforms.",
@@ -204,7 +154,7 @@
         },
         {
             "id": 15,
-            "category": "General",
+            "category": "AI Development",
             "subtitle": "Seo Design",
             "title": "On-Page SEO Checklist for Higher Google Rankings",
             "paragraph": "A practical on-page SEO checklist to help your pages rank higher on Google search results.",
@@ -214,7 +164,7 @@
         },
         {
             "id": 16,
-            "category": "General",
+            "category": "AI Development",
             "subtitle": "Seo Design",
             "title": "Technical SEO: Speed, Structure & Core Web Vitals",
             "paragraph": "Improve your technical SEO by optimizing site speed, structure, and Core Web Vitals scores.",
@@ -224,7 +174,7 @@
         },
         {
             "id": 17,
-            "category": "General",
+            "category": "E-book Creations",
             "subtitle": "Designer",
             "title": "UI/UX Design Principles Every Designer Must Know",
             "paragraph": "Essential UI/UX design principles that help create intuitive and beautiful user experiences.",
@@ -234,7 +184,7 @@
         },
          {
             "id": 18,
-            "category": "About Vaqtrix",
+            "category": "E-book Creations",
             "subtitle": "Marketing",
             "title": "PPC Advertising: How to Get More ROI in 2024",
             "paragraph": "Master PPC advertising with tips that help reduce cost and maximize your return on investment.",
@@ -244,7 +194,7 @@
         },
         {
             "id": 19,
-            "category": "About Vaqtrix",
+            "category": "General",
             "subtitle": "Marketing",
             "title": "Social Media Marketing Complete Beginner Guide",
             "paragraph": "Everything a beginner needs to know about growing their brand through social media platforms.",
@@ -254,7 +204,7 @@
         },
         {
             "id": 20,
-            "category": "About Vaqtrix",
+            "category": "General",
             "subtitle": "Seo Design",
             "title": "On-Page SEO Checklist for Higher Google Rankings",
             "paragraph": "A practical on-page SEO checklist to help your pages rank higher on Google search results.",
@@ -264,7 +214,7 @@
         },
         {
             "id": 21,
-            "category": "About Vaqtrix",
+            "category": "General",
             "subtitle": "Seo Design",
             "title": "Technical SEO: Speed, Structure & Core Web Vitals",
             "paragraph": "Improve your technical SEO by optimizing site speed, structure, and Core Web Vitals scores.",
@@ -274,6 +224,56 @@
         },
         {
             "id": 22,
+            "category": "General",
+            "subtitle": "Designer",
+            "title": "UI/UX Design Principles Every Designer Must Know",
+            "paragraph": "Essential UI/UX design principles that help create intuitive and beautiful user experiences.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/08.jpg",
+            "link": "/project/project-details"
+        },
+         {
+            "id": 23,
+            "category": "About Vaqtrix",
+            "subtitle": "Marketing",
+            "title": "PPC Advertising: How to Get More ROI in 2024",
+            "paragraph": "Master PPC advertising with tips that help reduce cost and maximize your return on investment.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/03.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 24,
+            "category": "About Vaqtrix",
+            "subtitle": "Marketing",
+            "title": "Social Media Marketing Complete Beginner Guide",
+            "paragraph": "Everything a beginner needs to know about growing their brand through social media platforms.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/04.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 25,
+            "category": "About Vaqtrix",
+            "subtitle": "Seo Design",
+            "title": "On-Page SEO Checklist for Higher Google Rankings",
+            "paragraph": "A practical on-page SEO checklist to help your pages rank higher on Google search results.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/06.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 26,
+            "category": "About Vaqtrix",
+            "subtitle": "Seo Design",
+            "title": "Technical SEO: Speed, Structure & Core Web Vitals",
+            "paragraph": "Improve your technical SEO by optimizing site speed, structure, and Core Web Vitals scores.",
+            "date": "June 3, 2025",
+            "img": "/assets/img/case-studies/07.jpg",
+            "link": "/project/project-details"
+        },
+        {
+            "id": 27,
             "category": "About Vaqtrix",
             "subtitle": "Designer",
             "title": "UI/UX Design Principles Every Designer Must Know",
