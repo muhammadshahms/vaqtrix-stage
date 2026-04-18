@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { 
   FaRobot, 
   FaMobileAlt, 
@@ -14,7 +15,27 @@ import {
 export default function Nav({ setMobileToggle }) {
   const [serviceOpen, setServiceOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const router = useRouter();
+  const pathname = usePathname() || "/";
+
+  const normalizePath = (path) => {
+    if (!path || path === "/") return "/";
+    return path.replace(/\/+$/, "");
+  };
+
+  const currentPath = normalizePath(pathname);
+
+  const isActivePath = (href) => normalizePath(href) === currentPath;
+
+  const service = [
+    { title: "AI Automation", icon: <FaRobot />, href: "/ai-development" },
+    { title: "App Development", icon: <FaMobileAlt />, href: "/app-developmente" },
+    { title: "Web Development", icon: <FaLaptopCode />, href: "/website" },
+    { title: "Digital Marketing & Branding", icon: <FaBullhorn />, href: "/digital-marketing" },
+    { title: "Ecommerce Solutions", icon: <FaShoppingCart />, href: "/e-commerce" },
+    { title: "E-Book Creation", icon: <FaBookOpen />, href: "/e-book-creation" },
+  ];
+
+  const isServiceRouteActive = service.some(({ href }) => isActivePath(href));
 
   // ✅ SSR safe mobile check
   useEffect(() => {
@@ -35,46 +56,59 @@ export default function Nav({ setMobileToggle }) {
     return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
 
-  // ✅ Pehle state update, phir navigate
-  const handleServiceClick = (href) => {
-    setServiceOpen(false);
+  const handleNavClick = () => {
     setMobileToggle(false);
-    router.push(href);
   };
 
-  const service = [
-    { title: "AI Automation", icon: <FaRobot />, href: "/ai-development" },
-    { title: "App Development", icon: <FaMobileAlt />, href: "/app-developmente" },
-    { title: "Web Development", icon: <FaLaptopCode />, href: "/website" },
-    { title: "Digital Marketing & Branding", icon: <FaBullhorn />, href: "/digital-marketing" },
-    { title: "Ecommerce Solutions", icon: <FaShoppingCart />, href: "/e-commerce" },
-    { title: "E-Book Creation", icon: <FaBookOpen />, href: "/e-book-creation" },
-  ];
+  const handleServiceClick = () => {
+    setServiceOpen(false);
+    setMobileToggle(false);
+  };
 
   return (
     <ul className="cs_nav_list fw-medium" role="menubar">
 
       <li>
-        <a style={{ cursor: "pointer" }} onClick={() => { setMobileToggle(false); router.push("/"); }}>
+        <Link
+          href="/"
+          onClick={handleNavClick}
+          style={{
+            cursor: "pointer",
+            color: isActivePath("/") ? "var(--tp-theme-primary, #c2f306)" : undefined,
+          }}
+          aria-current={isActivePath("/") ? "page" : undefined}
+        >
           Home
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a style={{ cursor: "pointer" }} onClick={() => { setMobileToggle(false); router.push("/about"); }}>
+        <Link
+          href="/about"
+          onClick={handleNavClick}
+          style={{
+            cursor: "pointer",
+            color: isActivePath("/about") ? "var(--tp-theme-primary, #c2f306)" : undefined,
+          }}
+          aria-current={isActivePath("/about") ? "page" : undefined}
+        >
           About
-        </a>
+        </Link>
       </li>
 
       {/* SERVICES */}
       <li
-        className={`menu-item-has-children ${serviceOpen ? "active" : ""}`}
+        className={`menu-item-has-children ${serviceOpen || isServiceRouteActive ? "active" : ""}`}
         // ✅ Desktop — hover pe open/close
         onMouseEnter={() => !isMobile && setServiceOpen(true)}
         onMouseLeave={() => !isMobile && setServiceOpen(false)}
       >
         <a
-          style={{ cursor: "pointer" }}
+          style={{
+            cursor: "pointer",
+            color: isServiceRouteActive ? "var(--tp-theme-primary, #c2f306)" : undefined,
+          }}
+          aria-current={isServiceRouteActive ? "page" : undefined}
           onClick={(e) => {
             e.stopPropagation();
             // ✅ Mobile — click pe toggle, Desktop pe kuch nahi
@@ -89,29 +123,46 @@ export default function Nav({ setMobileToggle }) {
           style={{ display: serviceOpen ? "grid" : "none" }}
         >
           {service.map(({ title, icon, href }) => (
-            <a
+            <Link
               key={title}
               className="dropdown-item"
+              href={href}
+              onClick={handleServiceClick}
               style={{ cursor: "pointer" }}
-              onClick={() => handleServiceClick(href)}
             >
               {icon}
               <span>{title}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </li>
 
       <li>
-        <a style={{ cursor: "pointer" }} onClick={() => { setMobileToggle(false); router.push("/project"); }}>
+        <Link
+          href="/project"
+          onClick={handleNavClick}
+          style={{
+            cursor: "pointer",
+            color: isActivePath("/project") ? "var(--tp-theme-primary, #c2f306)" : undefined,
+          }}
+          aria-current={isActivePath("/project") ? "page" : undefined}
+        >
           Project
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a style={{ cursor: "pointer" }} onClick={() => { setMobileToggle(false); router.push("/pricing"); }}>
+        <Link
+          href="/pricing"
+          onClick={handleNavClick}
+          style={{
+            cursor: "pointer",
+            color: isActivePath("/pricing") ? "var(--tp-theme-primary, #c2f306)" : undefined,
+          }}
+          aria-current={isActivePath("/pricing") ? "page" : undefined}
+        >
           Pricing
-        </a>
+        </Link>
       </li>
 
     </ul>

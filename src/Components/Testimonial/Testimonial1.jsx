@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import testimonialData from "@/data/testimonial";
 
-// ─── Framer Motion Variants ───────────────────────────────────────────────────
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (i = 1) => ({
@@ -15,20 +14,17 @@ const fadeUp = {
   }),
 };
 
-// ─── Main Component ───────────────────────────────────────────────────────────
 const Testimonial1 = ({ category }) => {
 
   const sliderRef = useRef(null);
   const next      = () => sliderRef.current.slickNext();
   const previous  = () => sliderRef.current.slickPrev();
 
-  // ── Data resolve: category lowercase karo, match karo, fallback home ──────
   const key      = category ? category.toLowerCase() : "home";
   const pageData = testimonialData[key] || testimonialData["home"];
   const heading  = pageData.heading;
   const items    = pageData.items;
 
-  // ── Slider Settings ───────────────────────────────────────────────────────
   const settings = {
     dots: false,
     infinite: true,
@@ -56,7 +52,6 @@ const Testimonial1 = ({ category }) => {
           viewport={{ once: true }}
         >
 
-          {/* ── Heading Area ── */}
           <motion.div className="section-title-area" variants={fadeUp}>
             <motion.div className="section-title" variants={fadeUp}>
               <motion.div className="sub-title bg-color-2" custom={0} variants={fadeUp}>
@@ -73,10 +68,8 @@ const Testimonial1 = ({ category }) => {
             </motion.p>
           </motion.div>
 
-          {/* ── Slider Row ── */}
           <div className="row">
 
-            {/* Left — rating + arrows */}
             <div className="col-xl-2 col-lg-4">
               <motion.div className="testimonial-left" custom={3} variants={fadeUp}>
                 <div className="client-img">
@@ -100,7 +93,6 @@ const Testimonial1 = ({ category }) => {
               </motion.div>
             </div>
 
-            {/* Right — Slider */}
             <div className="col-xl-10 col-lg-8">
               <Slider ref={sliderRef} {...settings}>
                 {items.map((item, i) => (
@@ -118,7 +110,14 @@ const Testimonial1 = ({ category }) => {
                         <Image src="/imag/Quotation-Mark.png" alt="img" width={44} height={33} />
                       </div>
                       <div className="testimonial-img">
-                        <Image src={item.img} alt={item.title} width={102} height={102} />
+                        {/* ✅ Width/Height badla: 102 → 180 */}
+                        <Image
+                          src={item.img}
+                          alt={item.title}
+                          width={180}
+                          height={180}
+                          style={{ borderRadius: "50%", objectFit: "cover" }}
+                        />
                         <div className="shape-img">
                           <Image src="/imag/Arrow-Corner.png" alt="img" width={62} height={221} />
                         </div>

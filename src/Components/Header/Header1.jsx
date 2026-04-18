@@ -16,36 +16,59 @@ export default function Header1({ variant }) {
     const handleResize = () => {
       const isMobile = window.innerWidth <= 767;
       setIsMobileViewport(isMobile);
-      if (!isMobile) {
-        setMobileToggle(false);
-      }
+      if (!isMobile) setMobileToggle(false);
     };
-
     handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-
       if (currentScrollPos > prevScrollPos) {
-        setIsSticky("cs-gescout_sticky"); // Scrolling down
+        setIsSticky("cs-gescout_sticky");
       } else if (currentScrollPos !== 0) {
-        setIsSticky("cs-gescout_show cs-gescout_sticky"); // Scrolling up
+        setIsSticky("cs-gescout_show cs-gescout_sticky");
       } else {
-        setIsSticky(""); // Top of page
+        setIsSticky("");
       }
-
       setPrevScrollPos(currentScrollPos);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
+
+  const btnStyle = {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    lineHeight: "1",
+    background: "#81EA06",
+    color: "#1C4401",
+    fontWeight: "700",
+    fontSize: "14px",
+    padding: "10px 24px",
+    borderRadius: "999px",
+    textDecoration: "none",
+    whiteSpace: "nowrap",
+    letterSpacing: "0.03em",
+    border: "2px solid #81EA06",
+    transition: "background 0.3s ease, color 0.3s ease, border-color 0.3s ease",
+    cursor: "pointer",
+  };
+
+  const handleEnter = (e) => {
+    e.currentTarget.style.background = "#fff";
+    e.currentTarget.style.color = "#1C4401";
+    e.currentTarget.style.borderColor = "#fff";
+  };
+
+  const handleLeave = (e) => {
+    e.currentTarget.style.background = "#81EA06";
+    e.currentTarget.style.color = "#1C4401";
+    e.currentTarget.style.borderColor = "#81EA06";
+  };
 
   return (
     <div>
@@ -59,14 +82,10 @@ export default function Header1({ variant }) {
         <div className="cs_main_header">
           <div className="container">
             <div className="cs_main_header_in">
+
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" href="/">
-                  <Image
-                    src="/assets/img/logo/white-logo.png"
-                    alt="img"
-                    width={171}
-                    height={44}
-                  />
+                  <Image src="/assets/img/logo/white-logo.png" alt="img" width={171} height={44} />
                 </Link>
               </div>
 
@@ -84,11 +103,7 @@ export default function Header1({ variant }) {
                     </button>
                   ) : (
                     <span
-                      className={
-                        mobileToggle
-                          ? "cs-munu_toggle cs_teggle_active"
-                          : "cs-munu_toggle"
-                      }
+                      className={mobileToggle ? "cs-munu_toggle cs_teggle_active" : "cs-munu_toggle"}
                       onClick={() => setMobileToggle(!mobileToggle)}
                     >
                       <span></span>
@@ -98,44 +113,30 @@ export default function Header1({ variant }) {
                 </div>
               </div>
 
+              {/* ✅ Buttons */}
               <div className="cs_main_header_right">
-                <div className="header-btn d-flex align-items-center">            
-                  <div className="main-button">
-                    <Link href="/blog">
-                      <span className="theme-btn">Blog</span>
-                    </Link>
-                  </div>
-                </div>
-              
-               
-                <div className="header-btn d-flex align-items-center">
-                  <div className="main-button">
-                    <Link href="/contact">
-                      <span className="theme-btn">Contact</span>
-                    </Link>
-                  </div>
+                <div className="d-flex align-items-center gap-3">
+                  <a href="/blog" style={btnStyle} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                    Blog
+                  </a>
+                  <a href="/contact" style={btnStyle} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                    Contact
+                  </a>
                 </div>
               </div>
+
             </div>
-            </div>
+          </div>
         </div>
       </header>
 
       <div className={`search-wrap ${searchToggle ? "active" : ""}`}>
         <div className="search-inner">
-          <i
-            onClick={() => setSearchToggle(!searchToggle)}
-            className="bi bi-x-lg search-close"
-            id="search-close"
-          ></i>
+          <i onClick={() => setSearchToggle(!searchToggle)} className="bi bi-x-lg search-close" id="search-close"></i>
           <div className="search-cell">
             <form method="get">
               <div className="search-field-holder">
-                <input
-                  type="search"
-                  className="main-search-input"
-                  placeholder="Search..."
-                />
+                <input type="search" className="main-search-input" placeholder="Search..." />
               </div>
             </form>
           </div>
