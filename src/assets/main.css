@@ -9675,6 +9675,33 @@ background: #81EA06;
   z-index: 1;
 }
 
+.header-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  background: transparent;
+  border: 2px solid #7fff00;
+  color: #7fff00 !important;
+  border-radius: 20px;
+  padding: 8px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  box-shadow: none;
+}
+
+.header-cta-btn:hover,
+.header-cta-btn:focus-visible {
+  background: #0a1400;
+  color: #7fff00 !important;
+  border: 2px solid #7fff00;
+  box-shadow: inset 0 0 0 2px #7fff00;
+}
+
 .header_style_3 .cs_main_header_right .search-trigger {
   color: #fff
 }

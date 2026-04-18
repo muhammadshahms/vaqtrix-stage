@@ -39,37 +39,6 @@ export default function Header1({ variant }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
-  const btnStyle = {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    lineHeight: "1",
-    background: "#81EA06",
-    color: "#1C4401",
-    fontWeight: "700",
-    fontSize: "14px",
-    padding: "10px 24px",
-    borderRadius: "999px",
-    textDecoration: "none",
-    whiteSpace: "nowrap",
-    letterSpacing: "0.03em",
-    border: "2px solid #81EA06",
-    transition: "background 0.3s ease, color 0.3s ease, border-color 0.3s ease",
-    cursor: "pointer",
-  };
-
-  const handleEnter = (e) => {
-    e.currentTarget.style.background = "#fff";
-    e.currentTarget.style.color = "#1C4401";
-    e.currentTarget.style.borderColor = "#fff";
-  };
-
-  const handleLeave = (e) => {
-    e.currentTarget.style.background = "#81EA06";
-    e.currentTarget.style.color = "#1C4401";
-    e.currentTarget.style.borderColor = "#81EA06";
-  };
-
   return (
     <div>
       <header
@@ -116,12 +85,12 @@ export default function Header1({ variant }) {
               {/* ✅ Buttons */}
               <div className="cs_main_header_right">
                 <div className="d-flex align-items-center gap-3">
-                  <a href="/blog" style={btnStyle} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                  <Link href="/blog" className="header-cta-btn" aria-label="Go to blog page">
                     Blog
-                  </a>
-                  <a href="/contact" style={btnStyle} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                  </Link>
+                  <Link href="/contact" className="header-cta-btn" aria-label="Go to contact page">
                     Contact
-                  </a>
+                  </Link>
                 </div>
               </div>
 
