@@ -82,16 +82,61 @@ export default function Header1({ variant }) {
                 </div>
               </div>
 
-              {/* ✅ Buttons */}
               <div className="cs_main_header_right">
                 <div className="d-flex align-items-center gap-3">
-                  <Link href="/blog" className="header-cta-btn" aria-label="Go to blog page">
-                    Blog
-                  </Link>
-                  <Link href="/contact" className="header-cta-btn" aria-label="Go to contact page">
+<Link href="/blog" className="header-cta-btn header-cta-lg" aria-label="Go to blog page">
+  Blog
+</Link>
+
+                  <Link href="/contact" className="header-cta-btn header-cta-lg" aria-label="Go to contact page">
                     Contact
                   </Link>
                 </div>
+
+                <style>{`
+                  .header-cta-btn {
+                    font-family: 'Plus Jakarta Sans', sans-serif;
+                    font-size: 13px;
+                    font-weight: 600;
+                    padding: 8px 20px;
+                    border-radius: 8px;
+                    border: 1.5px solid #81ea06;
+                    background: #81ea06;
+                    color: #0e2800 !important;
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    letter-spacing: 0.02em;
+                    transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+                    outline: none;
+                    box-shadow: none;
+                  }
+                  .header-cta-btn:hover,
+                  .header-cta-btn:focus,
+                  .header-cta-btn:focus-visible,
+                  .header-cta-btn:active {
+                    background: #ffffff;
+                    color: #0e2800 !important;
+                    border-color: #81ea06;
+                    outline: none;
+                    box-shadow: none;
+                  }
+                  .header-cta-outline {
+                    background: transparent;
+                    border-color: #81ea06;
+                    color: #81ea06 !important;
+                  }
+                  .header-cta-outline:hover,
+                  .header-cta-outline:focus,
+                  .header-cta-outline:focus-visible,
+                  .header-cta-outline:active {
+                    background: #ffffff;
+                    color: #81ea06 !important;
+                  
+                    outline: none;
+                    box-shadow: none;
+                  }
+                `}</style>
               </div>
 
             </div>

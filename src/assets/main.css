@@ -4964,6 +4964,108 @@ span {
   padding-top: 0;
 }
 
+.marquee3-section {
+  position: relative;
+}
+
+.marquee3-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 18px 0 26px;
+}
+
+.marquee3-row-wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee3-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: marquee3-scroll 26s linear infinite;
+}
+
+.marquee3-row-wrap:hover .marquee3-track {
+  animation-play-state: paused;
+}
+
+.marquee3-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 34px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 62px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.marquee3-item--filled {
+  color: #0f4b00;
+}
+
+.marquee3-item--stroke {
+  color: transparent;
+  -webkit-text-stroke: 1.8px #5f4f7d;
+}
+
+.marquee3-icon {
+  width: 52px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1399px) {
+  .marquee3-item {
+    font-size: 52px;
+    padding: 0 28px;
+  }
+}
+
+@media (max-width: 991px) {
+  .marquee3-item {
+    font-size: 38px;
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  .marquee3-icon {
+    width: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .marquee3-container {
+    padding: 10px 0 18px;
+  }
+
+  .marquee3-item {
+    font-size: 30px;
+    padding: 0 16px;
+  }
+
+  .marquee3-item--stroke {
+    -webkit-text-stroke: 1.2px #5f4f7d;
+  }
+}
+
+@keyframes marquee3-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);

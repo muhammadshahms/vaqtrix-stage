@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import MotionText from "../AnimateOnScroll/MotionText";
+import BlogCardItem from "./BlogCardItem";
 import blogData from "@/data/blog.json";
 
 const AUTO_INTERVAL = 3000;
@@ -24,91 +25,6 @@ const buildBlogHref = (post, serviceCategory) => {
   if (source) params.set("service", source);
   const query = params.toString();
   return `/blog/${post.id}${query ? `?${query}` : ""}`;
-};
-
-const categoryColors = {
-  "Website Development": "#0057FF",
-  "Mobile App Development": "#7C3AED",
-  "AI Development": "#0891B2",
-  "E-commerce Solutions": "#D97706",
-  "Digital Marketing & Branding": "#DC2626",
-  "E-book Creations": "#059669",
-  "General": "#1C4401",
-  "About Vaqtrix": "#81EA06",
-};
-
-const categoryThumbs = {
-  "Website Development":          { bg: "#dbeafe", iconColor: "#1d4ed8" },
-  "Mobile App Development":       { bg: "#ede9fe", iconColor: "#7c3aed" },
-  "AI Development":               { bg: "#e0f2fe", iconColor: "#0891b2" },
-  "E-commerce Solutions":         { bg: "#fef3c7", iconColor: "#d97706" },
-  "Digital Marketing & Branding": { bg: "#fee2e2", iconColor: "#dc2626" },
-  "E-book Creations":             { bg: "#d1fae5", iconColor: "#059669" },
-  "General":                      { bg: "#f0fdf4", iconColor: "#1C4401" },
-  "About Vaqtrix":                { bg: "#ecfdf5", iconColor: "#1C4401" },
-};
-
-const thumbFallbacks = [
-  { bg: "#dbeafe", iconColor: "#1d4ed8" },
-  { bg: "#ede9fe", iconColor: "#7c3aed" },
-  { bg: "#fef3c7", iconColor: "#d97706" },
-  { bg: "#d1fae5", iconColor: "#059669" },
-  { bg: "#fee2e2", iconColor: "#dc2626" },
-  { bg: "#e0f2fe", iconColor: "#0891b2" },
-];
-
-const categoryIcons = {
-  "Website Development": (color) => (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-      <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" />
-    </svg>
-  ),
-  "Mobile App Development": (color) => (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-      <rect x="5" y="2" width="14" height="20" rx="2" /><line x1="12" y1="18" x2="12.01" y2="18" strokeWidth="2" />
-    </svg>
-  ),
-  "AI Development": (color) => (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-      <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-    </svg>
-  ),
-  "E-commerce Solutions": (color) => (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 0 1-8 0" />
-    </svg>
-  ),
-  "Digital Marketing & Branding": (color) => (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-    </svg>
-  ),
-  "E-book Creations": (color) => (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-    </svg>
-  ),
-  "General": (color) => (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-      <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-    </svg>
-  ),
-  "About Vaqtrix": (color) => (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-    </svg>
-  ),
-};
-
-const DefaultIcon = (color) => (
-  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
-  </svg>
-);
-
-const getReadTime = (text = "") => {
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
-  return `${Math.max(1, Math.round(words / 200))} min read`;
 };
 
 const Blog1 = ({
@@ -245,157 +161,16 @@ const Blog1 = ({
                 }}
               >
                 {renderPosts.map((item, i) => {
-                  const globalIndex = (currentIndex + i) % allPosts.length;
-                  const thumb =
-                    categoryThumbs[item.category] ||
-                    thumbFallbacks[globalIndex % thumbFallbacks.length];
-                  const renderIcon = categoryIcons[item.category] || DefaultIcon;
-
                   return (
-                    <div
+                    <BlogCardItem
                       key={`${item.id}-${i}`}
-                      style={{ flex: `0 0 ${cardWidthCalc}`, minWidth: 0, display: "flex", flexDirection: "column" }}
-                    >
-                      <div
-                        style={{
-                          display: "flex", flexDirection: "column", height: "100%",
-                          background: "#fff", borderRadius: "16px",
-                          border: "1.5px solid #e2eeda",
-                          overflow: "hidden",
-                          transition: "transform 0.3s ease, box-shadow 0.3s ease, outline-color 0.3s ease",
-                          cursor: "pointer",
-                          outline: "1.5px solid transparent", // ✅ outline ready (won't clip)
-                          outlineOffset: "0px",
-                        }}
-                        onMouseEnter={e => {
-                          e.currentTarget.style.transform = "translateY(-8px)";
-                          e.currentTarget.style.boxShadow = "0 20px 50px rgba(28,68,1,0.13)";
-                          e.currentTarget.style.outline = "1.5px solid #81EA06"; // ✅ outline use kiya border ki jagah
-                          e.currentTarget.style.borderColor = "transparent";
-                        }}
-                        onMouseLeave={e => {
-                          e.currentTarget.style.transform = "translateY(0)";
-                          e.currentTarget.style.boxShadow = "none";
-                          e.currentTarget.style.outline = "1.5px solid transparent";
-                          e.currentTarget.style.borderColor = "#e2eeda";
-                        }}
-                      >
-                        {/* THUMBNAIL */}
-                        <div style={{
-                          height: "170px",
-                          background: thumb.bg,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          position: "relative",
-                          overflow: "hidden",
-                          flexShrink: 0,
-                        }}>
-                          {renderIcon(thumb.iconColor)}
-
-                          {/* Category pill — top left */}
-                          {item.category && (
-                            <span style={{
-                              position: "absolute", top: "12px", left: "12px",
-                              background: "rgba(255,255,255,0.92)",
-                              color: thumb.iconColor,
-                              fontSize: "10px", fontWeight: "800",
-                              letterSpacing: "0.07em", textTransform: "uppercase",
-                              padding: "4px 11px", borderRadius: "999px",
-                              border: `1px solid ${thumb.iconColor}44`,
-                            }}>
-                              {item.category}
-                            </span>
-                          )}
-
-                          {/* Read time pill — top right */}
-                          {item.paragraph && (
-                            <span style={{
-                              position: "absolute", top: "12px", right: "12px",
-                              background: "#1C4401",
-                              color: "#81EA06",
-                              fontSize: "10px", fontWeight: "700",
-                              padding: "4px 10px", borderRadius: "999px",
-                            }}>
-                              {getReadTime(item.paragraph)}
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Colored category bar */}
-                        <div style={{
-                          height: "3px", width: "100%", flexShrink: 0,
-                          background: categoryColors[item.category] || thumbFallbacks[globalIndex % thumbFallbacks.length].iconColor,
-                        }} />
-
-                        {/* Card Body */}
-                        <div style={{ flex: 1, display: "flex", flexDirection: "column", padding: "18px 20px 22px" }}>
-
-                          {/* Date */}
-                          {item.date && (
-                            <div style={{ display: "flex", alignItems: "center", marginBottom: "12px" }}>
-                              <span style={{ display: "flex", alignItems: "center", gap: "5px", fontSize: "11px", color: "#888", fontWeight: "500" }}>
-                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#81EA06" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                  <rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" />
-                                </svg>
-                                {item.date}
-                              </span>
-                            </div>
-                          )}
-
-                          {/* Title */}
-                          <h5 style={{
-                            display: "-webkit-box", WebkitLineClamp: 2,
-                            WebkitBoxOrient: "vertical", overflow: "hidden",
-                            minHeight: "2.8em", lineHeight: "1.4em",
-                            margin: "0 0 10px", fontSize: "15px",
-                            fontWeight: "700", color: "#1C4401",
-                          }}>
-                            <Link
-                              href={buildBlogHref(item, category)}
-                              title={item.title}
-                              style={{ color: "inherit", textDecoration: "none" }}
-                            >
-                              {item.title}
-                            </Link>
-                          </h5>
-
-                          {/* Excerpt */}
-                          {item.paragraph && (
-                            <p style={{
-                              fontSize: "13px", color: "#6b8c5a", lineHeight: "1.6",
-                              margin: "0 0 14px",
-                              display: "-webkit-box", WebkitLineClamp: 2,
-                              WebkitBoxOrient: "vertical", overflow: "hidden",
-                            }}>
-                              {item.paragraph}
-                            </p>
-                          )}
-
-                          {/* Divider */}
-                          <div style={{ height: "1px", background: "#e2eeda", margin: "0 0 14px" }} />
-
-                          {/* Read More */}
-                          <Link
-                            href={buildBlogHref(item, category)}
-                            style={{
-                              marginTop: "auto",
-                              display: "inline-flex", alignItems: "center", gap: "6px",
-                              color: "#1C4401", fontWeight: "700", fontSize: "13px",
-                              textDecoration: "none",
-                              transition: "gap 0.2s ease",
-                            }}
-                            onMouseEnter={e => e.currentTarget.style.gap = "10px"}
-                            onMouseLeave={e => e.currentTarget.style.gap = "6px"}
-                          >
-                            Read More
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#81EA06" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
+                      post={item}
+                      href={buildBlogHref(item, category)}
+                      index={i}
+                      currentIndex={currentIndex}
+                      totalItems={allPosts.length}
+                      cardWidthCalc={cardWidthCalc}
+                    />
                   );
                 })}
               </div>

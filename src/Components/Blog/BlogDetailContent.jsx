@@ -6,9 +6,10 @@ import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn, FaPinterestP, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import blogData from "@/data/blog.json";
+import BlogCardItem from "./BlogCardItem";
 
 export default function BlogDetailContent({ post, relatedPosts = [] }) {
-  const recentPosts = blogData.posts.filter((p) => p.id !== post.id).slice(0, 5);
+  const recentPosts = blogData.posts.filter((p) => p.id !== post.id).slice(0, 3);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
@@ -250,22 +251,22 @@ export default function BlogDetailContent({ post, relatedPosts = [] }) {
               <h3 style={{ fontSize: "1rem", fontWeight: "600", borderBottom: "2px solid var(--tp-theme-primary, #1C4401)", paddingBottom: "8px", marginBottom: "16px", color: "var(--header, #000)" }}>
                 Recent Posts
               </h3>
-              <div className="recent-posts-list">
-                {recentPosts.map((rp) => {
+              <div className="recent-posts-list" style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
+                {recentPosts.map((rp, index) => {
                   const params = new URLSearchParams();
                   if (rp.category) params.set("service", rp.category);
                   const query = params.toString();
                   const href = `/blog/${rp.id}${query ? `?${query}` : ""}`;
                   return (
-                    <Link href={href} key={rp.id} className="recent-post-link" style={{ display: "flex", gap: "16px", paddingBottom: "16px", marginBottom: "16px", borderBottom: "1px solid #eaeaea", textDecoration: "none", color: "inherit" }}>
-                      <div style={{ width: "80px", height: "60px", flexShrink: 0, position: "relative", borderRadius: "4px", overflow: "hidden" }}>
-                        <Image src={rp.img} alt={rp.title} fill style={{ objectFit: "cover" }} />
-                      </div>
-                      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                        <h4 className="recent-title" style={{ fontSize: "0.85rem", fontWeight: "600", margin: "0 0 6px 0", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden", lineHeight: "1.4" }}>{rp.title}</h4>
-                        {rp.date && <span style={{ fontSize: "0.75rem", color: "#6c757d" }}>{rp.date}</span>}
-                      </div>
-                    </Link>
+                    <BlogCardItem
+                      key={rp.id}
+                      post={rp}
+                      href={href}
+                      index={index}
+                      currentIndex={0}
+                      totalItems={recentPosts.length}
+                      cardWidthCalc="100%"
+                    />
                   );
                 })}
               </div>

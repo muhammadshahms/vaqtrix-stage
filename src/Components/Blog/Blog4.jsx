@@ -273,7 +273,7 @@ const Blog4 = ({ initialCategory }) => {
                   <div
                     style={{
                       height: "170px",
-                      background: categoryThumbs[item.category]?.bg || "#f0fdf4",
+                      background: "#f0fdf4",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -282,6 +282,10 @@ const Blog4 = ({ initialCategory }) => {
                       flexShrink: 0,
                     }}
                   >
+                    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#1C4401" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
+                      <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+
                     {/* Category badge — top left */}
                     {item.category && (
                       <span
@@ -290,14 +294,14 @@ const Blog4 = ({ initialCategory }) => {
                           top: "12px",
                           left: "12px",
                           background: "rgba(255,255,255,0.92)",
-                          color: categoryThumbs[item.category]?.iconColor || "#1C4401",
+                          color: "#1C4401",
                           fontSize: "10px",
                           fontWeight: "800",
                           letterSpacing: "0.07em",
                           textTransform: "uppercase",
                           padding: "4px 11px",
                           borderRadius: "999px",
-                          border: `1px solid ${categoryThumbs[item.category]?.iconColor || "#1C4401"}44`,
+                          border: "1px solid #1C440144",
                         }}
                       >
                         {item.category}
@@ -330,7 +334,7 @@ const Blog4 = ({ initialCategory }) => {
                       height: "3px",
                       width: "100%",
                       flexShrink: 0,
-                      background: categoryColors[item.category] || "#1C4401",
+                      background: "#1C4401",
                     }}
                   />
 
