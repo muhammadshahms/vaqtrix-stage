@@ -19,7 +19,6 @@ const CaseStudy4 = ({
       : categories;
 
   const sectionRef = useRef(null);
-  const lightboxVideoRef = useRef(null);
 
   const [selectedCategory, setSelectedCategory] = useState(
     category.length ? category[0] : "All"
@@ -51,10 +50,6 @@ const CaseStudy4 = ({
   };
 
   const closeLightbox = () => {
-    if (lightboxVideoRef.current) {
-      lightboxVideoRef.current.pause();
-      lightboxVideoRef.current.currentTime = 0;
-    }
     setLightboxOpen(false);
   };
 
@@ -83,14 +78,6 @@ const CaseStudy4 = ({
     document.body.style.overflow = lightboxOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [lightboxOpen]);
-
-  // Pause video on slide change
-  useEffect(() => {
-    if (lightboxVideoRef.current) {
-      lightboxVideoRef.current.pause();
-      lightboxVideoRef.current.currentTime = 0;
-    }
-  }, [lightboxIndex]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -159,7 +146,6 @@ const CaseStudy4 = ({
                 const globalIndex = (currentPage - 1) * cardsPerPage + i;
                 const isHovered = hoveredIndex === i;
                 const anyHovered = hoveredIndex !== null;
-                const isVideo = !!item.video;
 
                 return (
                   <motion.div
@@ -183,34 +169,22 @@ const CaseStudy4 = ({
                       }}
                     >
                       <div className="thumb">
-                        {/* ✅ VIDEO card — muted autoplay loop as thumbnail */}
-                        {isVideo ? (
-                          <video
-                            src={item.video}
-                            muted
-                            loop
-                            playsInline
-                            autoPlay
-                            style={{ width: "100%", display: "block", aspectRatio: "3/2", objectFit: "cover", borderRadius: "30px" }}
-                          />
-                        ) : (
-                          /* ✅ IMAGE card */
-                          <Image
-                            src={item.img}
-                            alt={item.title}
-                            width={681}
-                            height={454}
-                            style={{ width: "100%", height: "auto", display: "block" }}
-                          />
-                        )}
+                        <Image
+                          src={item.img}
+                          alt={item.title}
+                          width={681}
+                          height={454}
+                          style={{
+                            width: "100%",
+                            aspectRatio: "3/2",
+                            height: "100%",
+                            minHeight: "240px",
+                            display: "block",
+                            objectFit: "cover",
+                            borderRadius: "30px"
+                          }}
+                        />
                       </div>
-
-                      {/* ✅ Play icon only on video cards */}
-                      {isVideo && (
-                        <div style={playBadgeStyle}>
-                          <i className="bi bi-play-fill" style={{ color: "#fff", fontSize: "18px" }}></i>
-                        </div>
-                      )}
                     </div>
                   </motion.div>
                 );
@@ -304,25 +278,20 @@ const CaseStudy4 = ({
                   background: "#111",
                 }}
               >
-                {/* ✅ VIDEO — controls, autoPlay */}
-                {currentLightboxItem.video ? (
-                  <video
-                    ref={lightboxVideoRef}
-                    src={currentLightboxItem.video}
-                    controls
-                    autoPlay
-                    style={{ width: "100%", display: "block", maxHeight: "68vh" }}
-                  />
-                ) : (
-                  /* ✅ IMAGE */
-                  <Image
-                    src={currentLightboxItem.img}
-                    alt={currentLightboxItem.title}
-                    width={820}
-                    height={547}
-                    style={{ width: "100%", height: "auto", display: "block" }}
-                  />
-                )}
+                <Image
+                  src={currentLightboxItem.img}
+                  alt={currentLightboxItem.title}
+                  width={1200}
+                  height={900}
+                  style={{
+                    width: "100%",
+                    maxHeight: "82vh",
+                    height: "auto",
+                    display: "block",
+                    objectFit: "contain",
+                    background: "#111"
+                  }}
+                />
 
                 {/* Bottom bar */}
                 {/* <div style={bottomBarStyle}>
@@ -359,20 +328,6 @@ const CaseStudy4 = ({
 };
 
 // ── Styles ──────────────────────────────────────────────
-
-const playBadgeStyle = {
-  position: "absolute",
-  top: "12px",
-  right: "12px",
-  background: "rgba(0,0,0,0.6)",
-  borderRadius: "50%",
-  width: "40px",
-  height: "40px",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  backdropFilter: "blur(4px)",
-};
 
 const counterStyle = {
   position: "absolute",

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import techStackData from "@/data/techstack.json";
 
-const TechStack = ({ category = "home" }) => {
+const TechStack = ({ category = "home", bgColor = "#ffffff" }) => {
   const data = techStackData[category] || techStackData["home"];
 
   // ✅ Mobile detection
@@ -19,7 +19,7 @@ const TechStack = ({ category = "home" }) => {
   const imgSrc = isMobile ? data.mobileImage : data.desktopImage;
 
   return (
-    <section className="bg-white section-padding">
+    <section className="section-padding" style={{ backgroundColor: bgColor }}>
       <div className="container text-center">
 
         <h2 className="fw-bold mb-4">

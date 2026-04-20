@@ -14,84 +14,84 @@
       "id": 1,
       "category": "Website Development",
       "title": "Brand Intro Animation",
-      "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "img": "/assets/img/Project%20Images/01_Homepage.png",
       "link": "/services/video-animation"
     },
     {
       "id": 2,
       "category": "Website Development",
       "title": "Product Explainer Video",
-      "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "img": "/assets/img/Project%20Images/Activity.png",
       "link": "/services/video-animation"
     },
     {
       "id": 3,
       "category": "App Development",
       "title": "Mobility Machines Logo",
-      "img": "/assets/img/case-studies/04.jpg",
+      "img": "/assets/img/Project%20Images/Car%20Rental%20Landing%20Page.png",
       "link": "/services/logo-design"
     },
     {
       "id": 4,
       "category": "App Development",
       "title": "Tech Startup Brand Identity",
-      "img": "/assets/img/case-studies/06.jpg",
+      "img": "/assets/img/Project%20Images/Description%20Categories.png",
       "link": "/services/logo-design"
     },
     {
       "id": 5,
       "category": "Mascot",
       "title": "Gaming Mascot Character",
-      "img": "/assets/img/case-studies/07.jpg",
+      "img": "/assets/img/Project%20Images/Detailed.png",
       "link": "/services/mascot-logos"
     },
     {
       "id": 6,
       "category": "Mascot",
       "title": "Sports Team Mascot Design",
-      "img": "/assets/img/case-studies/08.jpg",
+      "img": "/assets/img/Project%20Images/Food%20Website%20-%20Yapari%20Burger.png",
       "link": "/services/mascot-logos"
     },
     {
       "id": 7,
       "category": "Social Media Post Design",
       "title": "Fashion E-Commerce Store",
-      "img": "/assets/img/case-studies/02.jpg",
+      "img": "/assets/img/Project%20Images/Genery%20-%20%20Digital%20Blockchain%20Website.png",
       "link": "/services/shopify-store"
     },
     {
       "id": 8,
       "category": "Social Media Post Design",
       "title": "Electronics Store Redesign",
-      "img": "/assets/img/case-studies/03.jpg",
+      "img": "/assets/img/Project%20Images/Home.png",
       "link": "/services/shopify-store"
     },
     {
       "id": 9,
       "category": "Text Logo",
       "title": "Instagram Growth Campaign",
-      "img": "/assets/img/case-studies/04.jpg",
+      "img": "/assets/img/Project%20Images/Home2.png",
       "link": "/services/social-media"
     },
     {
       "id": 10,
       "category": "Text Logo",
       "title": "Text Logo Brand Kit",
-      "img": "/assets/img/case-studies/06.jpg",
+      "img": "/assets/img/Project%20Images/Home3.png",
       "link": "/services/social-media"
     },
     {
       "id": 11,
       "category": "Branding",
       "title": "2D Mobile Arcade Game",
-      "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "img": "/assets/img/Project%20Images/Home4.png",
       "link": "/services/game-development"
     },
     {
       "id": 12,
       "category": "Branding",
       "title": "Web-Based Puzzle Game",
-      "img": "/assets/img/case-studies/08.jpg",
+      "img": "/assets/img/Project%20Images/Home5.png",
       "link": "/services/game-development"
     },
    
@@ -99,21 +99,21 @@
       "id": 14,
       "category": "E-commerce Stores",
       "title": "Mobile App UX Redesign",
-      "img": "/assets/img/case-studies/03.jpg",
+      "img": "/assets/img/Project%20Images/Home6.png",
       "link": "/services/ui-ux"
     },
      {
       "id": 15,
       "category": "E-commerce Stores",
       "title": "Web-Based Puzzle Game",
-      "img": "/assets/img/case-studies/08.jpg",
+      "img": "/assets/img/Project%20Images/Home7.png",
       "link": "/services/game-development"
     },
     {
       "id": 16,
       "category": "E-commerce Stores",
       "title": "SaaS Dashboard UI Design",
-      "img": "/assets/img/case-studies/02.jpg",
+      "img": "/assets/img/Project%20Images/Homepage.png",
       "link": "/services/ui-ux"
     }
    

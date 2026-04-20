@@ -3,6 +3,7 @@
 import MotionText from "../AnimateOnScroll/MotionText";
 import Image from "next/image";
 import ContactForm from "./Contactform";
+import ReactCountryFlag from "react-country-flag";
 
 const ContactInfo1 = () => {
   return (
@@ -63,7 +64,11 @@ const ContactInfo1 = () => {
                     <MotionText delay={0.8}>
                       <div className="contact-info style2">
                         <div className="icon">
-                          <span style={{ fontSize: "12px", fontWeight: 700 }}>US</span>
+                          <ReactCountryFlag
+                            countryCode="US"
+                            svg
+                            style={{ width: "24px", height: "24px", borderRadius: "1px", flexShrink: 0 }}
+                          />
                         </div>
                         <div className="content">
                           <h3>+1 (818) 278 0897</h3>
@@ -74,7 +79,11 @@ const ContactInfo1 = () => {
                     <MotionText delay={0.8}>
                       <div className="contact-info style2">
                         <div className="icon">
-                          <span style={{ fontSize: "12px", fontWeight: 700 }}>UK</span>
+                          <ReactCountryFlag
+                            countryCode="GB"
+                            svg
+                            style={{ width: "24px", height: "24px", borderRadius: "1px", flexShrink: 0 }}
+                          />
                         </div>
                         <div className="content">
                           <h3>+44 7476617576</h3>

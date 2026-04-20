@@ -96,16 +96,20 @@ export default function Header1({ variant }) {
                 <style>{`
                   .header-cta-btn {
                     font-family: 'Plus Jakarta Sans', sans-serif;
-                    font-size: 13px;
+                    font-size: 14px;
                     font-weight: 600;
-                    padding: 8px 20px;
-                    border-radius: 8px;
+                    padding: 10px 24px;
+                    border-radius: 10px;
                     border: 1.5px solid #81ea06;
                     background: #81ea06;
                     color: #0e2800 !important;
                     text-decoration: none;
                     display: inline-flex;
                     align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 2;
+                    pointer-events: auto;
                     letter-spacing: 0.02em;
                     transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
                     outline: none;
@@ -117,7 +121,7 @@ export default function Header1({ variant }) {
                   .header-cta-btn:active {
                     background: #ffffff;
                     color: #0e2800 !important;
-                    border-color: #81ea06;
+                    border-color: #ffffff;
                     outline: none;
                     box-shadow: none;
                   }

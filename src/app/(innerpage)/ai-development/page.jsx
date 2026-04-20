@@ -33,7 +33,7 @@ const page = () => {
         showPlanSelector={false}
 
       /> */}
-                  <TechStack category='ai'/> 
+                  <TechStack category='ai' bgColor="#EEF6EE"/> 
       <Services3 category={ServicesData.Ai} />
       <WhyChoose4 categoryId="Ai2.0" />
       <Faq1 addclass="faq-section section-padding " category="ai" ></Faq1>
