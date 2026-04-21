@@ -98,8 +98,8 @@ export default function Header1({ variant }) {
                     font-family: 'Plus Jakarta Sans', sans-serif;
                     font-size: 14px;
                     font-weight: 600;
-                    padding: 10px 24px;
-                    border-radius: 10px;
+                    padding: 12px 28px;
+                    border-radius: 70px;
                     border: 1.5px solid #81ea06;
                     background: #81ea06;
                     color: #0e2800 !important;
