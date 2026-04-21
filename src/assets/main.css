@@ -5111,7 +5111,7 @@ span {
   padding: 16px;
   background-color: var(--white);
   border-radius: 16px;
-  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
 }
 
 .news-box-items .news-image {

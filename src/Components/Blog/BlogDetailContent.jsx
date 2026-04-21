@@ -6,7 +6,6 @@ import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn, FaPinterestP, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import blogData from "@/data/blog.json";
-import BlogCardItem from "./BlogCardItem";
 
 export default function BlogDetailContent({ post, relatedPosts = [] }) {
   const recentPosts = blogData.posts.filter((p) => p.id !== post.id).slice(0, 3);
@@ -258,15 +257,66 @@ export default function BlogDetailContent({ post, relatedPosts = [] }) {
                   const query = params.toString();
                   const href = `/blog/${rp.id}${query ? `?${query}` : ""}`;
                   return (
-                    <BlogCardItem
-                      key={rp.id}
-                      post={rp}
-                      href={href}
-                      index={index}
-                      currentIndex={0}
-                      totalItems={recentPosts.length}
-                      cardWidthCalc="100%"
-                    />
+                    <Link 
+                      href={href} 
+                      key={rp.id} 
+                      className="recent-post-link" 
+                      style={{ 
+                        textDecoration: 'none', 
+                        display: 'flex', 
+                        gap: '16px', 
+                        alignItems: 'flex-start', 
+                        borderBottom: '1px solid #eaeaea', 
+                        paddingBottom: '18px' 
+                      }}
+                    >
+                      {/* Image and Date Column */}
+                      <div style={{ width: '120px', flexShrink: 0, display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ width: '100%', height: '80px', position: 'relative', borderRadius: '6px', overflow: 'hidden' }}>
+                           <Image 
+                             src={rp.img || "/assets/img/blog/blog-1.jpg"} 
+                             alt={rp.title || "Recent Post"} 
+                             fill 
+                             style={{ objectFit: 'cover' }} 
+                           />
+                        </div>
+                        {rp.date && (
+                          <div style={{ 
+                            fontSize: '11px', 
+                            color: '#6c757d', 
+                            marginTop: '8px', 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            gap: '5px',
+                            fontWeight: '600'
+                          }}>
+                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#81EA06" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                               <rect x="3" y="4" width="18" height="18" rx="2" />
+                               <line x1="16" y1="2" x2="16" y2="6" />
+                               <line x1="8" y1="2" x2="8" y2="6" />
+                               <line x1="3" y1="10" x2="21" y2="10" />
+                             </svg>
+                             {rp.date}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Title Column */}
+                      <div style={{ flex: 1, marginTop: '-2px' }}>
+                        <h4 className="recent-title" style={{ 
+                          fontSize: '15px', 
+                          margin: 0, 
+                          fontWeight: '700', 
+                          lineHeight: '1.45', 
+                          display: '-webkit-box', 
+                          WebkitLineClamp: 3, 
+                          WebkitBoxOrient: 'vertical', 
+                          overflow: 'hidden' 
+                        }}>
+                           {rp.title}
+                        </h4>
+                      </div>
+                    </Link>
                   );
                 })}
               </div>
