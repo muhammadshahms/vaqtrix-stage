@@ -162,9 +162,7 @@ const CaseStudy4 = ({
                       style={{
                         position: "relative",
                         overflow: "hidden",
-                        transition: "filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease",
-                        filter: anyHovered && !isHovered ? "blur(3px)" : "none",
-                        opacity: anyHovered && !isHovered ? 0.5 : 1,
+                          transition: "transform 0.3s ease",
                         transform: isHovered ? "scale(1.02)" : "scale(1)",
                       }}
                     >

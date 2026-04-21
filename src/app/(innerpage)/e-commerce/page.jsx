@@ -32,7 +32,7 @@ const page = () => {
         showPlanSelector={false}
 
       />
-       <TechStack category='ecom'/>   
+       <TechStack category='ecom' bgColor="#E9EFDD" />   
       <Services3 category={ServicesData.Ecom} />
       <WhyChoose4 categoryId="Ecom2.0" />
       <Faq1 addclass="faq-section section-padding " category="ecom" ></Faq1>
