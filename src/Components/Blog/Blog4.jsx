@@ -242,7 +242,8 @@ const Blog4 = ({ initialCategory }) => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
             className="row g-4"
-            // âœ… alignItems removed for natural height
+            // ✅ align-items-stretch — saari cards row me equal height
+            style={{ alignItems: "stretch" }}
           >
             {currentCards.length === 0 && (
               <div className="text-center w-100">No results found.</div>
@@ -253,30 +254,32 @@ const Blog4 = ({ initialCategory }) => {
                 key={`${item.id}-${i}`}
                 className="col-12 col-md-6 col-xl-4"
                 layout
-
+                // ✅ flex column taaki card andar bhi stretch ho
+                style={{ display: "flex", flexDirection: "column" }}
               >
-                {/* âœ… Card â€” natural height */}
+                {/* ✅ Card — height: 100% taaki equal height mile */}
                 <Link
                   href={buildBlogHref(item)}
                   className="news-box-items mt-0 shadow-lg rounded overflow-hidden"
                   style={{
                     display: "flex",
                     flexDirection: "column",
+                    height: "100%",
                     textDecoration: "none",
-                    color: "inherit",
-                    paddingBottom: "8px"
+                    color: "inherit"
                   }}
                 >
                   {/* ✅ Thumbnail with category badge + read time + colored bar */}
                   <div
                     style={{
-                      height: "140px",
+                      height: "170px",
                       background: "#f0fdf4",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       position: "relative",
-                      overflow: "hidden", borderRadius: "12px", flexShrink: 0,
+                      overflow: "hidden",
+                      flexShrink: 0,
                     }}
                   >
                     <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#1C4401" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
@@ -289,10 +292,8 @@ const Blog4 = ({ initialCategory }) => {
                         style={{
                           position: "absolute",
                           top: "12px",
-                          left: "12px",                            maxWidth: "calc(100% - 90px)",
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",                          background: "rgba(255,255,255,0.92)",
+                          left: "12px",
+                          background: "rgba(255,255,255,0.92)",
                           color: "#1C4401",
                           fontSize: "10px",
                           fontWeight: "800",
@@ -339,8 +340,9 @@ const Blog4 = ({ initialCategory }) => {
 
                   {/* Content */}
                   <div
-                    className="news-content p-2 px-3"
+                    className="news-content p-3"
                     style={{
+                      flex: 1,
                       display: "flex",
                       flexDirection: "column",
                       gap: "8px",
@@ -725,4 +727,3 @@ const Blog4 = ({ initialCategory }) => {
 };
 
 export default Blog4;
-

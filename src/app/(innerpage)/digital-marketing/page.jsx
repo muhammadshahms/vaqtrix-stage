@@ -41,7 +41,7 @@ const page = () => {
         showButton={true}
         showPlanSelector={true}
       />
-       <TechStack category='digital' bgColor="#E9EFDD"/> 
+       <TechStack category='digital'/> 
       <Services3 category={ServicesData.Digital} />
       <WhyChoose4 categoryId="Digital2.0" />
       <Faq1 addclass="faq-section section-padding " category="digital" ></Faq1>
