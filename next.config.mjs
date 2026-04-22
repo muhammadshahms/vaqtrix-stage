@@ -3,11 +3,13 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
-    domains: ["img.icons8.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.icons8.com",
+      },
+    ],
   },
   reactStrictMode: false,
 };

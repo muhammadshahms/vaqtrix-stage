@@ -13,14 +13,14 @@ const ServicesCategory = ({ category }) => {
   return (
     <section
       className="service-section fix section-padding"
-      data-background={category.background || "/assets/img/service/service-bg.jpg"}
+      style={{ backgroundColor: "#eaf4ea", marginTop: "-1px", backgroundImage: "none" }}
     >
       <div className="container text-start">
 
         {/* ✅ Add main heading and paragraph */}
         <div className="section-header text-center mb-5">
            <h1>{category.heading}</h1>
-        <p>{category.paragraph}</p>
+           <p dangerouslySetInnerHTML={{ __html: category.paragraph }}></p>
         </div>
 
         <div className="row g-4">
@@ -31,7 +31,7 @@ const ServicesCategory = ({ category }) => {
               data-wow-delay={`${0.2 + i * 0.1}s`}
             >
               <div
-                className="service-box-items mt-0"
+                className="service-box-items mt-0 h-100"
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
                 style={{

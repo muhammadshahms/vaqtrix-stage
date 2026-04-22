@@ -52,7 +52,7 @@ export default function BlogCardItem({ post, href, index = 0, currentIndex = 0, 
     <div style={{ flex: `0 0 ${cardWidthCalc}`, minWidth: 0, display: "flex", flexDirection: "column" }}>
       <Link
         href={href}
-        className="news-box-items mt-0 shadow-lg rounded overflow-hidden"
+        className="news-box-items mt-0 rounded overflow-hidden"
         style={{
           display: "flex",
           flexDirection: "column",

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 import blogData from "@/data/blog.json";
+import BlogCardItem from "./BlogCardItem";
 
 const truncate = (text, maxLength) => {
   if (!text) return "";
@@ -257,202 +258,13 @@ const Blog4 = ({ initialCategory }) => {
                 // ✅ flex column taaki card andar bhi stretch ho
                 style={{ display: "flex", flexDirection: "column" }}
               >
-                {/* ✅ Card — height: 100% taaki equal height mile */}
-                <Link
-                  href={buildBlogHref(item)}
-                  className="news-box-items mt-0 shadow-lg rounded overflow-hidden"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    height: "100%",
-                    textDecoration: "none",
-                    color: "inherit"
-                  }}
-                >
-                  {/* ✅ Thumbnail with category badge + read time + colored bar */}
-                  <div
-                    style={{
-                      height: "170px",
-                      background: "#f0fdf4",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      position: "relative",
-                      overflow: "hidden",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#1C4401" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.45 }}>
-                      <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                    </svg>
-
-                    {/* Category badge — top left */}
-                    {item.category && (
-                      <span
-                        style={{
-                          position: "absolute",
-                          top: "12px",
-                          left: "12px",
-                          background: "rgba(255,255,255,0.92)",
-                          color: "#1C4401",
-                          fontSize: "10px",
-                          fontWeight: "800",
-                          letterSpacing: "0.07em",
-                          textTransform: "uppercase",
-                          padding: "4px 11px",
-                          borderRadius: "999px",
-                          border: "1px solid #1C440144",
-                        }}
-                      >
-                        {item.category}
-                      </span>
-                    )}
-
-                    {/* Read time — top right */}
-                    {item.paragraph && (
-                      <span
-                        style={{
-                          position: "absolute",
-                          top: "12px",
-                          right: "12px",
-                          background: "#1C4401",
-                          color: "#81EA06",
-                          fontSize: "10px",
-                          fontWeight: "700",
-                          padding: "4px 10px",
-                          borderRadius: "999px",
-                        }}
-                      >
-                        {getReadTime(item.paragraph)}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* ✅ Colored category bar */}
-                  <div
-                    style={{
-                      height: "3px",
-                      width: "100%",
-                      flexShrink: 0,
-                      background: "#1C4401",
-                    }}
-                  />
-
-                  {/* Content */}
-                  <div
-                    className="news-content p-3"
-                    style={{
-                      flex: 1,
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "8px",
-                    }}
-                  >
-                    {/* ✅ Date */}
-                    {item.date && (
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "6px",
-                          color: "#888",
-                          fontSize: "11px",
-                          fontWeight: 500,
-                        }}
-                      >
-                        <svg
-                          width="11"
-                          height="11"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="#81EA06"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <rect x="3" y="4" width="18" height="18" rx="2" />
-                          <line x1="16" y1="2" x2="16" y2="6" />
-                          <line x1="8" y1="2" x2="8" y2="6" />
-                          <line x1="3" y1="10" x2="21" y2="10" />
-                        </svg>
-                        <span>{item.date}</span>
-                      </div>
-                    )}
-
-                    {/* ✅ Title: 2 line clamp */}
-                    <h5
-                      style={{
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical",
-                        overflow: "hidden",
-                        lineHeight: "1.4em",
-                        minHeight: "2.8em",
-                        margin: "0 0 10px",
-                        fontSize: "15px",
-                        fontWeight: "700",
-                        color: "#1C4401",
-                        wordBreak: "break-word",
-                      }}
-                      title={item.title}
-                    >
-                      {item.title}
-                    </h5>
-
-                    {/* ✅ Paragraph: 2 line clamp */}
-                    {item.paragraph && (
-                      <p
-                        style={{
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                          lineHeight: "1.6",
-                          margin: "0 0 14px",
-                          fontSize: "13px",
-                          color: "#6b8c5a",
-                          wordBreak: "break-word",
-                        }}
-                        title={item.paragraph}
-                      >
-                        {item.paragraph}
-                      </p>
-                    )}
-
-                    {/* ✅ Divider */}
-                    <div style={{ height: "1px", background: "#e2eeda", margin: "0 0 14px" }} />
-
-                    {/* ✅ Read More link */}
-                    <div
-                      style={{
-                        marginTop: "auto",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "6px",
-                        color: "#1C4401",
-                        fontWeight: "700",
-                        fontSize: "13px",
-                        cursor: "pointer",
-                        transition: "gap 0.2s ease",
-                      }}
-                    >
-                      Read More
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#81EA06"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
+                <BlogCardItem 
+                  post={item} 
+                  href={buildBlogHref(item)} 
+                  index={i} 
+                  totalItems={filteredContent.length} 
+                  cardWidthCalc="100%" 
+                />
               </motion.div>
             ))}
           </motion.div>
