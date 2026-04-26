@@ -58,7 +58,7 @@ const WhatWeDo = () => {
 
         {/* SERVICES GRID */}
         <motion.div
-          className="row text-left"
+          className="row text-left g-4 align-items-stretch"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
