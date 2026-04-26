@@ -37,11 +37,6 @@ const categoryThumbs = {
   "About Vaqtrix": { bg: "#ecfdf5", iconColor: "#1C4401" },
 };
 
-// ✅ Read time calculator
-const getReadTime = (text = "") => {
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
-  return `${Math.max(1, Math.round(words / 200))} min read`;
-};
 
 // This tab map keeps the visible labels aligned with the requested UI,
 // while still filtering against the existing blog categories in data.
