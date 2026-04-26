@@ -2,8 +2,8 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-// import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSearchParams } from "next/navigation";
 
 import portfolioData from "@/data/portfolio.json";
 
@@ -19,10 +19,16 @@ const CaseStudy4 = ({
       : categories;
 
   const sectionRef = useRef(null);
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams ? searchParams.get("category") : null;
 
   const [selectedCategory, setSelectedCategory] = useState(
-    category.length ? category[0] : "All"
-  ); const [currentPage, setCurrentPage] = useState(1);
+    (categoryParam && allowedCategories.includes(categoryParam))
+      ? categoryParam
+      : (category.length ? category[0] : "All")
+  );
+  
+  const [currentPage, setCurrentPage] = useState(1);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -78,6 +84,14 @@ const CaseStudy4 = ({
     document.body.style.overflow = lightboxOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [lightboxOpen]);
+
+  // Handle URL Param changes
+  useEffect(() => {
+    if (categoryParam && allowedCategories.includes(categoryParam)) {
+      setSelectedCategory(categoryParam);
+      setCurrentPage(1);
+    }
+  }, [categoryParam, allowedCategories]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);

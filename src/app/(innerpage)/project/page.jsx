@@ -1,6 +1,6 @@
 import CaseStudy4 from '@/Components/CaseStudy/CaseStudy4';
 import BreadCumb from '@/Components/Common/BreadCumb';
-import React from 'react';
+import React, { Suspense } from 'react';
 
 const page = () => {
   return (
@@ -9,7 +9,9 @@ const page = () => {
                 bgimg="/assets/img/breadcrumb.jpg"
                 Title="Explore Vaqtrix Portfolio of Digital Innovation"
             ></BreadCumb>       
-            <CaseStudy4></CaseStudy4>        
+            <Suspense fallback={<div>Loading...</div>}>
+              <CaseStudy4></CaseStudy4>        
+            </Suspense>
     </div>
   );
 };
