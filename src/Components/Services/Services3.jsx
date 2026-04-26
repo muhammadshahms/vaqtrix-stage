@@ -13,7 +13,7 @@ const ServicesCategory = ({ category }) => {
   return (
     <section
       className="service-section fix section-padding"
-      style={{ backgroundColor: "#eaf4ea", marginTop: "-1px", backgroundImage: "none" }}
+      style={{ backgroundColor: "#EBF4EB", marginTop: "-1px", backgroundImage: "none" }}
     >
       <div className="container text-start">
 

@@ -113,7 +113,7 @@ const Footer1 = () => {
                                     display: "inline-flex",
                                     alignItems: "center",
                                     gap: "8px",
-                                    background: "#fff",
+                                    background: "#F1F6E4",
                                     color: "#1C4401",
                                     fontWeight: "700",
                                     fontSize: "14px",
@@ -122,7 +122,7 @@ const Footer1 = () => {
                                     textDecoration: "none",
                                     whiteSpace: "nowrap",
                                     letterSpacing: "0.03em",
-                                    border: "2px solid #fff",
+                                    border: "2px solid #F1F6E4",
                                     transition: "background 0.3s ease, color 0.3s ease, border-color 0.3s ease",
                                 }}
                                 onMouseEnter={e => {
@@ -131,9 +131,9 @@ const Footer1 = () => {
                                     e.currentTarget.style.borderColor = "#81EA06";
                                 }}
                                 onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#fff";
+                                    e.currentTarget.style.background = "#F1F6E4";
                                     e.currentTarget.style.color = "#1C4401";
-                                    e.currentTarget.style.borderColor = "#fff";
+                                    e.currentTarget.style.borderColor = "#F1F6E4";
                                 }}
                             >
                                 Talk to an AI Specialist

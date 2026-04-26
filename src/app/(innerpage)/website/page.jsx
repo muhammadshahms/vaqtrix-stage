@@ -34,7 +34,7 @@ const page = () => {
         showPlanSelector={false}
 
       />
-      <TechStack category='website' bgColor="#F1F6E4" />     
+      <TechStack category='website' bgColor="#EBF4EB" />     
        <Services3 category={ServicesData.Website} />
       <WhyChoose4 categoryId="Website2.0" />
       <Faq1 addclass="faq-section section-padding " category="website" ></Faq1>

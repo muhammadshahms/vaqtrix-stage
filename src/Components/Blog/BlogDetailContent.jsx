@@ -54,7 +54,7 @@ export default function BlogDetailContent({ post, relatedPosts = [] }) {
     padding: "13px 16px",
     fontSize: "0.95rem",
     width: "100%",
-    background: focusedField === field ? "#f6fff0" : "#fff",
+    background: focusedField === field ? "#F1F6E4" : "#F1F6E4",
     color: "#1C4401",
     outline: "none",
     transition: "border-color 0.25s ease, background 0.25s ease",

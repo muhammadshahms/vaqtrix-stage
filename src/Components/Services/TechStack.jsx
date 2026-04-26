@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import techStackData from "@/data/techstack.json";
 
-const TechStack = ({ category = "home", bgColor = "#ffffff" }) => {
+const TechStack = ({ category = "home", bgColor = "#EBF4EB" }) => {
   const data = techStackData[category] || techStackData["home"];
 
   // ✅ Mobile detection

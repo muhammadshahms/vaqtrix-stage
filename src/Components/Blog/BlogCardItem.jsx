@@ -64,7 +64,7 @@ export default function BlogCardItem({ post, href, index = 0, currentIndex = 0, 
         <div
           style={{
             height: "170px",
-            background: "#f0fdf4",
+            background: "#F1F6E4",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
