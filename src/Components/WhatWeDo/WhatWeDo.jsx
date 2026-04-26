@@ -70,7 +70,7 @@ const WhatWeDo = () => {
               className="col-xl-4 col-lg-6 col-md-6"
               variants={fadeUp}
             >
-              <div className="service-box-items h-100 mt-0 d-flex align-items-start">
+              <div className="service-box-items h-100">
 
                 {/* ICON */}
                 <MotionImage>
