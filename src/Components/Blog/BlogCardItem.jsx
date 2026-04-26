@@ -39,10 +39,6 @@ const GlobeIcon = (color) => (
   </svg>
 );
 
-const getReadTime = (text = "") => {
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
-  return `${Math.max(1, Math.round(words / 200))} min read`;
-};
 
 export default function BlogCardItem({ post, href, index = 0, currentIndex = 0, totalItems = 1, cardGap = 24, cardWidthCalc = "100%" }) {
   const globalIndex = (currentIndex + index) % totalItems;
@@ -96,23 +92,6 @@ export default function BlogCardItem({ post, href, index = 0, currentIndex = 0, 
             </span>
           )}
 
-          {post.paragraph && (
-            <span
-              style={{
-                position: "absolute",
-                top: "12px",
-                right: "12px",
-                background: "#1C4401",
-                color: "#81EA06",
-                fontSize: "10px",
-                fontWeight: "700",
-                padding: "4px 10px",
-                borderRadius: "999px",
-              }}
-            >
-              {getReadTime(post.paragraph)}
-            </span>
-          )}
         </div>
 
         <div style={{ height: "3px", width: "100%", flexShrink: 0, background: categoryColors[post.category] || thumbFallbacks[globalIndex % thumbFallbacks.length].iconColor }} />
