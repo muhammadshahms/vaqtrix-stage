@@ -1,13 +1,13 @@
 "use client";
 
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useState, useEffect, useCallback, Suspense } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 
 import portfolioData from "@/data/portfolio.json";
 
-const CaseStudy4 = ({
+const CaseStudyInner = ({
   category = [],
   defaultCategory = "All",
   topHeading,
@@ -307,23 +307,6 @@ const CaseStudy4 = ({
                     background: "#111"
                   }}
                 />
-
-                {/* Bottom bar */}
-                {/* <div style={bottomBarStyle}>
-                  <div style={{ minWidth: 0 }}>
-                    <h4 style={lightboxTitleStyle}>{currentLightboxItem.title}</h4>
-                    <p style={lightboxCatStyle}>{currentLightboxItem.category}</p>
-                  </div>
-                  {currentLightboxItem.link && (
-                    <Link
-                      href={currentLightboxItem.link}
-                      onClick={(e) => e.stopPropagation()}
-                      style={viewServiceStyle}
-                    >
-                      View Service →
-                    </Link>
-                  )}
-                </div> */}
               </motion.div>
             </AnimatePresence>
 
@@ -339,6 +322,15 @@ const CaseStudy4 = ({
         )}
       </AnimatePresence>
     </>
+  );
+};
+
+// ── Wrapper Component ──────────────────────────────────
+const CaseStudy4 = (props) => {
+  return (
+    <Suspense fallback={<div className="text-center p-5">Loading Portfolio...</div>}>
+      <CaseStudyInner {...props} />
+    </Suspense>
   );
 };
 
@@ -386,43 +378,5 @@ const arrowBtnStyle = (side) => ({
   zIndex: 10,
   flexShrink: 0,
 });
-
-const bottomBarStyle = {
-  background: "#1a1a1a",
-  padding: "14px 20px",
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  gap: "12px",
-};
-
-const lightboxTitleStyle = {
-  color: "#fff",
-  margin: 0,
-  fontSize: "15px",
-  fontWeight: 600,
-  whiteSpace: "nowrap",
-  overflow: "hidden",
-  textOverflow: "ellipsis",
-};
-
-const lightboxCatStyle = {
-  color: "#888",
-  margin: 0,
-  fontSize: "12px",
-  marginTop: "2px",
-};
-
-const viewServiceStyle = {
-  flexShrink: 0,
-  background: "var(--tp-theme-primary, #1C4401)",
-  color: "#fff",
-  fontSize: "13px",
-  textDecoration: "none",
-  fontWeight: 500,
-  padding: "7px 16px",
-  borderRadius: "6px",
-  whiteSpace: "nowrap",
-};
 
 export default CaseStudy4;
