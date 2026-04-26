@@ -41,8 +41,8 @@ const ServicesCategory = ({ category }) => {
                     hovered === i ? "0 15px 35px rgba(0,0,0,0.08)" : "none",
                 }}
               >
-                <div className="icon">
-                  <Image src={item.img} alt={item.title} width={60} height={50} />
+                <div className="icon" style={{ minWidth: "80px", height: "80px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <Image src={item.img} alt={item.title} width={80} height={80} style={{ objectFit: "contain", width: "100%", height: "100%" }} />
                 </div>
 
                 <div className="content">
