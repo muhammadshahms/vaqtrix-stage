@@ -6,6 +6,7 @@ import Link from "next/link";
 import MotionText from "../AnimateOnScroll/MotionText";
 import BlogCardItem from "./BlogCardItem";
 import blogData from "@/data/blog.json";
+import Button from "../Common/Button";
 
 const AUTO_INTERVAL = 3000;
 const TRANSITION_DURATION = 600;
@@ -112,15 +113,8 @@ const Blog1 = ({
         {/* HEADING */}
         <div className="section-title text-center mb-5">
           <MotionText>
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: "8px",
-              background: "#1C4401", border: "1.5px solid #81EA06",
-              borderRadius: "999px", padding: "7px 22px", marginBottom: "20px",
-            }}>
-              <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#81EA06", display: "inline-block", flexShrink: 0 }} />
-              <span style={{ color: "#81EA06", fontSize: "12px", fontWeight: "700", letterSpacing: "0.14em", textTransform: "uppercase" }}>
-                {subTitle}
-              </span>
+            <div className="sub-title mx-auto">
+              <span>{subTitle}</span>
             </div>
             <h2 style={{ fontSize: "clamp(26px, 3vw, 42px)", fontWeight: "800", lineHeight: "1.2", color: "#1C4401", marginBottom: "10px" }}>
               {heading}
@@ -197,31 +191,9 @@ const Blog1 = ({
 
             {/* VIEW ALL BUTTON */}
             <div style={{ textAlign: "center", marginTop: "44px" }}>
-              <Link
-                href="/blog"
-                style={{
-                  display: "inline-flex", alignItems: "center", gap: "10px",
-                  background: "#1C4401", color: "#81EA06",
-                  fontWeight: "700", fontSize: "15px",
-                  padding: "15px 40px", borderRadius: "999px",
-                  textDecoration: "none", border: "2px solid #81EA06",
-                  letterSpacing: "0.05em",
-                  transition: "background 0.3s ease, color 0.3s ease",
-                }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.background = "#81EA06";
-                  e.currentTarget.style.color = "#1C4401";
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.background = "#1C4401";
-                  e.currentTarget.style.color = "#81EA06";
-                }}
-              >
-                View All Blog Posts
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-                </svg>
-              </Link>
+              <Button href="/blog" variant="primary" size="lg">
+                View All Blog Posts <i className="bi bi-arrow-right ms-2"></i>
+              </Button>
             </div>
           </>
         )}

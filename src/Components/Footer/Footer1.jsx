@@ -147,7 +147,7 @@ const Footer1 = () => {
             </div>
 
             {/* Footer */}
-            <section className="footer-section footer-bg fix" style={{ paddingTop: "150px", marginTop: "40px" }}>
+            <section className="footer-section footer-bg fix mt-5">
                 <div className="container">
                     <div className="footer-widgets-wrapper pb-5">
                         <div className="row g-4">
