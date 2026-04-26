@@ -65,61 +65,64 @@ const ContactInfo1 = () => {
                   {/* Contact Info Cards */}
                   <div
                     style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(241,246,228,0.1)",
+                      background: "#FFFFFF",
+                      border: "1px solid rgba(28, 68, 1, 0.1)",
                       borderRadius: "16px",
-                      padding: "28px 24px",
+                      padding: "32px",
                       display: "flex",
                       flexDirection: "column",
-                      gap: "0",
+                      gap: "24px",
+                      boxShadow: "0 10px 30px rgba(28, 68, 1, 0.05)",
                     }}
                   >
-                    <h2 style={{ marginBottom: "20px", fontSize: "22px", color: "#F1F6E4" }}>
-                      Contact Info
-                    </h2>
+                    <div>
+                      <h2 style={{ margin: 0, fontSize: "24px", color: "#1C4401", fontWeight: "800" }}>
+                        Direct Contact
+                      </h2>
+                    </div>
+
+                    <div style={{ height: "1px", background: "rgba(28, 68, 1, 0.1)" }} />
 
                     <MotionText delay={0.8}>
-                      <div className="contact-info style2">
-                        <div className="icon">
+                      <div className="d-flex align-items-center" style={{ gap: "16px" }}>
+                        <div className="d-flex align-items-center justify-content-center" style={{ width: "52px", height: "52px", background: "#F1F6E4", borderRadius: "50%", flexShrink: 0 }}>
                           <ReactCountryFlag
                             countryCode="US"
                             svg
-                            style={{ width: "24px", height: "24px", borderRadius: "1px", flexShrink: 0 }}
+                            style={{ width: "24px", height: "24px", borderRadius: "2px" }}
                           />
                         </div>
-                        <div className="content">
-                          <h3>+1 (818) 278 0897</h3>
+                        <div>
+                          <span style={{ display: "block", fontSize: "12px", color: "#5a7a50", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "4px" }}>USA Office</span>
+                          <h3 style={{ fontSize: "18px", color: "#1C4401", margin: 0, fontWeight: "700" }}>+1 (818) 278 0897</h3>
                         </div>
                       </div>
                     </MotionText>
 
                     <MotionText delay={0.85}>
-                      <div className="contact-info style2">
-                        <div className="icon">
+                      <div className="d-flex align-items-center" style={{ gap: "16px" }}>
+                        <div className="d-flex align-items-center justify-content-center" style={{ width: "52px", height: "52px", background: "#F1F6E4", borderRadius: "50%", flexShrink: 0 }}>
                           <ReactCountryFlag
                             countryCode="GB"
                             svg
-                            style={{ width: "24px", height: "24px", borderRadius: "1px", flexShrink: 0 }}
+                            style={{ width: "24px", height: "24px", borderRadius: "2px" }}
                           />
                         </div>
-                        <div className="content">
-                          <h3>+44 7476617576</h3>
+                        <div>
+                          <span style={{ display: "block", fontSize: "12px", color: "#5a7a50", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "4px" }}>UK Office</span>
+                          <h3 style={{ fontSize: "18px", color: "#1C4401", margin: 0, fontWeight: "700" }}>+44 7476617576</h3>
                         </div>
                       </div>
                     </MotionText>
 
                     <MotionText delay={0.9}>
-                      <div className="contact-info style2 border-none">
-                        <div className="icon">
-                          <Image
-                            src="/assets/img/icon/12.svg"
-                            alt="gmail"
-                            width={24}
-                            height={24}
-                          />
+                      <div className="d-flex align-items-center" style={{ gap: "16px" }}>
+                        <div className="d-flex align-items-center justify-content-center" style={{ width: "52px", height: "52px", background: "#F1F6E4", borderRadius: "50%", flexShrink: 0 }}>
+                          <i className="bi bi-envelope-fill" style={{ fontSize: "20px", color: "#1C4401" }}></i>
                         </div>
-                        <div className="content">
-                          <h3>info@vaqtrix.com</h3>
+                        <div>
+                          <span style={{ display: "block", fontSize: "12px", color: "#5a7a50", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "4px" }}>Email Us</span>
+                          <h3 style={{ fontSize: "18px", color: "#1C4401", margin: 0, fontWeight: "700" }}>info@vaqtrix.com</h3>
                         </div>
                       </div>
                     </MotionText>
