@@ -110,7 +110,7 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
             aria-expanded={serviceOpen}
           >
             Services
-            <span style={{ fontSize: "0.7em", transition: "transform 0.3s", transform: serviceOpen ? "rotate(180deg)" : "rotate(0)" }}>▼</span>
+            <span style={{ fontSize: "0.7em", transition: "transform 0.3s", transform: serviceOpen ? "rotate(180deg)" : "rotate(0)" }}></span>
           </a>
 
           <div

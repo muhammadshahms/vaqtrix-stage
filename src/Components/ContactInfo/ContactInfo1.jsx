@@ -12,7 +12,7 @@ const ContactInfo1 = () => {
         {/* Section Title */}
         <div className="section-title-area text-center">
           <MotionText delay={0.2}>
-            <div className="section-title">
+            <div className="section-title d-flex flex-column align-items-start justify-content-center" >
               <div className="sub-title bg-color-3">
                 <span>Contact us</span>
               </div>
@@ -46,20 +46,37 @@ const ContactInfo1 = () => {
             {/* Map & Contact Info */}
             <div className="col-xl-6">
               <MotionText delay={0.6}>
-                <div className="contact-map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd"
-                    loading="lazy"
-                    width="100%"
-                    height="400"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Location Map"
-                  ></iframe>
+                <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
 
-                  <div className="contact-info-wrapper">
-                    <h2>Contact Info</h2>
+                  {/* Google Map */}
+                  <div style={{ borderRadius: "16px", overflow: "hidden", lineHeight: 0 }}>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd"
+                      loading="lazy"
+                      width="100%"
+                      height="280"
+                      style={{ border: 0, display: "block" }}
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Location Map"
+                    />
+                  </div>
+
+                  {/* Contact Info Cards */}
+                  <div
+                    style={{
+                      background: "rgba(255,255,255,0.04)",
+                      border: "1px solid rgba(241,246,228,0.1)",
+                      borderRadius: "16px",
+                      padding: "28px 24px",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0",
+                    }}
+                  >
+                    <h2 style={{ marginBottom: "20px", fontSize: "22px", color: "#F1F6E4" }}>
+                      Contact Info
+                    </h2>
 
                     <MotionText delay={0.8}>
                       <div className="contact-info style2">
@@ -76,7 +93,7 @@ const ContactInfo1 = () => {
                       </div>
                     </MotionText>
 
-                    <MotionText delay={0.8}>
+                    <MotionText delay={0.85}>
                       <div className="contact-info style2">
                         <div className="icon">
                           <ReactCountryFlag
@@ -107,6 +124,7 @@ const ContactInfo1 = () => {
                       </div>
                     </MotionText>
                   </div>
+
                 </div>
               </MotionText>
             </div>
@@ -119,3 +137,4 @@ const ContactInfo1 = () => {
 };
 
 export default ContactInfo1;
+
