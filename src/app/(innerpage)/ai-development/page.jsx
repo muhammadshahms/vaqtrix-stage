@@ -23,6 +23,10 @@ const page = () => {
         bgimg="/assets/img/hero/Sample-Hero-1.png"
         Title="Vaqtrix Creates AI-Driven Business Systems"
       ></BreadCumb>
+      <Suspense fallback={<div>Loading Portfolio...</div>}>
+        <CaseStudy4 defaultCategory="All" />
+      </Suspense>
+      <Services3 category={ServicesData.Ai} />
       <WhyChoose4 categoryId="Ai" />
       <SecurityGrowth category="Vaqtrix AI Automation Solutions We Deliver" />
         
@@ -36,10 +40,6 @@ const page = () => {
 
       /> */}
                   <TechStack category='ai' bgColor="#EBF4EB"/> 
-      <Services3 category={ServicesData.Ai} />
-      <Suspense fallback={<div>Loading Portfolio...</div>}>
-        <CaseStudy4 defaultCategory="All" />
-      </Suspense>
       <WhyChoose4 categoryId="Ai2.0" />
       <Faq1 addclass="faq-section section-padding " category="ai" ></Faq1>
       <Marquee3 category="ai" />

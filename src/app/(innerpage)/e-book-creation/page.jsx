@@ -24,6 +24,10 @@ const page = () => {
         bgimg="/assets/img/breadcrumb.jpg"
         Title="E-Book Creation"
       ></BreadCumb>
+      <Suspense fallback={<div>Loading Portfolio...</div>}>
+        <CaseStudy4 category={["All"]} />
+      </Suspense>
+      <Services3 category={ServicesData.Ebook} />
       <WhyChoose4 categoryId="Ebook" />
       <SecurityGrowth category="Ebook" />
       {/* <PdfGallery categoryId="Ebook" /> */}
@@ -36,10 +40,6 @@ const page = () => {
 
       />
       {/* <TechStack></TechStack> */}
-      <Services3 category={ServicesData.Ebook} />
-      <Suspense fallback={<div>Loading Portfolio...</div>}>
-        <CaseStudy4 category={["All"]} />
-      </Suspense>
       <WhyChoose4 categoryId="Ebook2.0" />
       <Faq1 addclass="faq-section section-padding " category="ebook" ></Faq1>
       <Marquee3 category="ebook" />

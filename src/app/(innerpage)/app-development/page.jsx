@@ -22,15 +22,15 @@ const Page = () => {
 				bgimg="/assets/img/hero/Sample-Hero-1.png"
 				Title="Scalable App Development Solutions"
 			/>
+			<Suspense fallback={<div>Loading Portfolio...</div>}>
+				<CaseStudy4 defaultCategory="App Development" />
+			</Suspense>
+			<Services3 category={ServicesData.App} />
 			<div style={{ marginTop: "20px" }}>
 				<WhyChoose4 categoryId="App" />
 			</div>
 			<SecurityGrowth category="Mobile App Development Services Built to Scale" />
 			<TechStack category='app' />
-			<Services3 category={ServicesData.App} />
-			<Suspense fallback={<div>Loading Portfolio...</div>}>
-				<CaseStudy4 defaultCategory="App Development" />
-			</Suspense>
 			<WhyChoose4 categoryId="Ai2.0" />
 			<Faq1 addclass="faq-section section-padding " category="app" />
 			<Marquee3 category="app" />

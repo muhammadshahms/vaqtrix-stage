@@ -23,6 +23,10 @@ const page = () => {
         bgimg="/assets/img/breadcrumb.jpg"
         Title="Vaqtrix Builds Scalable E-commerce Platforms"
       ></BreadCumb>
+      <Suspense fallback={<div>Loading Portfolio...</div>}>
+        <CaseStudy4 defaultCategory="E-commerce Stores" />
+      </Suspense>
+      <Services3 category={ServicesData.Ecom} />
       <WhyChoose4 categoryId="Ecom" />
       <SecurityGrowth category="Vaqtrix E-Commerce Solutions Built To Scale" />
       <PdfGallery categoryId="Ecom" />
@@ -35,10 +39,6 @@ const page = () => {
 
       />
        <TechStack category='ecom'/>   
-      <Services3 category={ServicesData.Ecom} />
-      <Suspense fallback={<div>Loading Portfolio...</div>}>
-        <CaseStudy4 defaultCategory="E-commerce Stores" />
-      </Suspense>
       <WhyChoose4 categoryId="Ecom2.0" />
       <Faq1 addclass="faq-section section-padding " category="ecom" ></Faq1>
       <Marquee3 category="ecom" />

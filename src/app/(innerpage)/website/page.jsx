@@ -25,6 +25,10 @@ const page = () => {
         Title="Vaqtrix Builds AI-Powered Websites That Convert & Scale
 "
       ></BreadCumb>
+      <Suspense fallback={<div>Loading Portfolio...</div>}>
+        <CaseStudy4 defaultCategory="Website Development" />
+      </Suspense>
+      <Services3 category={ServicesData.Website} />
       <WhyChoose4 categoryId="Website" />
       <SecurityGrowth category="High Performance Website Development Services" />
       <PdfGallery categoryId="Website" />
@@ -37,10 +41,6 @@ const page = () => {
 
       />
       <TechStack category='website' bgColor="#EBF4EB" />     
-       <Services3 category={ServicesData.Website} />
-      <Suspense fallback={<div>Loading Portfolio...</div>}>
-        <CaseStudy4 defaultCategory="Website Development" />
-      </Suspense>
       <WhyChoose4 categoryId="Website2.0" />
       <Faq1 addclass="faq-section section-padding " category="website" ></Faq1>
       <Marquee3 category="website" />
