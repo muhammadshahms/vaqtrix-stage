@@ -8809,7 +8809,7 @@ background: #81EA06;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: #EFF5E3;
+    background: #f2f7e5;
     min-width: 240px;
     padding: 15px;
     border-radius: 12px;
@@ -8903,7 +8903,7 @@ background: #81EA06;
 
   /* Dropdown inside mobile */
   .cs_nav_list .dropdown-panel {
-    background: #EFF5E3;
+    background: #F0F5E4;
     border-radius: 8px;
     padding: 10px;
     margin-top: 10px;
@@ -9305,7 +9305,7 @@ background: #81EA06;
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgb(255 255 255 / 76%);
+    background: #F0F5E4;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     border-radius: 12px;
