@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { CountryRegionData } from "react-country-region-selector";
 import CustomDropdown from "./CustumeDrp";
+import Button from "../Common/Button";
 
 // Defensive: fallback to [] if bad import
 const COUNTRY_DATA = Array.isArray(CountryRegionData)
@@ -269,10 +270,10 @@ const ContactForm = ({
 
         {/* Submit Button */}
         <div className="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
-          <button type="submit" className="theme-btn" disabled={loading}>
+          <Button type="submit" variant="primary" size="lg" disabled={loading}>
             {loading ? "Sending..." : "Send Message"}{" "}
             <i className="bi bi-arrow-right"></i>
-          </button>
+          </Button>
         </div>
 
       </div>

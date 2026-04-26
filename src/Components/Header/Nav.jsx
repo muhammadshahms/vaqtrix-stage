@@ -11,6 +11,7 @@ import {
   FaShoppingCart, 
   FaBookOpen 
 } from "react-icons/fa";
+import Button from "../Common/Button";
 
 export default function Nav({ setMobileToggle }) {
   const [serviceOpen, setServiceOpen] = useState(false);
@@ -163,6 +164,16 @@ export default function Nav({ setMobileToggle }) {
         >
           Pricing
         </Link>
+      </li>
+
+      {/* Mobile only action buttons */}
+      <li className="d-lg-none mt-4 d-flex flex-column gap-3 px-3 pb-3">
+        <Button href="/blog" variant="primary" className="rounded-pill w-100 text-center" onClick={handleNavClick}>
+          Blog
+        </Button>
+        <Button href="/contact" variant="outline" className="rounded-pill w-100 text-center" onClick={handleNavClick}>
+          Contact
+        </Button>
       </li>
 
     </ul>

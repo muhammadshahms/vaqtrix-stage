@@ -121,7 +121,6 @@ const CaseStudy1 = () => {
                     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
                     .case-study-section {
-                        background-color: #EBF4EB;
                         font-family: 'Plus Jakarta Sans', sans-serif;
                     }
 

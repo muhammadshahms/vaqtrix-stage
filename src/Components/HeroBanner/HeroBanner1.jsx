@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import SampleHero from "../../../public/assets/img/hero/Sample-Hero-1.png";
 import HeroMain from "../../../public/imag/Gif.gif";
+import Button from "../Common/Button";
 
 export default function HeroBanner() {
 
@@ -103,44 +104,12 @@ export default function HeroBanner() {
                             </p>
 
                             <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
-
-                                {/* Button 1 — #81EA06 background, hover pe white bg same border */}
-                                <Link
-                                    href="/contact"
-                                    className="btn hero-btn"
-                                    onMouseEnter={() => setBtn1Hover(true)}
-                                    onMouseLeave={() => setBtn1Hover(false)}
-                                    style={{
-                                        backgroundColor: btn1Hover ? "transparent" : "#81EA06",
-                                        border: "2px solid #81EA06",
-                                        color: btn1Hover ? "#FFF" : "#0a1f0f",
-                                        fontWeight: "600",
-                                        transform: btn1Hover ? "translateY(-2px)" : "translateY(0)",
-                                        // boxShadow: btn1Hover ? "0 8px 24px rgba(129,234,6,0.3)" : "none",
-                                        transition: "all 0.3s ease",
-                                    }}
-                                >
+                                <Button href="/contact" variant="primary" size="lg">
                                     Get a Free Consultation
-                                </Link>
-
-                                {/* Button 2 — white border transparent bg, hover pe #81EA06 fill */}
-                                <Link
-                                    href="/contact"
-                                    className="btn hero-btn"
-                                    onMouseEnter={() => setBtn2Hover(true)}
-                                    onMouseLeave={() => setBtn2Hover(false)}
-                                    style={{
-                                        backgroundColor: btn2Hover ? "#81EA06" : "transparent",
-                                        border: "2px solid #81EA06",
-                                        color: btn2Hover ? "#0a1f0f" : "#ffffff",
-                                        fontWeight: "600",
-                                        transform: btn2Hover ? "translateY(-2px)" : "translateY(0)",
-                                        // boxShadow: btn2Hover ? "0 8px 24px rgba(129,234,6,0.3)" : "none",
-                                        transition: "all 0.3s ease",
-                                    }}
-                                >
+                                </Button>
+                                <Button href="/contact" variant="outline" size="lg">
                                     View Company Profile
-                                </Link>
+                                </Button>
                             </div>
 
                              {/* Review badges section: each logo opens its own external review/profile link. */}

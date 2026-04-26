@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../Common/Button";
 
 export default function Header1({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
@@ -50,7 +51,7 @@ export default function Header1({ variant }) {
       >
         <div className="cs_main_header">
           <div className="container">
-            <div className="cs_main_header_in">
+            <div className="cs_main_header_in d-flex align-items-center justify-content-between w-100">
 
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" href="/">
@@ -59,88 +60,32 @@ export default function Header1({ variant }) {
               </div>
 
               <div className="cs_main_header_center">
-                <div className="cs_nav cs_primary_font fw-medium">
-                  {isMobileViewport ? (
-                    <button
-                      type="button"
-                      className="simple-mobile-menu-btn"
-                      aria-label={mobileToggle ? "Close menu" : "Open menu"}
-                      aria-expanded={mobileToggle}
-                      onClick={() => setMobileToggle(!mobileToggle)}
-                    >
-                      {mobileToggle ? "✕" : "☰"}
-                    </button>
-                  ) : (
-                    <span
-                      className={mobileToggle ? "cs-munu_toggle cs_teggle_active" : "cs-munu_toggle"}
-                      onClick={() => setMobileToggle(!mobileToggle)}
-                    >
-                      <span></span>
-                    </span>
-                  )}
+                <div className="d-lg-none">
+                  <button
+                    type="button"
+                    className="simple-mobile-menu-btn"
+                    aria-label={mobileToggle ? "Close menu" : "Open menu"}
+                    aria-expanded={mobileToggle}
+                    onClick={() => setMobileToggle(!mobileToggle)}
+                    style={{ background: 'none', border: 'none', color: '#fff', fontSize: '28px', padding: '10px' }}
+                  >
+                    {mobileToggle ? "✕" : "☰"}
+                  </button>
+                </div>
+                <div className={`cs_nav cs_primary_font fw-medium ${mobileToggle ? "active_mobile_nav" : ""}`}>
                   <Nav setMobileToggle={setMobileToggle} />
                 </div>
               </div>
 
-              <div className="cs_main_header_right">
+              <div className="cs_main_header_right d-none d-lg-block pt-4">
                 <div className="d-flex align-items-center gap-3">
-<Link href="/blog" className="header-cta-btn header-cta-lg" aria-label="Go to blog page">
-  Blog
-</Link>
-
-                  <Link href="/contact" className="header-cta-btn header-cta-lg" aria-label="Go to contact page">
+                  <Button href="/blog" variant="outline" className="rounded-pill" aria-label="Go to blog page">
+                    Blog
+                  </Button>
+                  <Button href="/contact" variant="primary" className="rounded-pill" aria-label="Go to contact page">
                     Contact
-                  </Link>
+                  </Button>
                 </div>
-
-                <style>{`
-                  .header-cta-btn {
-                    font-family: 'Plus Jakarta Sans', sans-serif;
-                    font-size: 14px;
-                    font-weight: 600;
-                    padding: 12px 28px;
-                    border-radius: 70px;
-                    border: 1.5px solid #81ea06;
-                    background: #81ea06;
-                    color: #0e2800 !important;
-                    text-decoration: none;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    z-index: 2;
-                    pointer-events: auto;
-                    letter-spacing: 0.02em;
-                    transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
-                    outline: none;
-                    box-shadow: none;
-                  }
-                  .header-cta-btn:hover,
-                  .header-cta-btn:focus,
-                  .header-cta-btn:focus-visible,
-                  .header-cta-btn:active {
-                    background: #ffffff;
-                    color: #0e2800 !important;
-                    border-color: #ffffff;
-                    outline: none;
-                    box-shadow: none;
-                  }
-                  .header-cta-outline {
-                    background: transparent;
-                    border-color: #81ea06;
-                    color: #81ea06 !important;
-                  }
-                  .header-cta-outline:hover,
-                  .header-cta-outline:focus,
-                  .header-cta-outline:focus-visible,
-                  .header-cta-outline:active {
-                    background: #ffffff;
-                    color: #81ea06 !important;
-                  
-                    outline: none;
-                    box-shadow: none;
-                  }
-                `}</style>
               </div>
 
             </div>
