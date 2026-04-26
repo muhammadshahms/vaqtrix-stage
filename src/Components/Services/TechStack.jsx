@@ -19,7 +19,7 @@ const TechStack = ({ category = "home", bgColor = "#EBF4EB" }) => {
   const imgSrc = isMobile ? data.mobileImage : data.desktopImage;
 
   return (
-    <section className="section-padding" style={{ backgroundColor: bgColor }}>
+    <section className="section-padding">
       <div className="container text-center">
 
         <h2 className="fw-bold mb-4">

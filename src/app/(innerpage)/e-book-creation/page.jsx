@@ -1,4 +1,6 @@
 import BreadCumb from '@/Components/Common/BreadCumb';
+import CaseStudy4 from '@/Components/CaseStudy/CaseStudy4';
+import { Suspense } from 'react';
 import Services3 from '@/Components/Services/Services3';
 // import TechStack from '@/Components/Services/TechStack';
 import Pricing2 from '@/Components/Pricing/Pricng2';
@@ -35,6 +37,9 @@ const page = () => {
       />
       {/* <TechStack></TechStack> */}
       <Services3 category={ServicesData.Ebook} />
+      <Suspense fallback={<div>Loading Portfolio...</div>}>
+        <CaseStudy4 category={["All"]} />
+      </Suspense>
       <WhyChoose4 categoryId="Ebook2.0" />
       <Faq1 addclass="faq-section section-padding " category="ebook" ></Faq1>
       <Marquee3 category="ebook" />

@@ -1,4 +1,6 @@
 import BreadCumb from '@/Components/Common/BreadCumb';
+import CaseStudy4 from '@/Components/CaseStudy/CaseStudy4';
+import { Suspense } from 'react';
 import Services3 from '@/Components/Services/Services3';
 import TechStack from '@/Components/Services/TechStack';
 import Pricing2 from '@/Components/Pricing/Pricng2';
@@ -34,6 +36,9 @@ const page = () => {
       />
        <TechStack category='ecom'/>   
       <Services3 category={ServicesData.Ecom} />
+      <Suspense fallback={<div>Loading Portfolio...</div>}>
+        <CaseStudy4 defaultCategory="E-commerce Stores" />
+      </Suspense>
       <WhyChoose4 categoryId="Ecom2.0" />
       <Faq1 addclass="faq-section section-padding " category="ecom" ></Faq1>
       <Marquee3 category="ecom" />

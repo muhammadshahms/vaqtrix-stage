@@ -1,4 +1,5 @@
 import BreadCumb from '@/Components/Common/BreadCumb';
+import { Suspense } from 'react';
 import Services3 from '@/Components/Services/Services3';
 import TechStack from '@/Components/Services/TechStack';
 import Pricing2 from '@/Components/Pricing/Pricng2';
@@ -24,15 +25,17 @@ const page = () => {
       ></BreadCumb>
       <WhyChoose4 categoryId="Digital" />
       <SecurityGrowth category="Vaqtrix Digital Marketing Solutions Built For Real Growth" />
-      <CaseStudy4
-        category={[
-          "Mascot Logos",
-          "Social Media",
-          "Design Logo"
-        ]}
-        topHeading="Digital Marketing Campaigns That Deliver Real Growth"
-        topText="Explore a selection of digital marketing and branding projects delivered by Vaqtrix."
-      />
+      <Suspense fallback={<div>Loading Portfolio...</div>}>
+        <CaseStudy4
+          category={[
+            "Mascot Logos",
+            "Social Media",
+            "Design Logo"
+          ]}
+          topHeading="Digital Marketing Campaigns That Deliver Real Growth"
+          topText="Explore a selection of digital marketing and branding projects delivered by Vaqtrix."
+        />
+      </Suspense>
       {/* <PdfGallery categoryId="Digital" /> */}
 
       <Pricing2

@@ -25,12 +25,12 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
   const isActive = (href) => normalizePath(href) === currentPath;
 
   const services = [
-    { title: "AI Automation",             icon: <FaRobot />,        href: "/project?category=AI%20Automation" },
-    { title: "App Development",           icon: <FaMobileAlt />,    href: "/project?category=App%20Development" },
-    { title: "Web Development",           icon: <FaLaptopCode />,   href: "/project?category=Website%20Development" },
-    { title: "Digital Marketing & Branding", icon: <FaBullhorn />, href: "/project?category=Branding" },
-    { title: "Ecommerce Solutions",       icon: <FaShoppingCart />, href: "/project?category=E-commerce%20Stores" },
-    { title: "E-Book Creation",           icon: <FaBookOpen />,     href: "/project?category=E-Book%20Creation" },
+    { title: "AI Automation",             icon: <FaRobot />,        href: "/ai-development" },
+    { title: "App Development",           icon: <FaMobileAlt />,    href: "/app-development" },
+    { title: "Web Development",           icon: <FaLaptopCode />,   href: "/website" },
+    { title: "Digital Marketing & Branding", icon: <FaBullhorn />, href: "/digital-marketing" },
+    { title: "Ecommerce Solutions",       icon: <FaShoppingCart />, href: "/e-commerce" },
+    { title: "E-Book Creation",           icon: <FaBookOpen />,     href: "/e-book-creation" },
   ];
 
   const isServiceActive = services.some(({ href }) => isActive(href));

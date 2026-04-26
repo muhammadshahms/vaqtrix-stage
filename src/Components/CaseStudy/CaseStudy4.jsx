@@ -9,6 +9,7 @@ import portfolioData from "@/data/portfolio.json";
 
 const CaseStudy4 = ({
   category = [],
+  defaultCategory = "All",
   topHeading,
   topText,
 }) => {
@@ -25,7 +26,7 @@ const CaseStudy4 = ({
   const [selectedCategory, setSelectedCategory] = useState(
     (categoryParam && allowedCategories.includes(categoryParam))
       ? categoryParam
-      : (category.length ? category[0] : "All")
+      : (category.length > 0 ? category[0] : (allowedCategories.includes(defaultCategory) ? defaultCategory : "All"))
   );
   
   const [currentPage, setCurrentPage] = useState(1);

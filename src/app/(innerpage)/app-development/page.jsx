@@ -1,4 +1,6 @@
 import BreadCumb from '@/Components/Common/BreadCumb';
+import CaseStudy4 from '@/Components/CaseStudy/CaseStudy4';
+import { Suspense } from 'react';
 import Services3 from '@/Components/Services/Services3';
 import TechStack from '@/Components/Services/TechStack';
 // import Pricing2 from '@/Components/Pricing/Pricng2';
@@ -26,6 +28,9 @@ const Page = () => {
 			<SecurityGrowth category="Mobile App Development Services Built to Scale" />
 			<TechStack category='app' />
 			<Services3 category={ServicesData.App} />
+			<Suspense fallback={<div>Loading Portfolio...</div>}>
+				<CaseStudy4 defaultCategory="App Development" />
+			</Suspense>
 			<WhyChoose4 categoryId="Ai2.0" />
 			<Faq1 addclass="faq-section section-padding " category="app" />
 			<Marquee3 category="app" />
