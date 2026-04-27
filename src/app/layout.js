@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "slick-carousel/slick/slick.css";
 import "@/assets/main.css";
+import Script from "next/script";
 // import ChatWidget from "./Chatbot/ChatWidget"
 
 export const metadata = {
@@ -23,7 +24,18 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="author" content="Themeservices" />
         <link rel="icon" href="/assets/img/Home Icons/Small Logo.svg" sizes="any" />
-        <script
+      </head>
+      <body
+        className=""
+        style={{
+          "--body-color-font": "'Plus Jakarta Sans', sans-serif",
+          "--heading-font": "'DM Sans', sans-serif",
+        }}
+        suppressHydrationWarning
+      >
+        <Script
+          id="strip-injected-attrs"
+          strategy="beforeInteractive"
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `
@@ -65,15 +77,6 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-      </head>
-      <body
-        className=""
-        style={{
-          "--body-color-font": "'Plus Jakarta Sans', sans-serif",
-          "--heading-font": "'DM Sans', sans-serif",
-        }}
-        suppressHydrationWarning
-      >
         {children}
         {/* <ChatWidget/> */}
       </body>

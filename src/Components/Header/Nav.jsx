@@ -62,7 +62,7 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
     return (
       <ul className="cs_nav_list fw-medium d-flex flex-row gap-0" role="menubar">
         {/* Home */}
-        <li className="px-3">
+        <li>
           <Link
             href="/"
             onClick={close}
@@ -77,7 +77,7 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
         </li>
 
         {/* About */}
-        <li className="px-3">
+        <li>
           <Link
             href="/about"
             onClick={close}
@@ -93,7 +93,7 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
 
         {/* Services (hover dropdown) */}
         <li
-          className={`menu-item-has-children px-3 ${serviceOpen || isServiceActive ? "active" : ""}`}
+          className={`menu-item-has-children ${serviceOpen || isServiceActive ? "active" : ""}`}
           onMouseEnter={() => setServiceOpen(true)}
           onMouseLeave={() => setServiceOpen(false)}
         >
@@ -150,7 +150,7 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
         </li>
 
         {/* Pricing */}
-        <li className="px-3">
+        <li className="">
           <Link
             href="/pricing"
             onClick={close}

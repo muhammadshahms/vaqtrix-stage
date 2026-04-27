@@ -107,96 +107,99 @@ const Blog1 = ({
       : "0px";
 
   return (
-    <section className="news-section section-padding section-bg">
-      <div className="container">
+    <section className="news-section section-padding section-bg relative z-50" style={{ backgroundImage: "url('/assets/img/Home/1.png')" }}>
+      <div className="py-5" style={{ backgroundColor: "#F2F6E9" }}>
+        <div className="container">
 
-        {/* HEADING */}
-        <div className="section-title text-center mb-5">
-          <MotionText>
-            <div className="sub-title mx-auto">
-              <span>{subTitle}</span>
-            </div>
-            <h2 style={{ fontSize: "clamp(26px, 3vw, 42px)", fontWeight: "800", lineHeight: "1.2", color: "#1C4401", marginBottom: "10px" }}>
-              {heading}
-            </h2>
-            <p style={{ fontSize: "15px", color: "#5a7a50", marginBottom: 0 }}>
-              Stay ahead with expert guides, strategies &amp; industry tips
-            </p>
-          </MotionText>
-        </div>
 
-        {allPosts.length === 0 ? (
-          <p className="text-center">No posts found.</p>
-        ) : (
-          <>
-            {/* ✅ FIX: padding top diya taake hover pe card clip na ho, marginTop se gap compensate kiya */}
-            <div
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-              style={{
-                overflow: "hidden",
-                width: "100%",
-                position: "relative",
-                padding: "12px 4px 4px 4px",   // ✅ top/sides padding for clip fix
-                marginTop: "-12px",              // ✅ layout shift compensate
-                boxSizing: "border-box",
-              }}
-            >
+          {/* HEADING */}
+          <div className="section-title text-center mb-5">
+            <MotionText>
+              <div className="sub-title mx-auto">
+                <span>{subTitle}</span>
+              </div>
+              <h2 style={{ fontSize: "clamp(26px, 3vw, 42px)", fontWeight: "800", lineHeight: "1.2", color: "#1C4401", marginBottom: "10px" }}>
+                {heading}
+              </h2>
+              <p style={{ fontSize: "15px", color: "#5a7a50", marginBottom: 0 }}>
+                Stay ahead with expert guides, strategies &amp; industry tips
+              </p>
+            </MotionText>
+          </div>
+
+          {allPosts.length === 0 ? (
+            <p className="text-center">No posts found.</p>
+          ) : (
+            <>
+              {/* ✅ FIX: padding top diya taake hover pe card clip na ho, marginTop se gap compensate kiya */}
               <div
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
                 style={{
-                  display: "flex",
-                  gap: `${cardGap}px`,
-                  alignItems: "stretch",
-                  transform: `translateX(${translateX})`,
-                  transition: offset === -1
-                    ? `transform ${TRANSITION_DURATION}ms cubic-bezier(0.25,0.46,0.45,0.94)`
-                    : "none",
-                  willChange: "transform",
+                  overflow: "hidden",
+                  width: "100%",
+                  position: "relative",
+                  padding: "12px 4px 4px 4px",   // ✅ top/sides padding for clip fix
+                  marginTop: "-12px",              // ✅ layout shift compensate
+                  boxSizing: "border-box",
                 }}
               >
-                {renderPosts.map((item, i) => {
-                  return (
-                    <BlogCardItem
-                      key={`${item.id}-${i}`}
-                      post={item}
-                      href={buildBlogHref(item, category)}
-                      index={i}
-                      currentIndex={currentIndex}
-                      totalItems={allPosts.length}
-                      cardWidthCalc={cardWidthCalc}
+                <div
+                  style={{
+                    display: "flex",
+                    gap: `${cardGap}px`,
+                    alignItems: "stretch",
+                    transform: `translateX(${translateX})`,
+                    transition: offset === -1
+                      ? `transform ${TRANSITION_DURATION}ms cubic-bezier(0.25,0.46,0.45,0.94)`
+                      : "none",
+                    willChange: "transform",
+                  }}
+                >
+                  {renderPosts.map((item, i) => {
+                    return (
+                      <BlogCardItem
+                        key={`${item.id}-${i}`}
+                        post={item}
+                        href={buildBlogHref(item, category)}
+                        index={i}
+                        currentIndex={currentIndex}
+                        totalItems={allPosts.length}
+                        cardWidthCalc={cardWidthCalc}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* DOTS */}
+              {maxIndex > 0 && (
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "8px", marginTop: "32px" }}>
+                  {Array.from({ length: maxIndex + 1 }, (_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => goToSlide(idx)}
+                      aria-label={`Slide ${idx + 1}`}
+                      style={{
+                        width: currentIndex === idx ? "32px" : "8px",
+                        height: "8px", borderRadius: "999px", border: "none",
+                        background: currentIndex === idx ? "#81EA06" : "#b8d4a0",
+                        transition: "all 0.35s ease", padding: 0, cursor: "pointer",
+                      }}
                     />
-                  );
-                })}
-              </div>
-            </div>
+                  ))}
+                </div>
+              )}
 
-            {/* DOTS */}
-            {maxIndex > 0 && (
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "8px", marginTop: "32px" }}>
-                {Array.from({ length: maxIndex + 1 }, (_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => goToSlide(idx)}
-                    aria-label={`Slide ${idx + 1}`}
-                    style={{
-                      width: currentIndex === idx ? "32px" : "8px",
-                      height: "8px", borderRadius: "999px", border: "none",
-                      background: currentIndex === idx ? "#81EA06" : "#b8d4a0",
-                      transition: "all 0.35s ease", padding: 0, cursor: "pointer",
-                    }}
-                  />
-                ))}
+              {/* VIEW ALL BUTTON */}
+              <div style={{ textAlign: "center", marginTop: "44px" }}>
+                <Button href="/blog" variant="primary" size="lg">
+                  View All Blog Posts <i className="bi bi-arrow-right ms-2"></i>
+                </Button>
               </div>
-            )}
-
-            {/* VIEW ALL BUTTON */}
-            <div style={{ textAlign: "center", marginTop: "44px" }}>
-              <Button href="/blog" variant="primary" size="lg">
-                View All Blog Posts <i className="bi bi-arrow-right ms-2"></i>
-              </Button>
-            </div>
-          </>
-        )}
+            </>
+          )}
+        </div>
       </div>
     </section>
   );

@@ -8,10 +8,10 @@ import Button from "../Common/Button";
 
 export default function HeroBanner() {
 
-    const [btn1Hover, setBtn1Hover] = useState(false);
-    const [btn2Hover, setBtn2Hover] = useState(false);
+  const [btn1Hover, setBtn1Hover] = useState(false);
+  const [btn2Hover, setBtn2Hover] = useState(false);
 
-    const badges = [
+  const badges = [
     {
       src: "/assets/img/1 (1).svg",
       alt: "Clutch Review",
@@ -40,130 +40,138 @@ export default function HeroBanner() {
       height: 50,
       href: "https://www.yell.com/",
     },
-    ];
+  ];
 
-    return (
-        <>
-            <section
-                className="hero-section position-relative d-flex align-items-center min-vh-100 overflow-hidden"
-                style={{
-                    backgroundImage: `url(${SampleHero.src})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    width: "100%",
-                    height: "auto",
-                }}
-            >
-                <div className="hero-overlay" />
+  return (
+    <>
+      <section
+        className="hero-section position-relative d-flex align-items-center min-vh-100 overflow-hidden"
+        style={{
+          backgroundImage: `url(${SampleHero.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          height: "auto",
+        }}
+      >
+        <div className="hero-overlay" />
 
-                {/* Floating Shapes */}
-                {/* <div className="mike-shape">
+        {/* Floating Shapes */}
+        {/* <div className="mike-shape">
                     <Image src="/assets/img/hero/mike-shape.png" alt="shape" width={84} height={84}
                         style={{ width: "100%", height: "100%" }} />
                 </div> */}
-                <div className="arrow-shape">
-                    <Image src="/assets/img/hero/arrow-shape.png" alt="shape" width={55} height={28}
-                        style={{ width: "100%", height: "100%" }} />
-                </div>
-                <div className="arrow-shape-2">
-                    <Image src="/assets/img/hero/arrow-shape.png" alt="shape" width={55} height={28}
-                        style={{ width: "100%", height: "100%" }} />
-                </div>
-                {/* <div className="energy-shape">
+        <div className="arrow-shape">
+          <Image src="/assets/img/hero/arrow-shape.png" alt="shape" width={55} height={28}
+            style={{ width: "100%", height: "100%" }} />
+        </div>
+        <div className="arrow-shape-2">
+          <Image src="/assets/img/hero/arrow-shape.png" alt="shape" width={55} height={28}
+            style={{ width: "100%", height: "100%" }} />
+        </div>
+        {/* <div className="energy-shape">
                     <Image src="/assets/img/hero/energy-shape.png" alt="shape" width={94} height={94}
                         style={{ width: "100%", height: "100%" }} />
                 </div> */}
-                {/* <div className="rocket-shape">
+        {/* <div className="rocket-shape">
                     <Image src="/assets/img/hero/rocket.png" alt="rocket" width={142} height={142}
                         style={{ width: "100%", height: "100%" }} />
                 </div> */}
 
-                <div className="container position-relative z-3">
-                    <div className="row align-items-center">
+        <div className="container position-relative z-3">
+          <div className="row align-items-center">
 
-                        {/* LEFT CONTENT */}
-                        <div className="col-lg-6 text-center text-lg-start mb-5 mb-lg-0" style={{ position: "relative", zIndex: 4 }}>
-                            <div className="subtitle-wrapper">
-                                <span className="line"></span>
-                                <span className="hero-subtitle text-uppercase text-white fw-semibold">
-                                    VAQTRIX
-                                </span>
-                                <span className="line"></span>
-                            </div>
+            {/* LEFT CONTENT */}
+            <div className="col-lg-6 text-center text-lg-start mb-5 mb-lg-0" style={{ position: "relative", zIndex: 4 }}>
+              <div className="subtitle-wrapper">
+                <span className="line"></span>
+                <span className="hero-subtitle text-uppercase text-white fw-semibold">
+                  VAQTRIX
+                </span>
+                <span className="line"></span>
+              </div>
 
-                            <h1 className="hero-title text-white mb-4">
-                                Transform Your Business With{" "}
-                                <span style={{ color: "#81EA06" }}>AI-Powered</span> Digital Solutions
-                            </h1>
+              <h1 className="hero-title text-white mb-4">
+                Transform&nbsp;Your&nbsp;Business&nbsp;
+                With{" "}
+                <span style={{
+                  color: "#81EA06",
+                  whiteSpace: "nowrap",
+                  display: "inline-block"
+                }}>
+                  AI-Powered
+                </span>{" "}
+                Digital Solutions
+              </h1>
 
-                            <p className="hero-text text-light mb-4">
-                                Empowering businesses with AI-enhanced websites, apps,
-                                automation, and digital solutions designed to increase
-                                efficiency, revenue, and real-world impact.
-                            </p>
+              <p className="hero-text text-light mb-4">
+                Empowering businesses with AI-enhanced websites, apps,
+                automation, and digital solutions designed to increase
+                efficiency, revenue, and real-world impact.
+              </p>
 
-                            <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
-                                <Button href="/contact" variant="primary" size="lg">
-                                    Get a Free Consultation
-                                </Button>
-                                <Button href="/contact" variant="outline" size="lg">
-                                    View Company Profile
-                                </Button>
-                            </div>
+              <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
+                <Button href="/contact" variant="primary" size="lg">
+                  Get a Free Consultation
+                </Button>
+                <Button href="/contact" variant="outline" size="lg">
+                  View Company Profile
+                </Button>
+              </div>
 
-                             {/* Review badges section: each logo opens its own external review/profile link. */}
-                             <div className="d-flex flex-wrap flex-lg-nowrap gap-3 justify-content-center justify-content-lg-start hero-badges">
-                                {badges.map((badge, index) => (
-                                    <a
-                                        key={index}
-                                  href={badge.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                  className="hero-badge-item"
-                                        style={{
-                                            display: "inline-block",
-                                            cursor: "pointer",
-                                            transition: "transform 0.3s ease",
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.currentTarget.style.transform = "scale(1.05)";
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.currentTarget.style.transform = "scale(1)";
-                                        }}
-                                    >
-                                        <Image
-                                            src={badge.src}
-                                            alt={badge.alt}
-                                            width={badge.width}
-                                            height={badge.height}
-                                            className="img-fluid"
-                                        />
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
+              {/* Review badges section: each logo opens its own external review/profile link. */}
+              <div className="d-flex flex-wrap flex-lg-nowrap gap-3 justify-content-center justify-content-lg-start hero-badges">
+                {badges.map((badge, index) => (
+                  <a
+                    key={index}
+                    href={badge.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hero-badge-item"
+                    style={{
+                      display: "inline-block",
+                      cursor: "pointer",
+                      transition: "transform 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "scale(1.05)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "scale(1)";
+                    }}
+                  >
+                    <Image
+                      src={badge.src}
+                      alt={badge.alt}
+                      width={badge.width}
+                      height={badge.height}
+                      className="img-fluid"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
 
-                        {/* RIGHT SIDE */}
-                        <div className="col-lg-6 text-center position-relative" style={{ zIndex: 4 }}>
-                            <div className="hero-image-wrapper">
-                                <Image
-                                    src={HeroMain}
-                                    alt="Hero Visual"
-                                    width={998}
-                                    height={1131}
-                                    className="img-fluid hero-main-image"
-                                    priority
-                                />
-                            </div>
-                        </div>
+            {/* RIGHT SIDE */}
+            <div className="col-lg-6 text-center position-relative" style={{ zIndex: 4 }}>
+              <div className="hero-image-wrapper">
+                <Image
+                  src={HeroMain}
+                  alt="Hero Visual"
+                  width={998}
+                  height={1131}
+                  className="img-fluid hero-main-image"
+                  priority
+                />
+              </div>
+            </div>
 
-                    </div>
-                </div>
-            </section>
+          </div>
+        </div>
+      </section>
 
-            <style jsx>{`
+      <style jsx>{`
         .hero-section {
           background: radial-gradient(circle at right, #1aff00 0%, #0a1f0f 60%);
           padding: 120px 0 80px 0;
@@ -326,6 +334,6 @@ export default function HeroBanner() {
           .hero-image-wrapper { width: 90%; margin: 0 auto; }
         }
       `}</style>
-        </>
-    );
+    </>
+  );
 }

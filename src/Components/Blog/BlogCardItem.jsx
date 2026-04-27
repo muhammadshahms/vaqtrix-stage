@@ -55,12 +55,13 @@ export default function BlogCardItem({ post, href, index = 0, currentIndex = 0, 
           height: "100%",
           textDecoration: "none",
           color: "inherit",
+          backgroundColor: "#ffffff",
         }}
       >
         <div
           style={{
             height: "170px",
-            background: "#F1F6E4",
+            background: "#eaf4ea",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
