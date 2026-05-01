@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../Common/Button";
 
 const About2 = ({ addclass }) => {
 
@@ -98,7 +99,7 @@ const About2 = ({ addclass }) => {
                             {/* Button */}
                            <div className="about-button">
                                     <div className="main-button wow fadeInUp" data-wow-delay=".3s">
-                                        <Link href="/contact"> <span className="theme-btn">Start Your Project Now </span></Link>
+                                        <Button href="/contact" variant="outline" size="lg">Start Your Project Now</Button>
                                     </div>
                                     {/* <Link href="/about" className="link-btn wow fadeInUp" data-wow-delay=".5s">EXPLORE MORE</Link> */}
                                 </div>

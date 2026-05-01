@@ -4,6 +4,8 @@ import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Link from "next/link";
 import Image from "next/image";
 import ReactCountryFlag from "react-country-flag";
+import Button from "../Common/Button";
+import blogData from "../../data/blog.json";
 
 const Footer1 = () => {
     const [email, setEmail] = useState("");
@@ -81,12 +83,12 @@ const Footer1 = () => {
                         <br /> Future Ready Technology
                     </h2>
                     <div className="main-button wow fadeInUp text-center" data-wow-delay=".5s" style={{ flex: "0 0 auto", position: "relative", zIndex: 11 }}>
-                        <Link href="/contact"><span className="theme-btn">Talk to an AI Specialist</span></Link>
+                        <Button href="/contact" variant="outline" size="lg">Talk to an AI Specialist</Button>
                     </div>
                 </div>
             </div>
 
-            <section className="footer-section footer-bg fix" style={{ paddingTop: "130px" }}>
+            <section className="footer-section footer-bg fix" style={{ paddingTop: "80px" }}>
                 <div className="container">
                     <div className="footer-widgets-wrapper pb-5">
                         <div className="row g-4">
@@ -143,32 +145,21 @@ const Footer1 = () => {
                                         <h3 style={{ fontSize: "20px", fontWeight: "600" }}>Recent Posts</h3>
                                     </div>
                                     <div className="recent-post-area">
-                                        <div className="recent-post-items d-flex align-items-center gap-3 mb-4">
-                                            <div className="thumb flex-shrink-0">
-                                                <img src="/assets/img/news/pp1.jpg" alt="Post" style={{ width: "65px", height: "65px", objectFit: "cover", borderRadius: "8px" }} />
+                                        {blogData.posts.slice(0, 2).map((post, index) => (
+                                            <div key={post.id} className={`recent-post-items d-flex align-items-center gap-3 ${index === 0 ? "mb-4" : ""}`}>
+                                                <div className="thumb flex-shrink-0">
+                                                    <img src={post.img} alt="Post" style={{ width: "65px", height: "65px", objectFit: "cover", borderRadius: "8px" }} />
+                                                </div>
+                                                <div className="content">
+                                                    <ul className="post-date mb-1 d-flex" style={{ fontSize: "12px", color: "#81EA06", listStyle: "none", padding: 0, margin: 0 }}>
+                                                        <li><i className="fa-solid fa-calendar-days me-1"></i>{post.date}</li>
+                                                    </ul>
+                                                    <h6 style={{ fontSize: "15px", lineHeight: "1.4", margin: 0 }}>
+                                                        <Link href={`/blog/${post.id}`} style={{ color: "#fff", transition: "color 0.3s" }}>{post.title}</Link>
+                                                    </h6>
+                                                </div>
                                             </div>
-                                            <div className="content">
-                                                <ul className="post-date mb-1 d-flex" style={{ fontSize: "12px", color: "#81EA06", listStyle: "none", padding: 0, margin: 0 }}>
-                                                    <li><i className="fa-solid fa-calendar-days me-1"></i>20 Feb, 2024</li>
-                                                </ul>
-                                                <h6 style={{ fontSize: "15px", lineHeight: "1.4", margin: 0 }}>
-                                                    <Link href="/undercunstraction" style={{ color: "#fff", transition: "color 0.3s" }}>Top 5 Famous Technology Trend</Link>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                        <div className="recent-post-items d-flex align-items-center gap-3">
-                                            <div className="thumb flex-shrink-0">
-                                                <img src="/assets/img/news/pp2.jpg" alt="Post" style={{ width: "65px", height: "65px", objectFit: "cover", borderRadius: "8px" }} />
-                                            </div>
-                                            <div className="content">
-                                                <ul className="post-date mb-1 d-flex" style={{ fontSize: "12px", color: "#81EA06", listStyle: "none", padding: 0, margin: 0 }}>
-                                                    <li><i className="fa-solid fa-calendar-days me-1"></i>15 Dec, 2024</li>
-                                                </ul>
-                                                <h6 style={{ fontSize: "15px", lineHeight: "1.4", margin: 0 }}>
-                                                    <Link href="/undercunstraction" style={{ color: "#fff", transition: "color 0.3s" }}>The Surfing Man Will Blow Your Mind</Link>
-                                                </h6>
-                                            </div>
-                                        </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -224,8 +215,6 @@ const Footer1 = () => {
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
                                 className="scroll-icon d-inline-flex align-items-center justify-content-center" 
                                 style={{ width: "50px", height: "50px", borderRadius: "50%", background: "transparent", border: "5px solid #fff", color: "#fff", fontSize: "18px", cursor: "pointer", transition: "all 0.3s ease" }}
-                                onMouseEnter={(e) => e.currentTarget.style.transform = "translateY(-5px)"}
-                                onMouseLeave={(e) => e.currentTarget.style.transform = "translateY(0)"}
                             >
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="12" y1="19" x2="12" y2="5"></line>

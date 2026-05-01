@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MotionText from "../AnimateOnScroll/MotionText";
 import MotionImage from "../AnimateOnScroll/MotionImage";
+import Button from "../Common/Button";
 
 const About1 = () => {
 
@@ -236,13 +237,15 @@ const About1 = () => {
                                 </div>
 
                                 {/* CTA Button */}
-                                <Link
+                                <Button
                                     href="/contact"
-                                    className="main-button wow fadeInUp d-inline-block"
+                                    variant="outline"
+                                    size="lg"
+                                    className="wow fadeInUp"
                                     data-wow-delay=".3s"
                                 >
-                                    <span className="theme-btn">Explore Our Expertise</span>
-                                </Link>
+                                    Explore Our Expertise
+                                </Button>
 
                             </div>
                         </div>

@@ -38,15 +38,7 @@ export default function Gamecards() {
         <div className="row g-4 justify-content-center">
           {projects.map((project, index) => (
             <div key={index} className="col-xl-4 col-lg-4 col-md-6 d-flex">
-              <div 
-                className="project-card shadow-sm rounded-4 w-100 p-4 bg-white" 
-                style={{ 
-                  transition: "transform 0.3s ease",
-                  border: "1px solid var(--border)"
-                }}
-                onMouseOver={(e) => e.currentTarget.style.transform = "translateY(-5px)"}
-                onMouseOut={(e) => e.currentTarget.style.transform = "translateY(0)"}
-              >
+              <div className="project-card">
                 <div className="position-relative w-100 mb-3" style={{ height: "200px" }}>
                   <Image 
                     src={project.image} 
