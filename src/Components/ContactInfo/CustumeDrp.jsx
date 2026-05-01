@@ -89,7 +89,7 @@ const DropdownWrapper = styled.div`
     box-shadow: none;
     outline: none;
       border-color: var(--theme);
-      box-shadow: 0 0 0 1px rgb(212, 220, 237);
+      box-shadow: 0 0 0 1px var(--theme);
 
 
     svg {
@@ -116,7 +116,7 @@ const DropdownWrapper = styled.div`
     border-radius: 0 0 5px 5px;
     margin-top: 2px;
     box-shadow: 0 10px 20px rgba(15, 22, 36, 0.08);
-    border: 1px solid #D4DCED;
+    border: 1px solid var(--theme);
     overflow: auto;
     z-index: 4;
     animation: slideDown .25s cubic-bezier(.62,.28,.23,.99) forwards;
@@ -189,7 +189,7 @@ const DropdownWrapper = styled.div`
 const StyledPhoneInput = styled(PhoneInput)`
   .form-control {
     background-color: transparent !important;
-    border: 1px solid #D4DCED !important;
+    border: 1px solid var(--theme) !important;
     border-radius: 5px !important;
     color: var(--text) !important;
     min-height: 50px !important;
@@ -203,14 +203,14 @@ const StyledPhoneInput = styled(PhoneInput)`
   }
   .flag-dropdown {
     background: transparent !important;
-    border: 1px solid #cacaca; !important;
+    border: 1px solid var(--theme) !important;
     border-radius: 5px 0 0 5px !important;
   }
   .country-list {
     background: var(--white) !important;
     color: var(--text) !important;
     border-radius: 5px !important;
-    border: 1px solid #D4DCED !important;
+    border: 1px solid var(--theme) !important;
     font-size: 15px !important;
     font-family: inherit !important;
     max-height: 215px !important;
