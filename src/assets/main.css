@@ -2308,8 +2308,8 @@ span {
   align-items: center;
   gap: 25px;
   margin-top: 40px;
-  border-top: 1px solid #CCD8FF;
-  border-bottom: 1px solid #CCD8FF;
+  border-top: 1px solid var(--theme);
+  border-bottom: 1px solid var(--theme);
   padding: 30px 0;
 }
 
@@ -2320,7 +2320,7 @@ span {
 
 .faq-wrapper .accordion-item {
   border: 0;
-  background-color: var(--white);
+  background-color: #ffffff;
 }
 
 .faq-wrapper .accordion-item .accordion-header .accordion-button {
@@ -2330,7 +2330,7 @@ span {
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  background-color: var(--white);
+  background-color: #ffffff;
   padding: 25px 30px 0;
   text-transform: capitalize;
   font-size: 22px;
@@ -2364,7 +2364,7 @@ span {
 }
 
 .faq-wrapper .accordion-item .accordion-header .accordion-button.collapsed {
-  background-color: var(--white);
+  background-color: #ffffff;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
   padding: 25px 30px;
   color: var(--header);
@@ -2375,7 +2375,7 @@ span {
   padding-left: 30px;
   padding-top: 15px;
   color: var(--text);
-  background-color: var(--white);
+  background-color: #ffffff;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
 }
 
@@ -6147,8 +6147,8 @@ input.main-search-input::placeholder {
 
 .pricing-box-items {
   border-radius: 20px;
-  border: 1px solid #D4DCFF;
-  background: var(--white);
+  border: 1px solid var(--theme);
+  background: #ffffff;
   padding: 30px;
 }
 
