@@ -224,8 +224,10 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             color: isServiceActive || serviceOpen ? ACCENT : "rgba(241,246,228,0.9)",
             background: isServiceActive || serviceOpen ? DIM : "transparent",
+            borderTop: "none",
+            borderRight: "none",
+            borderBottom: "none",
             borderLeft: isServiceActive || serviceOpen ? `3px solid ${ACCENT}` : "3px solid transparent",
-            border: "none",
             cursor: "pointer",
             transition: "all 0.2s ease",
           }}
