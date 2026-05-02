@@ -88,7 +88,7 @@ body {
 .vq-btn-outline {
   background-color: transparent;
   border-color: #81EA06;
-  color: #183E01 !important; /* Default dark green for light backgrounds (About sections) */
+  color: #81EA06 !important; /* Neon green text for consistency with homepage buttons */
   transition: all 0.3s ease;
 }
 

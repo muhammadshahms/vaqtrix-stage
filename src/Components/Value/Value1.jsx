@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MotionText from "../AnimateOnScroll/MotionText";
 
 const Value1 = () => {
 
@@ -18,13 +19,23 @@ const Value1 = () => {
         <Image src="/assets/img/value-shape-2.png" alt="img" width={210} height={392}   />
         </div> */}
         <div className="container">
-            <div className="section-title text-center wow fadeInUp" data-wow-delay=".3s">
-                <h2>Our Values</h2>
+            <div className="section-title text-center mb-5">
+                <MotionText>
+                    <div className="sub-title mx-auto">
+                        <span>OUR VALUES</span>
+                    </div>
+                    <h2 style={{ fontSize: "clamp(26px, 3vw, 42px)", fontWeight: "800", lineHeight: "1.2", color: "#1C4401", marginBottom: "10px" }}>
+                        Our Values
+                    </h2>
+                    <p style={{ fontSize: "15px", color: "#5a7a50", marginBottom: 0 }}>
+                        Our core values drive our commitment to excellence and innovation.
+                    </p>
+                </MotionText>
             </div>
             <div className="row">
             {chooseContent.map((item, i) => (
                 <div key={i} className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                    <div className="value-box-items">
+                    <div className="value-box-items" style={{ backgroundColor: '#ffffff', border: 'none' }}>
                         <div className="d-flex align items-center">
                            <Image src={item.iconclass} alt="iconclass" width={80} height={80}/>
                         </div>
@@ -45,4 +56,4 @@ const Value1 = () => {
     );
 };
 
-export default Value1;
+export default Value1;

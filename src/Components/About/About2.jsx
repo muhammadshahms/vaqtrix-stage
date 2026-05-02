@@ -99,7 +99,9 @@ const About2 = ({ addclass }) => {
                             {/* Button */}
                            <div className="about-button">
                                     <div className="main-button wow fadeInUp" data-wow-delay=".3s">
-                                        <Button href="/contact" variant="outline" size="lg">Start Your Project Now</Button>
+                                        <Button href="/contact" variant="outline" size="lg">
+                                            Start Your Project Now <i className="bi bi-arrow-right ms-2"></i>
+                                        </Button>
                                     </div>
                                     {/* <Link href="/about" className="link-btn wow fadeInUp" data-wow-delay=".5s">EXPLORE MORE</Link> */}
                                 </div>
