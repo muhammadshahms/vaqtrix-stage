@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,13 +10,33 @@ const CheckIcon = () => (
     </svg>
 );
 
+const ServiceLink = ({ href, children }) => {
+    const [hovered, setHovered] = useState(false);
+    return (
+        <Link
+            href={href}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            style={{
+                color: hovered ? "#81EA06" : "#1C4401",
+                textDecoration: hovered ? "underline" : "none",
+                textUnderlineOffset: "4px",
+                fontWeight: 600,
+                transition: "color 0.3s ease, text-decoration 0.3s ease",
+            }}
+        >
+            <span>{children}</span>
+        </Link>
+    );
+};
+
 const WhyChoose2 = () => {
 
     const chooseContent = {
         subtitle: "OUR SERVICES",
         title: "Let's Explore AI-Powered Solutions Built for Your Business",
         content: "Whether you're looking to build intelligent software, automate operations, or scale your digital growth, our AI-driven services are designed to adapt to your goals, industry, and future ambitions.",
-        img:'/assets/img/About Graphics/Let’s-Explore-AI-Powered-Solutions-Built-for-Your-Business.png',         
+        img:"/assets/img/About Graphics/Let\u2019s-Explore-AI-Powered-Solutions-Built-for-Your-Business.png",         
         listCol1: [
             'AI-Driven Digital Marketing',
             'AI Development',
@@ -79,9 +99,7 @@ const WhyChoose2 = () => {
                                         {chooseContent.listCol1.map((item, i) => (
                                             <li key={i} className="d-flex align-items-center gap-2 mb-2">
                                                 <CheckIcon />
-                                                <Link href="/">
-                                                <span>{item}</span>
-                                                </Link>
+                                                <ServiceLink href="/">{item}</ServiceLink>
                                             </li>
                                         ))}
                                     </ul>
@@ -93,9 +111,7 @@ const WhyChoose2 = () => {
                                         {chooseContent.listCol2.map((item, i) => (
                                             <li key={i} className="d-flex align-items-center gap-2 mb-2">
                                                 <CheckIcon />
-                                                 <Link href="/">
-                                                <span>{item}</span>
-                                                </Link>
+                                                <ServiceLink href="/">{item}</ServiceLink>
                                             </li>
                                         ))}
                                     </ul>
@@ -120,4 +136,4 @@ const WhyChoose2 = () => {
     );
 };
 
-export default WhyChoose2;
+export default WhyChoose2;
