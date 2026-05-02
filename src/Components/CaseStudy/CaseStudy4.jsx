@@ -6,6 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 
 import portfolioData from "@/data/portfolio.json";
+import scrollcardData from "@/data/scrollcard.json";
+
+const categoryMap = {
+  "Website": "Website Development",
+  "App": "App Development",
+  "Ecom": "E-commerce Stores",
+  "Digital": "Social Media Post Design",
+};
 
 const CaseStudyInner = ({
   category = [],
@@ -13,13 +21,30 @@ const CaseStudyInner = ({
   topHeading,
   topText,
 }) => {
-  const { categories, projects } = portfolioData;
+  const { categories: originalCategories, projects: originalProjects } = portfolioData;
+
+  const scrollcardProjects = scrollcardData.flatMap((cat) => {
+    const mappedCategory = categoryMap[cat.id] || cat.id;
+    return cat.cards.map((c, i) => ({
+      id: `sc-${cat.id}-${i}`,
+      category: mappedCategory,
+      title: c.title,
+      img: c.image,
+    }));
+  });
+
+  const scrollcardCategories = Array.from(new Set(scrollcardData.map((cat) => categoryMap[cat.id] || cat.id)));
+  
+  const allProjects = [...originalProjects, ...scrollcardProjects];
+  const allCategories = Array.from(new Set([...originalCategories, ...scrollcardCategories]));
+
   const allowedCategories =
     category.length > 0
-      ? categories.filter((cat) => category.includes(cat))
-      : categories;
+      ? allCategories.filter((cat) => category.includes(cat))
+      : allCategories;
 
   const sectionRef = useRef(null);
+  const scrollRefs = useRef({});
   const searchParams = useSearchParams();
   const categoryParam = searchParams ? searchParams.get("category") : null;
 
@@ -36,8 +61,8 @@ const CaseStudyInner = ({
 
   const filteredProjects =
     category.length > 0
-      ? projects.filter((p) => category.includes(p.category))
-      : projects;
+      ? allProjects.filter((p) => category.includes(p.category))
+      : allProjects;
 
   const filteredContent =
     selectedCategory === "All"
@@ -58,6 +83,33 @@ const CaseStudyInner = ({
 
   const closeLightbox = () => {
     setLightboxOpen(false);
+  };
+
+  const startScroll = (id) => {
+    const el = scrollRefs.current[id];
+    if (!el) return;
+    el.style.scrollBehavior = "auto";
+    const speed = 2; // pixel per frame
+    const maxScroll = el.scrollHeight - el.clientHeight;
+    
+    if (maxScroll <= 0) return;
+
+    const scrollStep = () => {
+      if (el.scrollTop < maxScroll) {
+        el.scrollTop += speed;
+        el._scrollAnimation = requestAnimationFrame(scrollStep);
+      }
+    };
+    cancelAnimationFrame(el._scrollAnimation);
+    el._scrollAnimation = requestAnimationFrame(scrollStep);
+  };
+
+  const stopScroll = (id) => {
+    const el = scrollRefs.current[id];
+    if (!el) return;
+    cancelAnimationFrame(el._scrollAnimation);
+    el.style.scrollBehavior = "smooth";
+    el.scrollTop = 0;
   };
 
   const lightboxPrev = useCallback(() => {
@@ -168,8 +220,14 @@ const CaseStudyInner = ({
                     className="col-lg-4 col-md-6 card-item"
                     layout
                     style={{ cursor: "pointer" }}
-                    onMouseEnter={() => setHoveredIndex(i)}
-                    onMouseLeave={() => setHoveredIndex(null)}
+                    onMouseEnter={() => {
+                      setHoveredIndex(i);
+                      startScroll(item.id);
+                    }}
+                    onMouseLeave={() => {
+                      setHoveredIndex(null);
+                      stopScroll(item.id);
+                    }}
                     onClick={() => openLightbox(globalIndex)}
                   >
                     <div
@@ -183,7 +241,20 @@ const CaseStudyInner = ({
                         transform: isHovered ? "scale(1.02)" : "scale(1)",
                       }}
                     >
-                      <div className="thumb">
+                      <div 
+                        className="thumb img-scroll"
+                        ref={(el) => (scrollRefs.current[item.id] = el)}
+                        style={{
+                          width: "100%",
+                          aspectRatio: "3/2",
+                          height: "100%",
+                          minHeight: "240px",
+                          overflowY: "hidden",
+                          borderRadius: "30px",
+                          position: "relative",
+                          display: "block"
+                        }}
+                      >
                         <Image
                           src={item.img}
                           alt={item.title}
@@ -191,12 +262,9 @@ const CaseStudyInner = ({
                           height={454}
                           style={{
                             width: "100%",
-                            aspectRatio: "3/2",
-                            height: "100%",
-                            minHeight: "240px",
+                            height: "auto",
                             display: "block",
-                            objectFit: "cover",
-                            borderRadius: "30px"
+                            objectFit: "cover"
                           }}
                         />
                       </div>
