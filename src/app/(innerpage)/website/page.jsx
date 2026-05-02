@@ -25,32 +25,34 @@ const page = () => {
         Title="Vaqtrix Builds AI-Powered Websites That Convert & Scale
 "
       ></BreadCumb>
+      <WhyChoose4 categoryId="Website" />
+      <SecurityGrowth category="High Performance Website Development Services" />
+      <TechStack category='website' bgColor="#EBF4EB" />
+      <Services3 category={ServicesData.Website} />
+      <WhyChoose4 categoryId="Website2.0" />
+      <Faq1 addclass="faq-section section-padding " category="website" ></Faq1>
+      <Marquee3 category="website" />
+      <Testimonial1 category="website" />
+      
       <Suspense fallback={<div>Loading Portfolio...</div>}>
         <CaseStudy4 defaultCategory="Website Development" />
       </Suspense>
-      <Services3 category={ServicesData.Website} />
-      <WhyChoose4 categoryId="Website" />
-      <SecurityGrowth category="High Performance Website Development Services" />
-      <PdfGallery categoryId="Website" />
-      <Pricing2
 
+      {/* <PdfGallery categoryId="Website" /> */}
+      {/* <Pricing2
         pricingDataKey="Website"
         monthlyAndYearly={false}
         showButton={true}
         showPlanSelector={false}
-
-      />
-      <TechStack category='website' bgColor="#EBF4EB" />     
-      <WhyChoose4 categoryId="Website2.0" />
-      <Faq1 addclass="faq-section section-padding " category="website" ></Faq1>
-      <Marquee3 category="website" />
-<Testimonial1 category="website" />
-      <ContactInfo1></ContactInfo1>
+      /> */}
+      
       <Blog1
         subTitle="BLOG & INSIGHTS"
         heading={<>Website Development & Design Insights <br/>  For Modern Businesses</>}
         category="Website Development"
       />
+
+      <ContactInfo1></ContactInfo1>
 
     </div>
   );

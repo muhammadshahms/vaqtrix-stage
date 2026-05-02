@@ -22,25 +22,34 @@ const Page = () => {
 				bgimg="/assets/img/hero/Sample-Hero-1.png"
 				Title="Scalable App Development Solutions"
 			/>
-			<Suspense fallback={<div>Loading Portfolio...</div>}>
-				<CaseStudy4 defaultCategory="App Development" />
-			</Suspense>
-			<Services3 category={ServicesData.App} />
-			<div style={{ marginTop: "20px" }}>
-				<WhyChoose4 categoryId="App" />
-			</div>
+			<WhyChoose4 categoryId="App" />
 			<SecurityGrowth category="Mobile App Development Services Built to Scale" />
 			<TechStack category='app' />
-			<WhyChoose4 categoryId="Ai2.0" />
+			<Services3 category={ServicesData.App} />
+			<WhyChoose4 categoryId="App2.0" />
 			<Faq1 addclass="faq-section section-padding " category="app" />
 			<Marquee3 category="app" />
 			<Testimonial1 category="app" />
-			<ContactInfo1 />
+			
+			<Suspense fallback={<div>Loading Portfolio...</div>}>
+				<CaseStudy4 defaultCategory="App Development" />
+			</Suspense>
+
+			{/* <PdfGallery categoryId="App" /> */}
+			{/* <Pricing2
+				pricingDataKey="app"
+				monthlyAndYearly={false}
+				showButton={true}
+				showPlanSelector={false}
+			/> */}
+			
 			<Blog1
 				subTitle="BLOG & INSIGHTS"
 				heading={<>Mobile App Development & Design Insights</>}
 				category="Mobile App Development"
 			/>
+
+			<ContactInfo1 />
 		</div>
 	);
 };

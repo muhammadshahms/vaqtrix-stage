@@ -23,33 +23,35 @@ const page = () => {
         bgimg="/assets/img/hero/Sample-Hero-1.png"
         Title="Vaqtrix Creates AI-Driven Business Systems"
       ></BreadCumb>
+
+      <WhyChoose4 categoryId="Ai" />
+      <SecurityGrowth category="Vaqtrix AI Automation Solutions We Deliver" />
+         <TechStack category='ai' bgColor="#EBF4EB" />
+         <Services3 category={ServicesData.Ai} /> 
+               <WhyChoose4 categoryId="Ai2.0" />
+      <Faq1 addclass="faq-section section-padding " category="ai" ></Faq1>
+      <Marquee3 category="ai" />
+      <Testimonial1 category="ai" />
       <Suspense fallback={<div>Loading Portfolio...</div>}>
         <CaseStudy4 defaultCategory="All" />
       </Suspense>
-      <Services3 category={ServicesData.Ai} />
-      <WhyChoose4 categoryId="Ai" />
-      <SecurityGrowth category="Vaqtrix AI Automation Solutions We Deliver" />
-        
+
       {/* <PdfGallery categoryId="Ai" /> */}
       {/* <Pricing2
-
         pricingDataKey="Ai"
         monthlyAndYearly={false}
         showButton={true}
         showPlanSelector={false}
-
       /> */}
-                  <TechStack category='ai' bgColor="#EBF4EB"/> 
-      <WhyChoose4 categoryId="Ai2.0" />
-      <Faq1 addclass="faq-section section-padding " category="ai" ></Faq1>
-      <Marquee3 category="ai" />
-      <Testimonial1 category="ai" />
-       <ContactInfo1></ContactInfo1>
+   
       <Blog1
         subTitle="BLOG & INSIGHTS"
         heading={<>AI Development & Automation Insights</>}
         category="AI Development"
       />
+
+      <ContactInfo1></ContactInfo1>
+     
 
     </div>
   );

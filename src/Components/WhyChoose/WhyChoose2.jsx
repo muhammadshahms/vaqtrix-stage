@@ -38,13 +38,13 @@ const WhyChoose2 = () => {
         content: "Whether you're looking to build intelligent software, automate operations, or scale your digital growth, our AI-driven services are designed to adapt to your goals, industry, and future ambitions.",
         img:"/assets/img/About Graphics/Let\u2019s-Explore-AI-Powered-Solutions-Built-for-Your-Business.png",         
         listCol1: [
-            'AI-Driven Digital Marketing',
-            'AI Development',
+            'AI Automation',
             'Website Development',
+            'E-Commerce Solutions',
         ],
         listCol2: [
             'App Development',
-            'E-Commerce Solutions',
+            'Digital Marketing',
             'E-Book Creation',
         ],
     }

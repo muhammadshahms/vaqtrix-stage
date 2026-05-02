@@ -23,32 +23,34 @@ const page = () => {
         bgimg="/assets/img/breadcrumb.jpg"
         Title="Vaqtrix Builds Scalable E-commerce Platforms"
       ></BreadCumb>
-      <Suspense fallback={<div>Loading Portfolio...</div>}>
-        <CaseStudy4 defaultCategory="E-commerce Stores" />
-      </Suspense>
-      <Services3 category={ServicesData.Ecom} />
       <WhyChoose4 categoryId="Ecom" />
       <SecurityGrowth category="Vaqtrix E-Commerce Solutions Built To Scale" />
-      <PdfGallery categoryId="Ecom" />
-      <Pricing2
-
-        pricingDataKey="ecom"
-        monthlyAndYearly={false}
-        showButton={true}
-        showPlanSelector={false}
-
-      />
-       <TechStack category='ecom'/>   
+      <TechStack category='ecom'/>   
+      <Services3 category={ServicesData.Ecom} />
       <WhyChoose4 categoryId="Ecom2.0" />
       <Faq1 addclass="faq-section section-padding " category="ecom" ></Faq1>
       <Marquee3 category="ecom" />
       <Testimonial1 category="ecom" />
-      <ContactInfo1></ContactInfo1>
+      
+      <Suspense fallback={<div>Loading Portfolio...</div>}>
+        <CaseStudy4 defaultCategory="E-commerce Stores" />
+      </Suspense>
+
+      {/* <PdfGallery categoryId="Ecom" /> */}
+      {/* <Pricing2
+        pricingDataKey="ecom"
+        monthlyAndYearly={false}
+        showButton={true}
+        showPlanSelector={false}
+      /> */}
+      
       <Blog1
         subTitle="BLOG & INSIGHTS"
         heading={<>E-commerce Growth & Online Store Insights</>}
         category="E-commerce Solutions"
       />
+
+      <ContactInfo1></ContactInfo1>
 
     </div>
   );

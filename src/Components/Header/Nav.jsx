@@ -26,10 +26,10 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
 
   const services = [
     { title: "AI Automation",             icon: <FaRobot />,        href: "/ai-development" },
-    { title: "App Development",           icon: <FaMobileAlt />,    href: "/app-development" },
     { title: "Web Development",           icon: <FaLaptopCode />,   href: "/website" },
-    { title: "Digital Marketing & Branding", icon: <FaBullhorn />, href: "/digital-marketing" },
     { title: "Ecommerce Solutions",       icon: <FaShoppingCart />, href: "/e-commerce" },
+    { title: "App Development",           icon: <FaMobileAlt />,    href: "/app-development" },
+    { title: "Digital Marketing & Branding", icon: <FaBullhorn />, href: "/digital-marketing" },
     { title: "E-Book Creation",           icon: <FaBookOpen />,     href: "/e-book-creation" },
   ];
 

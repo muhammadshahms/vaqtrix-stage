@@ -23,6 +23,15 @@ const page = () => {
         bgimg="/assets/img/breadcrumb.jpg"
         Title="Vaqtrix Drives Brand Growth With Digital Marketing"
       ></BreadCumb>
+      <WhyChoose4 categoryId="Digital" />
+      <SecurityGrowth category="Vaqtrix Digital Marketing Solutions Built For Real Growth" />
+      <TechStack category='digital'/> 
+      <Services3 category={ServicesData.Digital} />
+      <WhyChoose4 categoryId="Digital2.0" />
+      <Faq1 addclass="faq-section section-padding " category="digital" ></Faq1>
+      <Marquee3 category="digital" />
+      <Testimonial1 category="digital" />
+
       <Suspense fallback={<div>Loading Portfolio...</div>}>
         <CaseStudy4
           category={[
@@ -34,28 +43,22 @@ const page = () => {
           topText="Explore a selection of digital marketing and branding projects delivered by Vaqtrix."
         />
       </Suspense>
-      <Services3 category={ServicesData.Digital} />
-      <WhyChoose4 categoryId="Digital" />
-      <SecurityGrowth category="Vaqtrix Digital Marketing Solutions Built For Real Growth" />
-      {/* <PdfGallery categoryId="Digital" /> */}
 
-      <Pricing2
+      {/* <PdfGallery categoryId="Digital" /> */}
+      {/* <Pricing2
         pricingDataKey={["seo", "branding", "socialmedia", "googleads", "logodesign"]}
         monthlyAndYearly={false}
         showButton={true}
         showPlanSelector={true}
-      />
-       <TechStack category='digital'/> 
-      <WhyChoose4 categoryId="Digital2.0" />
-      <Faq1 addclass="faq-section section-padding " category="digital" ></Faq1>
-      <Marquee3 category="digital" />
-<Testimonial1 category="digital" />
-      <ContactInfo1></ContactInfo1>
+      /> */}
+      
       <Blog1
         subTitle="BLOG & INSIGHTS"
         heading={<>Digital Marketing & Brand Design Insights</>}
         category="Digital Marketing & Branding"
       />
+
+      <ContactInfo1></ContactInfo1>
 
     </div>
   );

@@ -411,22 +411,30 @@
         "lists": [
           [
             {
-              "text": "Digital marketing",
-              "path": "/digital-marketing"
+              "text": "AI Automation",
+              "path": "/ai-development"
             },
             {
-              "text": "App development",
-              "path": "/app-development"
+              "text": "Website Development",
+              "path": "/website"
+            },
+            {
+              "text": "E-Commerce Solutions",
+              "path": "/e-commerce"
             }
           ],
           [
             {
-              "text": "E-commerce solutions",
-              "path": "/e-commerce"
+              "text": "App Development",
+              "path": "/app-development"
             },
             {
-              "text": "AI Software",
-              "path": "/ai-development"
+              "text": "Digital Marketing",
+              "path": "/digital-marketing"
+            },
+            {
+              "text": "E-Book Creation",
+              "path": "/e-book-creation"
             }
           ]
         ],
@@ -479,21 +487,29 @@
         "lists": [
           [
             {
-              "text": "Website development",
+              "text": "AI Automation",
+              "path": "/ai-development"
+            },
+            {
+              "text": "Website Development",
               "path": "/website"
             },
             {
-              "text": "App development",
-              "path": "/app-development"
+              "text": "E-Commerce Solutions",
+              "path": "/e-commerce"
             }
           ],
           [
             {
-              "text": "Digital marketing",
+              "text": "App Development",
+              "path": "/app-development"
+            },
+            {
+              "text": "Digital Marketing",
               "path": "/digital-marketing"
             },
             {
-              "text": "E-book creation",
+              "text": "E-Book Creation",
               "path": "/e-book-creation"
             }
           ]
@@ -547,22 +563,30 @@
         "lists": [
           [
             {
-              "text": "Digital marketing",
-              "path": "/digital-marketing"
+              "text": "AI Automation",
+              "path": "/ai-development"
             },
             {
-              "text": "App development",
-              "path": "/app-development"
+              "text": "Website Development",
+              "path": "/website"
+            },
+            {
+              "text": "E-Commerce Solutions",
+              "path": "/e-commerce"
             }
           ],
           [
             {
-              "text": "Website development",
-              "path": "/website"
+              "text": "App Development",
+              "path": "/app-development"
             },
             {
-              "text": "AI Systems",
-              "path": "/ai-development"
+              "text": "Digital Marketing",
+              "path": "/digital-marketing"
+            },
+            {
+              "text": "E-Book Creation",
+              "path": "/e-book-creation"
             }
           ]
         ],
@@ -615,22 +639,30 @@
         "lists": [
           [
             {
-              "text": "Custom e-commerce platforms",
-              "path": "/custom-ecommerce-platforms"
+              "text": "AI Automation",
+              "path": "/ai-development"
             },
             {
-              "text": "Secure payment integrations",
-              "path": "/secure-payment-integrations"
+              "text": "Website Development",
+              "path": "/website"
+            },
+            {
+              "text": "E-Commerce Solutions",
+              "path": "/e-commerce"
             }
           ],
           [
             {
-              "text": "Conversion focused store UX",
-              "path": "/conversion-focused-store-ux"
+              "text": "App Development",
+              "path": "/app-development"
             },
             {
-              "text": "Automation ready store setup",
-              "path": "/automation-ready-store-setup"
+              "text": "Digital Marketing",
+              "path": "/digital-marketing"
+            },
+            {
+              "text": "E-Book Creation",
+              "path": "/e-book-creation"
             }
           ]
         ],
@@ -683,22 +715,30 @@
         "lists": [
           [
             {
-              "text": "Website development",
+              "text": "AI Automation",
+              "path": "/ai-development"
+            },
+            {
+              "text": "Website Development",
               "path": "/website"
             },
             {
-              "text": "App development",
-              "path": "/app-development"
+              "text": "E-Commerce Solutions",
+              "path": "/e-commerce"
             }
           ],
           [
             {
-              "text": "E-commerce Solutions",
-              "path": "/e-commerce"
+              "text": "App Development",
+              "path": "/app-development"
             },
             {
-              "text": "AI Development ",
-              "path": "/ai-development"
+              "text": "Digital Marketing",
+              "path": "/digital-marketing"
+            },
+            {
+              "text": "E-Book Creation",
+              "path": "/e-book-creation"
             }
           ]
         ],
@@ -751,22 +791,30 @@
         "lists": [
           [
             {
-              "text": "Website development",
+              "text": "AI Automation",
+              "path": "/ai-development"
+            },
+            {
+              "text": "Website Development",
               "path": "/website"
             },
             {
-              "text": "App development",
-              "path": "/app-development"
+              "text": "E-Commerce Solutions",
+              "path": "/e-commerce"
             }
           ],
           [
             {
-              "text": "Digital marketing",
+              "text": "App Development",
+              "path": "/app-development"
+            },
+            {
+              "text": "Digital Marketing",
               "path": "/digital-marketing"
             },
             {
-              "text": "AI Development",
-              "path": "/ai-development"
+              "text": "E-Book Creation",
+              "path": "/e-book-creation"
             }
           ]
         ],
