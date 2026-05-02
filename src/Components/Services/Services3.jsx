@@ -34,6 +34,7 @@ const ServicesCategory = ({ category }) => {
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
                 style={{
+                  backgroundColor: "#ffffff",
                   transform: hovered === i ? "translateY(-10px) scale(1.02)" : "translateY(0)",
                   transition: "all 0.35s ease",
                   boxShadow:
