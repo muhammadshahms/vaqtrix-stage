@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import techStackData from "@/data/techstack.json";
 
 const TechStack = ({ category = "home", bgColor = "#EBF4EB" }) => {
-  const data = techStackData[category] || techStackData["home"];
+  const data = techStackData[category];
 
   // ✅ Mobile detection
   const [isMobile, setIsMobile] = useState(false);
@@ -15,6 +15,8 @@ const TechStack = ({ category = "home", bgColor = "#EBF4EB" }) => {
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
+
+  if (!data) return null;
 
   const imgSrc = isMobile ? data.mobileImage : data.desktopImage;
 

@@ -8844,7 +8844,7 @@ background: #81EA06;
   .cs_nav_list {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 6px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -8867,7 +8867,7 @@ background: #81EA06;
   .menu-item-has-children > a::after {
     content: " \25BE"; /* down arrow */
     font-size: 12px;
-    margin-left: 6px;
+    margin-left: 2px;
   }
 
   /* Dropdown Panel Desktop */
@@ -9284,7 +9284,7 @@ background: #81EA06;
   }
 
   .cs_nav .cs_nav_list>li {
-    margin-right: 48px;
+    margin-right: 24px;
     height: inherit;
   }
 
@@ -9355,7 +9355,7 @@ background: #81EA06;
   .cs_nav_list>li>a {
     text-decoration: none;
     color: #222;
-    padding: 10px 8px;
+    padding: 10px 2px;
     display: inline-block;
     cursor: pointer;
     transition: color 0.3s ease;

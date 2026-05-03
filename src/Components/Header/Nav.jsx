@@ -104,7 +104,7 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
               transition: "color 0.3s ease",
               display: "flex",
               alignItems: "center",
-              gap: "4px",
+              gap: "1px",
             }}
             aria-haspopup="true"
             aria-expanded={serviceOpen}
@@ -135,7 +135,7 @@ export default function Nav({ setMobileToggle, isMobileDrawer = false }) {
         </li>
 
         {/* Project */}
-        <li className="px-3">
+        <li>
           <Link
             href="/project"
             onClick={close}

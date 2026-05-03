@@ -37,12 +37,16 @@ const CardList = ({ category }) => {
 
   return (
     <section className="fix section-padding">
-      <div className="section-header">
-        <div className="sub-title mx-auto" style={{ marginBottom: '16px' }}>
+      <div className="section-title text-center mb-5">
+        <div className="sub-title mx-auto">
           <span>{categoryData?.subtitle || 'OUR SOLUTIONS'}</span>
         </div>
-        <h2>{category ? `${category}` : 'Services'}</h2>
-        <p>Explore our {category ? category.toLowerCase() : ''} solutions designed to grow your business.</p>
+        <h2 style={{ fontSize: "clamp(26px, 3vw, 42px)", fontWeight: "800", color: "var(--header)", marginBottom: "10px" }}>
+          {category ? `${category}` : 'Services'}
+        </h2>
+        <p style={{ fontSize: "15px", color: "#5a7a50", marginBottom: 0 }}>
+          Explore our {category ? category.toLowerCase() : ''} solutions designed to grow your business.
+        </p>
       </div>
 
       <div className="grid-wrapper container">

@@ -88,12 +88,12 @@ const Footer1 = () => {
                 </div>
             </div>
 
-            <section className="footer-section footer-bg fix" style={{ paddingTop: "80px" }}>
+            <section className="footer-section footer-bg fix" style={{ paddingTop: 0 }}>
                 <div className="container">
-                    <div className="footer-widgets-wrapper pb-5">
-                        <div className="row g-4">
+                    <div className="footer-widgets-wrapper pb-5" style={{ paddingTop: "20px" }}>
+                        <div className="row g-4 justify-content-between">
                             {/* Brand Section */}
-                            <div className="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div className="col-xl-5 col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                                 <div className="single-footer-widget h-100 d-flex flex-column">
                                     <div className="widget-head mb-4">
                                         <Link href="/">
@@ -117,7 +117,7 @@ const Footer1 = () => {
 
                             {/* Quick Links */}
                             <div className="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                                <div className="single-footer-widget ps-xl-4 h-100">
+                                <div className="single-footer-widget h-100">
                                     <div className="widget-head mb-4">
                                         <h3 style={{ fontSize: "20px", fontWeight: "600" }}>Quick Links</h3>
                                     </div>
@@ -138,31 +138,7 @@ const Footer1 = () => {
                                 </div>
                             </div>
 
-                            {/* Recent Posts */}
-                            <div className="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                                <div className="single-footer-widget h-100">
-                                    <div className="widget-head mb-4">
-                                        <h3 style={{ fontSize: "20px", fontWeight: "600" }}>Recent Posts</h3>
-                                    </div>
-                                    <div className="recent-post-area">
-                                        {blogData.posts.slice(0, 2).map((post, index) => (
-                                            <div key={post.id} className={`recent-post-items d-flex align-items-center gap-3 ${index === 0 ? "mb-4" : ""}`}>
-                                                <div className="thumb flex-shrink-0">
-                                                    <img src={post.img} alt="Post" style={{ width: "65px", height: "65px", objectFit: "cover", borderRadius: "8px" }} />
-                                                </div>
-                                                <div className="content">
-                                                    <ul className="post-date mb-1 d-flex" style={{ fontSize: "12px", color: "#81EA06", listStyle: "none", padding: 0, margin: 0 }}>
-                                                        <li><i className="fa-solid fa-calendar-days me-1"></i>{post.date}</li>
-                                                    </ul>
-                                                    <h6 style={{ fontSize: "15px", lineHeight: "1.4", margin: 0 }}>
-                                                        <Link href={`/blog/${post.id}`} style={{ color: "#fff", transition: "color 0.3s" }}>{post.title}</Link>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
+
 
                             {/* Contact / Newsletter */}
                             <div className="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".8s">

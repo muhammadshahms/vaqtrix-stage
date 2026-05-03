@@ -45,12 +45,12 @@ const page = () => {
       </Suspense>
 
       {/* <PdfGallery categoryId="Digital" /> */}
-      {/* <Pricing2
+      <Pricing2
         pricingDataKey={["seo", "branding", "socialmedia", "googleads", "logodesign"]}
         monthlyAndYearly={false}
         showButton={true}
         showPlanSelector={true}
-      /> */}
+      />
       
       <Blog1
         subTitle="BLOG & INSIGHTS"

@@ -32,9 +32,9 @@ const page = () => {
       <Faq1 addclass="faq-section section-padding " category="ai" ></Faq1>
       <Marquee3 category="ai" />
       <Testimonial1 category="ai" />
-      <Suspense fallback={<div>Loading Portfolio...</div>}>
+      {/* <Suspense fallback={<div>Loading Portfolio...</div>}>
         <CaseStudy4 defaultCategory="All" />
-      </Suspense>
+      </Suspense> */}
 
       {/* <PdfGallery categoryId="Ai" /> */}
       {/* <Pricing2
