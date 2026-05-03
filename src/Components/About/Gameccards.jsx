@@ -63,7 +63,7 @@ export default function Gamecards() {
                 <div className="d-flex gap-3 mb-3 text-dark fs-5">
                   {project.icons}
                 </div>
-                <a href="#" className="fw-bold" style={{ color: "var(--theme)", textDecoration: "none" }}>View Case Study →</a>
+
               </div>
             </div>
           ))}

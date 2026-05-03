@@ -6,7 +6,7 @@ const Section02 = () => {
   return (
     <section
       className="about-section fix section-padding "
-      style={{ position: "relative", overflow: "hidden" }}
+      style={{ position: "relative", overflow: "hidden", backgroundColor: "transparent" }}
     >
       {/* Content */}
       <div className="position-relative z-1 py-5">
