@@ -24,15 +24,20 @@ const TechStack = ({ category = "home", bgColor = "#EBF4EB" }) => {
     <section className="section-padding">
       <div className="container text-center">
 
-        <h2 className="fw-bold mb-4">
-          {data.heading}
-          {data.subheading && (
-            <>
-              <br />
-              <span>{data.subheading}</span>
-            </>
-          )}
-        </h2>
+        <div className="section-title text-center mb-5">
+          <div className="sub-title mx-auto">
+            <span>TECHNOLOGIES</span>
+          </div>
+          <h2 className="fw-bold mb-4 mt-3">
+            {data.heading}
+            {data.subheading && (
+              <>
+                <br />
+                <span>{data.subheading}</span>
+              </>
+            )}
+          </h2>
+        </div>
 
         {/* ✅ Desktop ya Mobile image — screen size ke hisab se */}
         <Image
