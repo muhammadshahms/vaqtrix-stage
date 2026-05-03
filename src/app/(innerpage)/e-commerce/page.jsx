@@ -33,7 +33,7 @@ const page = () => {
       <Testimonial1 category="ecom" />
       
       <Suspense fallback={<div>Loading Portfolio...</div>}>
-        <CaseStudy4 defaultCategory="E-commerce Stores" />
+        <CaseStudy4 defaultCategory="E-commerce Stores" hideFilters={true} />
       </Suspense>
 
       {/* <PdfGallery categoryId="Ecom" /> */}

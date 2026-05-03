@@ -32,7 +32,7 @@ const Page = () => {
 			<Testimonial1 category="app" />
 			
 			<Suspense fallback={<div>Loading Portfolio...</div>}>
-				<CaseStudy4 defaultCategory="App Development" />
+				<CaseStudy4 defaultCategory="App Development" hideFilters={true} />
 			</Suspense>
 
 			{/* <PdfGallery categoryId="App" /> */}

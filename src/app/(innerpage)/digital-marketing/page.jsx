@@ -41,6 +41,7 @@ const page = () => {
           ]}
           topHeading="Digital Marketing Campaigns That Deliver Real Growth"
           topText="Explore a selection of digital marketing and branding projects delivered by Vaqtrix."
+          hideFilters={true}
         />
       </Suspense>
 

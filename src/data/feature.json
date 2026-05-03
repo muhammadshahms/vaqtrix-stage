@@ -122,7 +122,7 @@
     },
     "App": {
       "section": {
-        "className": "team-section fix section-padding bg-cover py-0",
+        "className": "team-section fix section-padding bg-cover",
         "shapes": [
           {
             "src": "/assets/img/service/rocket-shape.png",

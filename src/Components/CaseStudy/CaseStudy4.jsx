@@ -20,6 +20,7 @@ const CaseStudyInner = ({
   defaultCategory = "All",
   topHeading,
   topText,
+  hideFilters = false,
 }) => {
   const { categories: originalCategories, projects: originalProjects } = portfolioData;
 
@@ -177,19 +178,21 @@ const CaseStudyInner = ({
             </div>
           )}
           {/* Category Tabs */}
-          <ul className="nav categories-tabs mb-3" role="tablist">
-            {allowedCategories.map((cat, index) => (
-              <li key={`${cat}-${index}`} className="nav-item" onClick={() => handleCategoryClick(cat)}>
-                <a
-                  className={`nav-link ${selectedCategory === cat ? "active" : ""}`}
-                  role="tab"
-                  style={{ cursor: "pointer" }}
-                >
-                  {cat}
-                </a>
-              </li>
-            ))}
-          </ul>
+          {!hideFilters && (
+            <ul className="nav categories-tabs mb-3" role="tablist">
+              {allowedCategories.map((cat, index) => (
+                <li key={`${cat}-${index}`} className="nav-item" onClick={() => handleCategoryClick(cat)}>
+                  <a
+                    className={`nav-link ${selectedCategory === cat ? "active" : ""}`}
+                    role="tab"
+                    style={{ cursor: "pointer" }}
+                  >
+                    {cat}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
 
           {/* Heading */}
           {!topHeading && (
