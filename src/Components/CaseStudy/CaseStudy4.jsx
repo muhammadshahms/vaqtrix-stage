@@ -172,8 +172,11 @@ const CaseStudyInner = ({
       <section ref={sectionRef} className="case-studies-section-4 fix section-padding">
         <div className="container">
           {topHeading && (
-            <div className="text-center mb-4" style={{ lineHeight: "60px" }}>
-              <h2>{topHeading}</h2>
+            <div className="section-title text-center mb-5 mt-4" style={{ lineHeight: "60px" }}>
+              <div className="sub-title mx-auto">
+                <span>PORTFOLIO</span>
+              </div>
+              <h2 className="mt-3">{topHeading}</h2>
               {topText && <p>{topText}</p>}
             </div>
           )}
@@ -196,9 +199,14 @@ const CaseStudyInner = ({
 
           {/* Heading */}
           {!topHeading && (
-            <h2 className="mb-4 case-studies-heading">
-              {selectedCategory === "All" ? "All Projects" : selectedCategory}
-            </h2>
+            <div className="section-title text-center mb-5 mt-4">
+              <div className="sub-title mx-auto">
+                <span>PORTFOLIO</span>
+              </div>
+              <h2 className="case-studies-heading mt-3">
+                {selectedCategory === "All" ? "All Projects" : selectedCategory}
+              </h2>
+            </div>
           )}
           {/* Cards Grid */}
           <AnimatePresence mode="wait">

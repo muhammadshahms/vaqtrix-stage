@@ -17,8 +17,11 @@ const ServicesCategory = ({ category }) => {
       <div className="container text-start">
 
         {/* ✅ Add main heading and paragraph */}
-        <div className="section-header text-center mb-5">
-           <h1>{category.heading}</h1>
+        <div className="section-title text-center mb-5">
+           <div className="sub-title mx-auto">
+             <span>INDUSTRIES</span>
+           </div>
+           <h2>{category.heading}</h2>
            <p dangerouslySetInnerHTML={{ __html: category.paragraph }}></p>
         </div>
 
